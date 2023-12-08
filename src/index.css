@@ -73,8 +73,11 @@ nav {
 }
 
 .card {
-  display: flex;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px;
   box-shadow: 0px 2px 3px grey;
   margin: 0 auto;
@@ -83,7 +86,35 @@ nav {
   border-radius: 4px;
 }
 
-.card img {
-  height: 20vh;
+.card > img {
+  height: 20vh
+}
 
+.card > h3 {
+  font-weight: 700;
+}
+
+.description {
+  width: 20vw;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 60vw;
+}
+
+.details > img {
+  height: 30vh
+}
+
+.details-container {
+  display: flex;
+}
+
+details > h1 {
+  font-weight: 700;
+  font-size: larger;
 }
