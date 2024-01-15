@@ -142,10 +142,12 @@ The HTTP request to the API should be done after the component loads (mounts). T
 To set up a side effect that runs only once when the component mounts, call the `useEffect` hook, and pass it an empty array `[]` as the second argument:
 
   ```jsx
+// Code to run when the component mounts
 useEffect(() => {
-  // Code to run when the component mounts
 
-}, [] );  //  <-- [] Means the effect will run only once, when the component mounts
+}, [] );
+
+//  ^ [] Means the effect will run only once, when the component mounts
   ```
 
   <br>
@@ -154,7 +156,9 @@ useEffect(() => {
 
   To fetch the data from the API, you can use `axios`. To install `axios`, run the command `npm install axios` from the root folder of your project.
 
-  Once you have installed it, import `axios` in the component where you want to make a HTTP request and then use it in the effect. To make a `GET` request to the API, use the following syntax:
+  Once you have installed it, import `axios` in the component where you want to make a HTTP request and then use it in the effect.
+  
+  To make a `GET` request to the API, use the following syntax:
 
   ```jsx
     axios.get("https://example.com/example-endpoint")
