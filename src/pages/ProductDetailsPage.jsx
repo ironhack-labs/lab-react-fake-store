@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 function ProductDetailsPage() {
@@ -17,6 +18,7 @@ function ProductDetailsPage() {
 
   return (
     <div className="ProductDetailsPage">
+   
     {/* Render product details here */}
     </div>
   );
