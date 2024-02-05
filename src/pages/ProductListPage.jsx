@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -11,8 +12,9 @@ function ProductListPage() {
   // To fetch the list of products, set up an effect with the `useEffect` hook:
   useEffect(() => {
     const fetchProducts = async () => {
-      const prods = await fetch(url);
-      const data = await prods.json();
+      const prods = await axios.get(url);
+      const data = await prods.data;
+      // console.log(data);
       setProducts(data);
     };
 

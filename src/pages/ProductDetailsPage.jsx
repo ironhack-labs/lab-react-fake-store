@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams, useLocation } from "react-router-dom";
 
@@ -17,8 +18,8 @@ function ProductDetailsPage() {
 
   useEffect(() => {
     const fetchProductDetail = async () => {
-      const urlProd = await fetch(url + productId);
-      const detail = await urlProd.json();
+      const urlProd = await axios.get(url + productId);
+      const detail = await urlProd.data;
       setProduct(detail);
     };
 
