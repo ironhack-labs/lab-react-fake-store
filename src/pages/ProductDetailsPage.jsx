@@ -24,7 +24,7 @@ function ProductDetailsPage() {
     };
 
     fetchProductDetail();
-  }, []);
+  }, [productId]);
 
   const { title, price, category, image, description } = product;
 
