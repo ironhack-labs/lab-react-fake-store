@@ -6,7 +6,7 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
-  return (
+  return ( 
     <div className="App relative z-20 pt-20">
       <Navbar />
 

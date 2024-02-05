@@ -21,7 +21,7 @@ function ProductListPage() {
   return (
     <div className="ProductListPage">
       {/* Render list of products here */}
-      <h2>Product List</h2>
+      <h2>Product List</h2> 
       <p>{fetching}</p>
 
       {products.map((clo) => {
