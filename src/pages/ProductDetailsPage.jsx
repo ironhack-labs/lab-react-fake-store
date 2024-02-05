@@ -1,25 +1,37 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
+const ClothesDetailsPage = () => {
+  const [clothes, setClothes] = useState(false);
+  const { productId } = useParams();
 
-function ProductDetailsPage() {
-  // The state variable `product` is currently an empty object {},
-  // but you should use it to store the response from the Fake Store API (the product details).
-  const [product, setProduct] = useState({});
+  useEffect(() => {
+    const fetchClothesDetails = async () => {
+      try {
+        const response = await axios.get(
+          `https://fakestoreapi.com/products/${productId}`
+        );
+        setClothes(response.data);
+      } catch (error) {
+        console.error("Error fetching product details:", error);
+      }
+    };
 
+    fetchClothesDetails();
+  }, [productId]);
 
-  // The `productId` coming from the URL parameter is available in the URL path.
-  // You can access it with the `useParams` hook from react-router-dom.
-
-
-  // To fetch the product details, set up an effect with the `useEffect` hook:
-
-
+  if (!clothes) {
+    return <p>Loading...</p>;
+  }
 
   return (
-    <div className="ProductDetailsPage">
-    {/* Render product details here */}
+    <div>
+      <h1>{clothes.title}</h1>
+      <p>{clothes.description}</p>
+      <p>Price: ${clothes.price}</p>
     </div>
   );
-}
+};
 
-export default ProductDetailsPage;
+export default ClothesDetailsPage;
