@@ -81,3 +81,19 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.ProductDetailsPage {
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+
+.ProductDetailsPage img {
+  width: 250px;
+  height: auto;
+}
+
+.ProductDetailsPage p {
+  margin: 9px;
+}
