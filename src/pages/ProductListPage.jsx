@@ -7,8 +7,10 @@ import { Link } from "react-router-dom";
 function ProductListPage() {
   const [products, setProducts] = useState([]);
 
+const apiUrl = "https://fakestoreapi.com/products"
+
 useEffect(() => {
-  axios.get('https://fakestoreapi.com/products')
+  axios.get(apiUrl)
   .then(response => {
     console.log(response.data);
     setProducts(response.data);
@@ -24,20 +26,22 @@ console.log(products);
     <div className="ProductListPage">
       <ul>
     
-        {products.map(product => (
-          <Link to={`/product/details/${product.id}`}>
-          <li key={product.id}>
+        {products.map((product => (
           
-          <img src= {product.image}></img><br />
-          <strong className="title"></strong> {product.title}<br />
-            <strong className="price"></strong> {product.price}<br />
-            <strong className="description"></strong> {product.description}<br />
-            <strong className="category"></strong> {product.category}<br />
-            <strong>Rating:</strong> {product.rating.rate} (Count: {product.rating.count})<br />
-           
+          <li key={product.id} className="Link">
+            <Link to={`/product/details/${product.id}`} >
+            <div className="product">
+              <img src= {product.image}></img><br />
+              <strong className="title"></strong> {product.title}<br />
+              <strong className="price"></strong> {product.price}<br />
+              <strong className="description"></strong> {product.description}<br />
+              <strong className="category"></strong> {product.category}<br />
+              <strong>Rating:</strong> {product.rating.rate} (Count: {product.rating.count})<br />
+              </div>
+            </Link>
             </li>
-             </Link>
-        ))}
+             
+        )))}
        
       </ul>
     </div>
