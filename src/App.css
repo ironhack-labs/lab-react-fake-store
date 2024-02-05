@@ -81,3 +81,21 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.margin-x {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.small-image {
+  width: 30%;
+}
