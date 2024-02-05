@@ -10,9 +10,9 @@ function ProductDetailsPage() {
 		fetch(`https://fakestoreapi.com/products/${productId}`)
 			.then((res) => res.json())
 			.then((json) => setProduct(json));
-      console.log(`in`);
+		console.log(`in`);
 	}, []);
-  console.log(product);
+	console.log(product);
 	// The `productId` coming from the URL parameter is available in the URL path.
 	// You can access it with the `useParams` hook from react-router-dom.
 
@@ -20,16 +20,18 @@ function ProductDetailsPage() {
 
 	return (
 		<div className="ProductDetailsPage">
-			{/* <ItemCard
-				id={product.id}
-				title={product.title}
-				category={product.category}
-				description={product.description}
-				image={product.image}
-				price={product.price}
-        ratingCount={product.rating.count}
-        ratingRate={product.rating.rate}
-			/> */}
+			{product.id && (
+				<ItemCard
+					id={product.id}
+					title={product.title}
+					category={product.category}
+					description={product.description}
+					image={product.image}
+					price={product.price}
+					ratingCount={product.rating.count}
+					ratingRate={product.rating.rate}
+				/>
+			)}
 		</div>
 	);
 }
