@@ -12,7 +12,6 @@ const apiUrl = "https://fakestoreapi.com/products"
 useEffect(() => {
   axios.get(apiUrl)
   .then(response => {
-    console.log(response.data);
     setProducts(response.data);
   })
   .catch(error => {
