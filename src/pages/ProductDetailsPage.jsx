@@ -16,7 +16,7 @@ function ProductDetailsPage() {
 
   useEffect(() => {
     axios
-      .get(`https://fakestoreapi.com/products/${productId} `)
+      .get(`https://fakestoreapi.com/products/${productId}`)
       .then((response) => {
         setProduct(response.data);
       })
