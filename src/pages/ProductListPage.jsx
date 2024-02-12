@@ -30,7 +30,7 @@ console.log(products)
         <h3> {product.category} </h3>
         <h3> {product.price} </h3>
         <h3> {product.description} </h3>
-        <Link to={`./product/${product.id}`}>More Details</Link>
+        <Link to={`./product/details/${product.id}`}>More Details</Link>
         </div>
       ))}
     </div>
