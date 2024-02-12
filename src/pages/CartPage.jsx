@@ -46,7 +46,7 @@ function CartPage() {
         <ul>
           {cart.map((cartItem, index) => (
             <li key={index}>
-              <img src={cartItem.productDetails.image} />
+              <img src={cartItem.productDetails.image} alt={cartItem.productDetails.title}/>
               <p>{cartItem.productDetails.title}</p>
               <p>Quantity: {cartItem.quantity}</p>
               <p>Price: ${cartItem.productDetails.price}</p>

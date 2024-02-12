@@ -6,6 +6,7 @@ function ProductListPage() {
   // The state variable `products` is currently an empty array [],
   // but you should use it to store the response from the Fake Store API (the list of products).
   const [products, setProducts] = useState([]);
+  const [error, setError] = useState(null); 
 
   const baseUrl = "https://fakestoreapi.com";
 
@@ -16,7 +17,8 @@ function ProductListPage() {
       .then((response) => {
         setProducts(response.data);
       })
-      .catch((e) => {
+      .catch((error) => {
+        setError("Error. Please try again later.")
         console.log("Error");
       });
   }, []);
@@ -28,7 +30,7 @@ function ProductListPage() {
         {products.map((productDetails, index) => (
           <li key={index} className="ListBox">
             <Link to={`./product/details/${productDetails.id}`}>
-              <img src={productDetails.image} />
+              <img src={productDetails.image} alt={productDetails.title} />
               <div>
                 <p>{productDetails.title} </p>
                 <p>{productDetails.price} </p>
