@@ -1,5 +1,6 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import axios from "axios";
+import "../styles/ProductListPage.css"
 
 function ProductListPage() {
   // The state variable `products` is currently an empty array [], 
@@ -7,11 +8,37 @@ function ProductListPage() {
   const [products, setProducts] = useState([]);
 
   // To fetch the list of products, set up an effect with the `useEffect` hook:
+  const baseUrl = "https://fakestoreapi.com/products"
 
+
+  useEffect(()=>{
+    axios.get(baseUrl)
+    .then(response => {
+      setProducts(response.data)
+      
+    })
+    .catch( err => console.log(err))
+  },[])
 
   return (
     <div className="ProductListPage">
-      {/* Render list of products here */}
+      
+      {
+        products.map((productObj) => {
+          return (
+
+          <div className="ProductListPage__product" key={productObj.id}>
+            <img src={productObj.image} alt="" />
+            <div className="title">{productObj.title}</div>
+            <div className="category">{productObj.category}</div>
+            <div className="price">{productObj.price}</div>
+            <div className="description">{productObj.description.slice(0,30)}</div>
+          </div>
+          )
+        })
+      }
+
+
     </div>
   );
 }

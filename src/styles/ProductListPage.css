@@ -1,0 +1,21 @@
+.ProductListPage__product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.ProductListPage__product img{
+    height: 120px;
+    width: 120px;
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+.ProductListPage__product .title {
+    font-weight: 600;
+    width: 150px;
+}
