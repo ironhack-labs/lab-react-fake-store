@@ -9,7 +9,7 @@ function CartPage() {
     const fetchCartDetails = async () => {
       try {
         const cartResponse = await axios.get(
-          "https://fakestoreapi.com/carts/:id"
+          "https://fakestoreapi.com/carts/1"
         );
         const cartData = cartResponse.data;
 
@@ -22,10 +22,10 @@ function CartPage() {
           }
         );
         const productDetails = await Promise.all(productDetailsPromises);
-        const updatedCart = cartData.product.map((productId, index) => ({
+        const updatedCart = cartData.products.map((productId, index) => ({
           productId,
-          quantity: cardData.quantities[index],
-          productDetails: productDetail[index],
+          quantity: cartData.quantities[index],
+          productDetails: productDetails[index],
         }));
         setCart(updatedCart);
         setLoading(false);
