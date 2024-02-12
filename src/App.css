@@ -81,3 +81,50 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+
+.product {
+  display: flex;
+  box-sizing: border-box;
+  width: 100vw;
+  margin: 16px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  text-align: center;
+  align-items: center;
+  border: 1px solid #ddd; 
+  padding: 10px;  
+  margin-bottom: 10px; 
+  background-color: white;
+}
+
+.product img {
+  width: 100px; /* Ölçüleri ihtiyacınıza göre ayarlayabilirsiniz */
+  height: 100px; /* Ölçüleri ihtiyacınıza göre ayarlayabilirsiniz */
+  margin-right: 10px;
+}
+
+.product-details {
+  position:absolute;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax (390px, 1fr));
+  flex: 1;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  height: 80%;
+  row-gap:10px;
+
+}
+.product-details p {
+  position :relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax (390px, 1fr));
+  margin: 10vw; /* Metinler arasındaki boşluğu ve her bir metnin yukarıdan ve aşağıdan uzaklığını belirler */
+  flex-grow: 1;
+  text-align: center; 
+  row-gap:10px;
+} /* Metinleri ortalar */
+
