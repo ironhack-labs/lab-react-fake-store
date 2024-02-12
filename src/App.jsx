@@ -1,9 +1,8 @@
-import "./App.css";
-import Navbar from "./components/Navbar";
-import ProductListPage from "./pages/ProductListPage";
-import ProductDetailsPage from "./pages/ProductDetailsPage";
-
-import { Routes, Route } from "react-router-dom";
+import "./App.css"
+import Navbar from "./components/Navbar"
+import ProductListPage from "./pages/ProductListPage"
+import ProductDetailsPage from "./pages/ProductDetailsPage"
+import { Routes, Route } from "react-router-dom"
 
 
 function App() {
@@ -22,3 +21,6 @@ function App() {
 }
 
 export default App;
+
+
+
