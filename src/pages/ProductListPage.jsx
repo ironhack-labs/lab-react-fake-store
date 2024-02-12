@@ -12,7 +12,7 @@ function ProductListPage({ products }) {
         <Link key={product.id} to={`/product/details/${product.id}`}>
           <div className="ProductCard">
             <img src={product.image} />
-            <h2 className="productTitle">{product.title}</h2>
+            <h2>{product.title}</h2>
             <p>{product.category}</p>
             <p>{product.price}</p>
             <p>{product.description}</p>

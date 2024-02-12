@@ -13,7 +13,7 @@ function App() {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((json) => setProducts(json));
-  });
+  }, []);
   return (
     <div className="App relative z-20 pt-20">
       <Navbar />
