@@ -1,10 +1,28 @@
-import { useState } from "react";
+//Iteration 3 | Product Details
 
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+// The state variable `product` is currently an empty object {},
+// but you should use it to store the response from the Fake Store API (the product details).
 
 function ProductDetailsPage() {
-  // The state variable `product` is currently an empty object {},
-  // but you should use it to store the response from the Fake Store API (the product details).
+
   const [product, setProduct] = useState({});
+  const {productId} = useParams ();
+
+  useEffect(() => {
+
+    fetch (`https://fakestoreapi.com/products/${productId}`)
+      .then((response) => {
+        return response.json()
+      })
+      .then((jsonResponse) => {
+        setProduct(jsonResponse)
+      })
+      .catch((error) => { error })
+  }, [])
 
 
   // The `productId` coming from the URL parameter is available in the URL path.
@@ -17,7 +35,16 @@ function ProductDetailsPage() {
 
   return (
     <div className="ProductDetailsPage">
-    {/* Render product details here */}
+      <h2> List of product detail </h2>
+            <ul key={product.id}>
+              <li> {product.title} </li>
+              <li> {product.price} </li>
+              <li> {product.category} </li>
+              <li> {product.description} </li>
+              {product.rating ? <li> {product.rating.rate} </li> : 'Loading Rate..'}
+              <li> <img src={product.image} alt="productImage" /> </li>
+            </ul>
+        <Link to = '/'> Back</Link>
     </div>
   );
 }
