@@ -71,7 +71,7 @@ In today's exercise, you will be building a simple React application that displa
 
 To help you get started quickly, we have provided you with the starter code and all the required page components. The React Router was already set up and app has the following pages:
 
-- **`HomePage`** - should display a list of all products
+- **`ProductListPage`** - should display a list of all products
 - **`ProductDetailsPage`** - should display the details of a single product
 
 
@@ -102,7 +102,7 @@ You will use the following API endpoints in this exercise:
 
 ### Iteration 1 | Products List
 
-In the `HomePage` component, make an HTTP request to the Fake Store API endpoint **Get all products** to retrieve the list of all products. <br> The API endpoint you should make a request to is:
+In the `ProductListPage` component, make an HTTP request to the Fake Store API endpoint **Get all products** to retrieve the list of all products. <br> The API endpoint you should make a request to is:
 
 **`GET`** **`https://fakestoreapi.com/products`** 
 
