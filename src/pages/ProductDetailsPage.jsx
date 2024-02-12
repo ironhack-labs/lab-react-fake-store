@@ -32,7 +32,7 @@ function ProductDetailsPage() {
         <h2>Loading...</h2>
       ) : (
         <div>
-          <img src={product.image} />
+          <img src={product.image} alt={product.title}  />
           <div>
             <p>{product.title} </p>
             <p>{product.price} </p>
