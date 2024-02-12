@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: whitesmoke;
 }
 
 /* Primary Button */
@@ -80,4 +81,35 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+.listPage {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 5px 5px 10px 0px rgba(192,192,192,1)
+}
+
+.listPage:hover {
+  background-color: ghostwhite;
+}
+
+.productImg {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  padding: 5px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.listPage div {
+  width: 250px;
+}
+
+.title {
+  font-weight: 700;
 }
