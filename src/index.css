@@ -82,6 +82,13 @@ nav {
   border-radius: 4px;
 }
 
+.ListBox {
+  border: 1px solid black; 
+  display: flex;
+  flex-direction: row;
+  
+  
+}
 .ProductListPage img {
   width: 100px;
 }
@@ -89,3 +96,4 @@ nav {
 .ProductDetailsPage img {
   width: 100px;
 }
+

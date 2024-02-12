@@ -26,7 +26,7 @@ function ProductListPage() {
       {/* Render list of products here */}
       <ul>
         {products.map((productDetails, index) => (
-          <li key={index}>
+          <li key={index} className="ListBox">
             <Link to={`./product/details/${productDetails.id}`}>
               <img src={productDetails.image} />
               <div>
