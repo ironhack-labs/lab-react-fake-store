@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -80,4 +79,21 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+.panelContainer {
+  margin: 30px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35vh;
+}
+.imgContainer {
+  max-width: 30%;
+  max-height: 100%;
+}
+.imgContainer img {
+  object-fit: contain;
+  max-height: 30vh;
+  max-width: 30vw;
 }
