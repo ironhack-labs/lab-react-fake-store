@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 
-function ProductDetailsPage() {
+function ProductDetailsPage({addToCart}) {
   // The state variable `product` is currently an empty object {},
   // but you should use it to store the response from the Fake Store API (the product details).
   const [product, setProduct] = useState({});
@@ -33,6 +33,8 @@ function ProductDetailsPage() {
 
 
 
+
+
   return (
     <div className="ProductDetailsPage">
     {/* Render product details here */}
@@ -42,6 +44,8 @@ function ProductDetailsPage() {
     <p>${product.price}</p>
 
     <Link to="/" className="btn-secondary">Back</Link>
+
+    <button className="btn-primary" onClick={() => addToCart(product)}>Add to Cart</button>
 
 
     </div>

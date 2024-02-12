@@ -20,7 +20,7 @@ function Navbar() {
 
         <div className="w-1/4 flex justify-end mr-4">
           {/* User Profile Button */}
-          <Link key={} to={`/product/details/${productDetails.id}`}>
+          <Link to="/cart">
             <button className="flex items-center text-l py-1">
               <img
                 src={cart}
@@ -28,7 +28,7 @@ function Navbar() {
                 className="h-10 w-auto border-solid border border-white rounded-3xl p-1"
               />
             </button>
-            </Link>
+          </Link>
         </div>
       </div>
     </nav>

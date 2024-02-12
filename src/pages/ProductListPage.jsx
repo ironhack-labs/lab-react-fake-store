@@ -5,20 +5,18 @@ import axios from 'axios';
 function ProductListPage() {
   // The state variable `products` is currently an empty array [], 
   // but you should use it to store the response from the Fake Store API (the list of products).
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState([]);
 
   // To fetch the list of products, set up an effect with the `useEffect` hook:
-  const baseUrl = "https://fakestoreapi.com/products";
-
   useEffect(() => {
-    axios.get(baseUrl)
+    axios.get(`https://fakestoreapi.com/products`)
     .then(response => {
       setProducts(response.data);
     })
     .catch(error => {
       console.log("Error getting the products", error);
     });
-  },[]);
+  },[]); // Empty dependency array means this will only run once on component mount
 
   return (
     <div className="ProductListPage">
