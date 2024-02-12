@@ -1,5 +1,6 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import axios from 'axios';
 
 function ProductListPage() {
   // The state variable `products` is currently an empty array [], 
@@ -7,11 +8,35 @@ function ProductListPage() {
   const [products, setProducts] = useState([]);
 
   // To fetch the list of products, set up an effect with the `useEffect` hook:
-
+  useEffect(() => {
+    axios.get(`https://fakestoreapi.com/products`)
+    .then(response => {
+      setProducts(response.data);
+    })
+    .catch(error => {
+      console.log("Error getting the products", error);
+    });
+  },[]); // Empty dependency array means this will only run once on component mount
 
   return (
     <div className="ProductListPage">
       {/* Render list of products here */}
+      {products !== null &&
+      products.map((productDetails, index) => {
+        return (
+          <Link key={productDetails.id} to={`/product/details/${productDetails.id}`}>
+
+          <div key={index}  className="card">
+          <img src={productDetails.image} />
+          <h2><b>{productDetails.title}</b></h2>
+          <p>${productDetails.price}</p>
+          <p>{productDetails.description}</p>
+          
+
+          </div>
+          </Link>
+        );
+      })}
     </div>
   );
 }
