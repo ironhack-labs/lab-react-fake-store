@@ -81,3 +81,22 @@
 .content.shifted {
   margin-left: 250px;
 }
+.itemList{
+  margin: 2vh 2vw;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.itemList img{
+  width: 50px;
+  height: 50px;
+}
+.itemList span{
+  margin-right: 2vw;;
+}
+
+.productImage{
+  width: 150px;
+  height: 150px;
+}
