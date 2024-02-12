@@ -1,0 +1,63 @@
+.ProductDetailsPage {
+    margin: 50px;
+    width: 75%;
+    height: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.ProductDetailsPage img {
+    width: 33%;
+    height: auto;
+    margin-bottom: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.category {
+    text-align: left;
+    margin-left: 50px;
+    background-color: #1E40AF;
+    color: white;
+    border-radius: 10px;
+    width: 150px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 1.5em;
+    text-align: left;
+    margin: 20px;
+}
+
+.cointainer-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description {
+    width: 70%;
+}
+
+.price {
+    margin-right: 80px;
+    color: #1E40AF;
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.cart {
+    text-align: right;
+    font-size: 50px;
+    margin-right: 80px;
+}
+
+.button {
+    background-color: rgb(13, 204, 13);
+    border-radius: 10px;
+    margin: 25px;
+    text-align: center;
+}
