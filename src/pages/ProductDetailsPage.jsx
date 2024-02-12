@@ -22,10 +22,18 @@ function ProductDetailsPage() {
       <span>{product.category}</span>
       <h2>{product.title}</h2>
 
-      <div style={{ display: "flex", textAlign: "start" }}>
+      <div style={{ display: "flex", textAlign: "start", gap: "20px" }}>
         <p>{product.description}</p>
 
-        <p>{product.price}</p>
+        <p
+          style={{
+            color: "rgb(58, 7, 169)",
+            fontWeight: "bold",
+            fontSize: "large",
+          }}
+        >
+          ${product.price}
+        </p>
       </div>
     </div>
   );

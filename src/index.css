@@ -96,13 +96,39 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: start;
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .ProductDetailsPage img {
   width: 350px;
 }
 
+.ProductDetailsPage span {
+  background-color: rgb(58, 7, 169);
+  color: white;
+  border-radius: 10px;
+  padding: 2px 20px;
+  margin-top: 10px;
+}
+
+.productTitle {
+  font-weight: bolder;
+  margin-top: 40px;
+  font-size: x-large;
+  margin-bottom: 30px;
+}
+
 .ProductListPage {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.CartPage {
   padding: 30px;
   display: flex;
   flex-direction: column;
