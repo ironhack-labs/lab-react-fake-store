@@ -63,7 +63,7 @@
 .flex-center {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 /* Card styles */
@@ -72,6 +72,8 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
+  width: 80%;
+  margin-top: 20px;
 }
 
 .content {
@@ -80,4 +82,53 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+.element {
+  padding: 20px;
+  width: 20%;
+}
+
+.element-image {
+  max-width: 100%;
+  height: 250px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.ProductDetailsPage {
+  text-align: start;
+}
+
+.ProductDetailsPage img {
+  width: 40vh;
+  margin: 20px;
+}
+
+.ProductDetailsPage p {
+  display: inline;
+}
+
+.ProductDetailsPage hr {
+  margin: 40px 0;
+}
+
+.ProductDetailsPage button {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.ProductDetailsPage-button button {
+  background-color: greenyellow;
+  width: 0;
+  margin: auto;
+  border-radius: 10px;  
+}
+
+.price {
+  color: blue;
+  font-size: 2em;
+  font-weight: 700;
 }
