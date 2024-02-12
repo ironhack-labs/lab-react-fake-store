@@ -8,7 +8,7 @@ function ProductListPage({ products }) {
 
   return (
     <div className="ProductListPage">
-      {products.map((product) => (
+      {products?.map((product) => (
         <Link key={product.id} to={`/product/details/${product.id}`}>
           <div className="ProductCard">
             <img src={product.image} />

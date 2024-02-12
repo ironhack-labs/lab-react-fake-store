@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 export default function CartPage({ products }) {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {

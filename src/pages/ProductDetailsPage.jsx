@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 function ProductDetailsPage() {
   // The state variable `product` is currently an empty object {},
   // but you should use it to store the response from the Fake Store API (the product details).
-  const [product, setProduct] = useState({});
+  const [product, setProduct] = useState(null);
 
   const { productId } = useParams();
 
@@ -17,25 +17,29 @@ function ProductDetailsPage() {
   // To fetch the product details, set up an effect with the `useEffect` hook:
 
   return (
-    <div className="ProductDetailsPage">
-      <img src={product.image} />
-      <span>{product.category}</span>
-      <h2>{product.title}</h2>
+    <>
+      {product !== null && (
+        <div className="ProductDetailsPage">
+          <img src={product.image} />
+          <span>{product.category}</span>
+          <h2>{product.title}</h2>
 
-      <div style={{ display: "flex", textAlign: "start", gap: "20px" }}>
-        <p>{product.description}</p>
+          <div style={{ display: "flex", textAlign: "start", gap: "20px" }}>
+            <p>{product.description}</p>
 
-        <p
-          style={{
-            color: "rgb(58, 7, 169)",
-            fontWeight: "bold",
-            fontSize: "large",
-          }}
-        >
-          ${product.price}
-        </p>
-      </div>
-    </div>
+            <p
+              style={{
+                color: "rgb(58, 7, 169)",
+                fontWeight: "bold",
+                fontSize: "large",
+              }}
+            >
+              ${product.price}
+            </p>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

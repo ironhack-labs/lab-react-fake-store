@@ -8,7 +8,7 @@ import CartPage from "./pages/CartPage";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(null);
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
