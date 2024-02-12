@@ -71,8 +71,13 @@
 .card {
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 16px;
+  padding: 40px;
   border-radius: 8px;
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .content {
@@ -89,8 +94,9 @@
   align-items: center;
   margin: 10px;
   padding: 20px;
+  border-radius: 8px;
   background-color: white;
-  box-shadow: 5px 5px 10px 0px rgba(192,192,192,1)
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .listPage:hover {
@@ -100,16 +106,67 @@
 .productImg {
   width: 180px;
   height: 180px;
+}
+
+img {
   object-fit: cover;
   padding: 5px;
   border: 1px solid lightgray;
   border-radius: 5px;
 }
 
+.productDetailsImg {
+  width: 350px;
+  height: 350px;
+}
+
 .listPage div {
   width: 250px;
 }
 
+.productDetails div {
+  margin: 20px 0px 15px 0px;
+}
+
 .title {
   font-weight: 700;
+}
+
+.detailsPage {
+  font-size: 25px;
+}
+
+.description {
+  width: 500px
+}
+
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 650px;
+}
+
+.price {
+  font-size: 22px;
+  color: blue;
+  font-weight: 700;
+}
+
+hr {
+  width: 100%;
+}
+
+.category {
+  padding: 0px 20px 0px 20px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+}
+
+.back-btn {
+  background-color: limegreen;
+  color: white;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 20px 0px 20px 0px;
 }
