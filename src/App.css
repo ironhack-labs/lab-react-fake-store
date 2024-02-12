@@ -81,3 +81,10 @@
 .content.shifted {
   margin-left: 250px;
 }
+img{
+  width:80px;
+}
+box{
+  display: flex;
+  flex-direction: row;
+}
