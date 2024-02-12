@@ -15,14 +15,14 @@ const baseUrl ="https://fakestoreapi.com/products"
 
   // To fetch the product details, set up an effect with the `useEffect` hook:
 useEffect(()=>{
-  axios .get(`https://fakestoreapi.com/products/+${productId}`)
+  axios .get(`https://fakestoreapi.com/products/${productId}`)
   .then(response =>{
     setProduct(response.data);
   })
   .catch(e =>{
     console.log(e)
   })
-},[])
+},[productId])
 
 
   return (
