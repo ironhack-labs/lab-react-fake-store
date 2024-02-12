@@ -1,9 +1,9 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ProductListPage from "./pages/ProductListPage";
-import ProductDetailsPage from "./pages/ProductDetailsPage";
-
-import { Routes, Route } from "react-router-dom";
+import ProductDetailsPage from "./pages/ProductDetailsPage"
+import CartPage from "./pages/CartPage";
 
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ProductListPage />} />
         <Route path="/product/details/:productId" element={<ProductDetailsPage />} />
+        <Route path="/carts/5" element={<CartPage />} />
       </Routes>
 
     </div>
