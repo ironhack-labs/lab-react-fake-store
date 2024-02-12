@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
 import axios from "axios";
 
 function ProductDetailsPage() {
@@ -35,6 +36,7 @@ function ProductDetailsPage() {
             <p>{product.category}</p>
             <p>{product.description}</p>
           </div>
+          <button>add to cart</button>
         </div>
       ) : (
         <p>Data Not Found!</p>
