@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
 }
 
 /* Primary Button */
@@ -80,4 +85,102 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+.ProductListPage {
+  margin-top: 20px;
+}
+
+.ProductCard {
+  border: 1px solid;
+  margin: 10px;
+  display: flex;
+  height: 250px;
+}
+
+.ProductCard img {
+  width: 150px;
+  border: 1px solid gray;
+  padding: 5px;
+  margin: 5px;
+}
+
+.ProductInfo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.ProductInfo p {
+  margin: 15px;
+}
+
+.title {
+  width: 30%;
+}
+
+.category {
+  width: 12%;
+}
+
+.price {
+  width: 8%;
+}
+
+.description {
+  width: 50%;
+  font-size: .8em;
+}
+
+.ProductDetailsArticle {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.ProductDetailsArticle img {
+  width: 200px;
+}
+
+.ProductDetailsArticle p {
+  text-align: start;
+  margin: 20px;
+}
+
+.ProductDetailsArticle .productDesc {
+  width: 100%;
+}
+
+.ProductDetailsArticle .productCategory {
+  background-color: rgb(149, 72, 216);
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.ProductDetailsArticle h2 {
+  text-align: start;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.ProductDetailsArticle .styling-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.ProductDetailsArticle .productPrice {
+  color: blue;
+  font-size: 1.2em;
+}
+
+.btnBack {
+  margin: 10px;
+  background-color: rgb(38, 180, 38);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
 }
