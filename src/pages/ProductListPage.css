@@ -1,0 +1,51 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: justify;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+img {
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+}
+
+.div-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+
+}
+
+/* .ProductListPage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Para distribuir los elementos en filas */
+
+
+/* .card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    border-radius: 8px;
+    width: calc(30% - 16px);
+    /* Ancho del artículo con margen entre elementos */
+
+/* Margen inferior entre elementos */
+
+
+/* .card img {
+    width: 100px;
+    height: auto;
+    /* Para mantener la proporción de la imagen */
