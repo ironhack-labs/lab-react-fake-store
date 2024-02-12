@@ -39,7 +39,7 @@ function ProductDetailsPage() {
             <div className="price">${product.price}</div>
           </div>
           <hr />
-          <Link><button class="back-btn">Back</button></Link>
+          <Link to="/"><button class="back-btn">Back</button></Link>
         </div>}
     </div>
   );

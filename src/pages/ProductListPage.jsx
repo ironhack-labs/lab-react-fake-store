@@ -27,19 +27,18 @@ function ProductListPage() {
         products.map((elm) => {
           return (
             <div className="ProductListPage" key={elm.id}>
-            <Link to={`/product/details/${elm.id}`}>
-              <div className="listPage">
-                <img src={elm.image} alt={elm.title} className="productImg" />
-                <div className="title">{elm.title}</div>
-                <div>{elm.category}</div>
-                <div>${elm.price}</div>
-                <div>{elm.description.slice(0, 50)}</div>
-              </div>
-            </Link>
+              <Link to={`/product/details/${elm.id}`}>
+                <div className="listPage">
+                  <img src={elm.image} alt={elm.title} className="productImg" />
+                  <div className="title">{elm.title}</div>
+                  <div>{elm.category}</div>
+                  <div>${elm.price}</div>
+                  <div>{elm.description.slice(0, 50)}</div>
+                </div>
+              </Link>
             </div>
           )
         })
-
       }
     </div>
   );
