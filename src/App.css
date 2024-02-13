@@ -81,3 +81,8 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.product-img{
+  height:100px;
+  width:100px
+}
