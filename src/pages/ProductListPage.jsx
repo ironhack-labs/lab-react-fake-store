@@ -92,6 +92,7 @@
 
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function ProductListPage() {
   const [products, setProducts] = useState([]);
@@ -112,25 +113,21 @@ function ProductListPage() {
   return (
     <div className="ProductListPage">
       <h1>Products List</h1>
-      <table className="product-table">
-        <tbody>
-          {products.map(product => (
-            <tr key={product.id} className="product-row">
-              <td>
-                <div className="product-card">
-                  <img src={product.image} alt={product.title} className="product-image" />
-                  <div className="product-details">
-                    <h2>{product.title}</h2>
-                    <p><strong>Category:</strong> {product.category}</p>
-                    <p><strong>Price:</strong> ${product.price}</p>
-                    <p>{product.description.split(' ').slice(0, 8).join(' ')}</p>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="product-cards">
+        {products.map(product => (
+          <Link to={`/product/details/${product.id}`} key={product.id} className="product-link">
+            <div className="product-card">
+              <img src={product.image} alt={product.title} className="product-image" />
+              <div className="product-details">
+                <h2>{product.title}</h2>
+                <p><strong>Category:</strong> {product.category}</p>
+                <p><strong>Price:</strong> ${product.price}</p>
+                <p>{product.description.split(' ').slice(0, 8).join(' ')}</p>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
