@@ -81,3 +81,37 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+
+.ProductImage{
+  width:30%
+}
+
+.ProductCard {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  display:flex;
+  align-items: center;
+  height:500px;
+  justify-content: space-between;
+}
+
+.ProductTitle{
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  
+}
+/*
+.ProductPrice{
+  font-weight: bold;
+}
+
+.ProductCategory{
+  ;
+}
+
+.ProductDescription{
+  font-weight: bold;
+}*/
