@@ -1,83 +1,55 @@
-.App {
+#root {
   text-align: center;
-}
-
-/* Primary Button */
-.btn-primary {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #3B82F6;
-}
-
-/* Secondary Button */
-.btn-secondary {
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-}
-
-.btn-secondary:hover {
-  background-color: #E5E7EB;
-}
-
-
-/* Spacing utilities */
-.spacing-xs {
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-.spacing-sm {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.spacing-md {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.spacing-lg {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-
-/* Text utilities */
-.text-center {
-  text-align: center;
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-/* Flex utilities */
-.flex-center {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
 }
 
-/* Card styles */
-.card {
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  border-radius: 8px;
+.ProductListComponent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.content {
-  transition: margin-left 0.4s ease-in-out;
+article{
+  margin: 10px;
+  border: 1px solid black;
+  padding: 10px;
 }
 
-.content.shifted {
-  margin-left: 250px;
+#cardImg{
+  width: 200px;
+  height: 200px;
+  float: left;
+  border: 1px solid black;
+}
+
+.cardText{
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  justify-content: space-evenly;
+}
+
+.ProductDetailsComponent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+.ProductDetailsComponent img{
+  width: 600px;
+  height: 600px;
+  margin-left: 20%;
+  padding: 20px;
+}
+.ProductDetailsComponent h3, p{
+  padding: 5px;
+}
+
+#backBtn{
+  padding: 10px;
+  background-color: gray;
+  border-radius: 10px;
 }
