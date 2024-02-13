@@ -1,4 +1,5 @@
 import "./App.css";
+import "./index.css";
 import Navbar from "./components/Navbar";
 import ProductListPage from "./pages/ProductListPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
