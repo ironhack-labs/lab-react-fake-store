@@ -81,3 +81,14 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.productBox {
+  display:flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.productBox img{
+  max-width: 10%;
+}
