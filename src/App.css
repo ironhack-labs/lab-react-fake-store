@@ -5,7 +5,7 @@
 /* Primary Button */
 .btn-primary {
   background-color: var(--primary-color);
-  color: white;
+  color: rgb(3, 0, 0);
   padding: 8px 16px;
   border-radius: 8px;
   transition: background-color 0.3s;
@@ -25,7 +25,7 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #000307;
 }
 
 
@@ -68,7 +68,7 @@
 
 /* Card styles */
 .card {
-  background-color: white;
+  background-color: rgb(3, 0, 0);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
