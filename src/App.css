@@ -81,3 +81,47 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.productImage {
+  width: 200px;
+  height: 200px
+}
+
+.itemDesc {
+  width: 300px;
+  font-size: small;
+}
+
+.itemBox {
+display: flex;
+height: 500px;
+margin: 20px;
+align-items: center;
+font-weight: bold;
+justify-content: space-between;
+background-color: white;
+}
+
+.detailBox {
+  display: flex;
+height: 500px;
+margin: 20px;
+align-items: center;
+font-weight: bold;
+justify-content: space-between;
+background-color: white;
+}
+
+
+.detailImg {
+  width: 400px;
+  height: 400px;
+}
+
+.detailInfo {
+  align-items: center;
+}
+
+.detailDesc {
+  width: 200px;
+}
