@@ -67,12 +67,7 @@
 }
 
 /* Card styles */
-.card {
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  border-radius: 8px;
-}
+
 
 .content {
   transition: margin-left 0.4s ease-in-out;
@@ -81,3 +76,4 @@
 .content.shifted {
   margin-left: 250px;
 }
+
