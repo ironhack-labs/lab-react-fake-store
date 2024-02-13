@@ -81,3 +81,45 @@ nav {
   background: #94a7c8;
   border-radius: 4px;
 }
+
+.ProductListPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.productClass{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid grey;
+  margin: 5px;
+}
+.product-img{
+  height: 200px;
+  width: 200px;
+}
+
+p {
+  width: 400px;
+  
+
+}
+
+.productDetailsPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageDetailsPage {
+  height: 200px;
+  width: 200px;
+  align-items: center;
+  margin: 50px;
+}
+
+h2, h3 {
+  margin: 10px;
+  font-weight:700
+}
