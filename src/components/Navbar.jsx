@@ -20,13 +20,13 @@ function Navbar() {
 
         <div className="w-1/4 flex justify-end mr-4">
           {/* User Profile Button */}
-            <button className="flex items-center text-l py-1">
-              <img
-                src={cart}
-                alt="Cart icon"
-                className="h-10 w-auto border-solid border border-white rounded-3xl p-1"
-              />
-            </button>
+          <button className="flex items-center text-l py-1">
+            <img
+              src={cart}
+              alt="Cart icon"
+              className="h-10 w-auto border-solid border border-white rounded-3xl p-1"
+            />
+          </button>
         </div>
       </div>
     </nav>
