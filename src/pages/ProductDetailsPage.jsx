@@ -21,9 +21,8 @@ function ProductDetailsPage() {
     })
     .catch((error) => {
       console.log(error);
-
     })
-  }, [])
+  }, [productId]);
 
 
   return (
