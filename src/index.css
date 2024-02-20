@@ -10,6 +10,7 @@
 :root {
     --primary-color: #1E40AF;
     --secondary-color: #3B82F6;
+    --tertiary-color: green;
     --background-color: #F3F4F6;
     --text-color: #111827;
 }
@@ -80,4 +81,35 @@ nav {
   margin-bottom: 20px;
   background: #94a7c8;
   border-radius: 4px;
+}
+
+.ProductListPage{
+  display: flex;
+  flex-direction: column;
+}
+
+.listCard{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  padding: 20px;
+}
+.product-der{
+  display: flex;
+  flex-direction: row;
+}
+.product-izq{
+  width: 15%;
+  padding: 10px;
+  border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+}
+
+.product-izq img{
+  width: 100px;
+  height: 100px;
+}
+.product-title{
+  font-weight: bold;
 }
