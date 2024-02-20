@@ -81,3 +81,57 @@
 .content.shifted {
   margin-left: 250px;
 }
+.ProductListPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 150px;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  column-gap: 60px;
+}
+
+.label-category {
+  background-color: #3B82F6;
+  color: white;
+  margin-top: 20px;
+  margin-left: 40px;
+  border-radius: 8px;
+}
+
+.h1-detailspage{
+  margin-top: 20px;
+  margin-left: 40px;
+  font-size: 20px;
+  display: flex;
+  justify-content: left;
+}
+
+.parrafos {
+  display: flex;
+  flex-direction: row;
+}
+
+.p1 {
+  width: 350px;
+  margin: 30px;
+}
+
+.p2 {
+  margin-top: 30px;
+  font-size: 30px;
+  color: #3B82F6;
+}
+
+.btn-back {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+}
