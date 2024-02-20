@@ -81,3 +81,14 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.ProductDetailsPage {
+  display: flex;
+  flex-direction: row;
+}
+
+.ProductDetailsPage {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
