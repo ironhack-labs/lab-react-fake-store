@@ -14,7 +14,6 @@ function ProductListPage() {
       })
       .then((response) => {
         setProducts(response);
-        console.log(response)
       })
       .catch((error) => {
         console.log(error);
@@ -25,18 +24,25 @@ function ProductListPage() {
     return <h3>Buscando la información</h3>
   }
 
-  products.map((eachProduct) => {
-    return (
-      <div className="ProductListPage">
+return(
+  <div className="ProductListPage">
+    {products.map((eachProduct) => {
+      return (
+      <div className="listCard" key={eachProduct.id}>
         {/* Render list of products here */}
-        <h2>{eachProduct.title}</h2>
+        <img src={eachProduct.image} />
         <p>{eachProduct.title}</p>
+        <p>{eachProduct.price}</p>
         <p>{eachProduct.category}</p>
         <p>{eachProduct.description}</p>
       </div>
     );
   }
-  );
+  )};
+</div>
+)
+
+  
 }
 
 export default ProductListPage;
