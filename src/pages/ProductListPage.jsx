@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function ProductListPage() {
   // The state variable `products` is currently an empty array [],
@@ -28,14 +29,16 @@ return(
   <div className="ProductListPage">
     {products.map((eachProduct) => {
       return (
-      <div className="listCard" key={eachProduct.id}>
+        <Link to={`/product/details/${eachProduct.id}`}> 
+      <div className="card" key={eachProduct.id}>
         {/* Render list of products here */}
-        <img src={eachProduct.image} />
+        <img src={eachProduct.image} width="100px" />
         <p>{eachProduct.title}</p>
         <p>{eachProduct.price}</p>
         <p>{eachProduct.category}</p>
         <p>{eachProduct.description}</p>
       </div>
+      </Link>
     );
   }
   )};
