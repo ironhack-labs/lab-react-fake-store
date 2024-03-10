@@ -1,0 +1,35 @@
+.product-card {
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px;
+}
+
+.product-card > * {
+    width: 250px;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.product-card img {
+    box-sizing: border-box;
+    height: 100%;
+    width: 200px;
+    border: 2px solid #ddd;
+    padding: 5px;
+}
+
+.product-title {
+    margin-left: 20px;
+}
+
+.product-description {
+    width: 400px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
