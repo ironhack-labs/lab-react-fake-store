@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 function ProductListPage() {
-  // The state variable `products` is currently an empty array [], 
+  // The state variable `products` is currently an empty array [],
   // but you should use it to store the response from the Fake Store API (the list of products).
   const [products, setProducts] = useState([]);
 
@@ -11,6 +11,7 @@ function ProductListPage() {
 
   return (
     <div className="ProductListPage">
+      <h1>product List Page</h1>
       {/* Render list of products here */}
     </div>
   );
