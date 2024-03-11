@@ -16,6 +16,7 @@ function App() {
           path="/product/details/:productId"
           element={<ProductDetailsPage />}
         />
+        <Route path="/cart" />
       </Routes>
     </div>
   );
