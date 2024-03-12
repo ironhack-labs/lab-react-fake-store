@@ -39,7 +39,7 @@ function ProductListPage() {
                 <img src={product.image} alt="image of the product" />
                 <h3><strong>{product.title}</strong></h3>
                 <h3>{product.category}</h3>
-                <h3>{product.price}</h3>
+                <h3>${product.price}</h3>
                 <h3>{product.description.slice(0,30)}</h3>
               </Link>
             </div>

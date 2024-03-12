@@ -28,29 +28,29 @@ function ProductDetailsPage() {
     console.log("every product", product);
   }, [productId]); //  <-- The effect will run every time the `productId`` changes
 
-
-  const backToHome = () =>{
+  const backToHome = () => {
     window.location.href = "/";
-  }
+  };
   if (!product) {
     return <p>Loading...</p>;
   }
 
   return (
-    <div className="ProductDetailsPage">
-      <div>
-        <img src={product.image} alt="image of the product" />
-        <h3>{product.category}</h3>
-        <h3>{product.title}</h3>
+    <div>
+      <div className="ProductDetailsPage">
         <div>
-        <h3>{product.description}</h3>
-        <h3>{product.price}</h3>
+          <img src={product.image} alt="image of the product" />
+          <h3 className="catagory">{product.category}</h3>
+          <h3 className="title">{product.title}</h3>
         </div>
-        <button className="backBtn" onClick={backToHome}>back</button>
-        {/* <Link to={`/carts/${product.id}`}>
-        <img src={cartImg} alt="Cart Image" />
-        </Link> */}
+        <div className="descriptionContainer">
+          <h3 className="description">{product.description}</h3>
+          <h3 className="price">${product.price}</h3>
+        </div>
       </div>
+      <button className="backBtn" onClick={backToHome}>
+        back
+      </button>
     </div>
   );
 }
