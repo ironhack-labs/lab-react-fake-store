@@ -69,9 +69,15 @@
 /* Card styles */
 .card {
   background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    width: 95%;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content {
@@ -80,4 +86,13 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+.card img{
+  width: 200px;
+  height: 100%;
+}
+
+.card .description {
+  width: 300px;
 }
