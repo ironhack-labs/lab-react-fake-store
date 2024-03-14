@@ -2,6 +2,7 @@ import { useState } from "react";
 
 
 function ProductDetailsPage() {
+  
   // The state variable `product` is currently an empty object {},
   // but you should use it to store the response from the Fake Store API (the product details).
   const [product, setProduct] = useState({});
