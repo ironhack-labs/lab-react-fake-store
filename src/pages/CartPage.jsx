@@ -11,32 +11,27 @@ function CartPage() {
 
     useEffect(() => {
         axios.get(`${apiURL}/cart/1`) 
-          .then(response => {
-            setCartItems(response.data)
-            console.log(response.data);
-            // Process and save this data in state
-            })
-          
+          .then((cartResponse) => {
+            console.log(cartResponse.data)
 
-            Promise.all(cart.products.map(product => 
-                axios.get(`${apiURL}/${productId}`)
-            ))
-            .then(responses => {
-                // responses will be an array of axios responses,
-                // process these to get an array of product details
-                const productDetails = responses.map(response => response.data);
-                setCartItems(productDetails);
-            })
-            .catch(error => {
-                console.error("Error fetching product details:", error);
-            })
-        // })
-        .catch(error => {
-            console.error("Error fetching cart details:", error);
-        });
+            const cartProductIds = cartResponse.data.products.map((product) => product.id);
 
-    }, []);
+            return Promise.all(cartProductIds.map((id) => axios.get(`${apiURL}/products/${id}`)));
+          })
 
+          .then((productResponses) => {
+            const productDetails = productResponses.map((response) => response.data);
+            console.log(productDetails);
+
+
+            setCartItems(productDetails);
+          })
+          .catch((error) => {
+            console.error('Error fetching cart or products details:', error);
+          });
+    },);
+
+            
 
     return (
       <div>
