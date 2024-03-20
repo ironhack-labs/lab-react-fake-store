@@ -18,7 +18,7 @@ function ProductListPage() {
 
     .catch((err) => {
       console.log(err);
-      setProducts(false);
+      setProducts([]);
     })
   }, [] );
 
@@ -33,7 +33,7 @@ function ProductListPage() {
           <h2>{product.title}</h2>
           <p>{product.description}</p>
           <h3>{product.category}</h3>
-          <h3>{product.price}</h3>
+          <h3>$ {product.price}</h3>
         </div>
       </Link>
     ))}
