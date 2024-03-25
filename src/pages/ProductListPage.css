@@ -1,0 +1,16 @@
+.ProductListPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.product {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  background-color: white;
+  margin: 1rem;
+}
+
+img {
+  width: 100px;
+}
