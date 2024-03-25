@@ -1,0 +1,39 @@
+.ProductDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: start;
+  padding: 2rem;
+  text-align: left;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+}
+
+.category {
+  background-color: navy;
+  border-radius: 8px;
+  color: white;
+  padding: 0.5rem;
+}
+
+.image {
+  width: 250px;
+  height: 300px;
+  background-size: cover;
+}
+
+.price {
+  color: navy;
+  font-weight: bold;
+}
+
+.back {
+  text-align: center;
+  background-color: green;
+  color: white;
+  border-radius: 8px;
+  padding: 0.5rem;
+}

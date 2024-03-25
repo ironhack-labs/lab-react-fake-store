@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+.image {
+  width: 150px;
+  height: 200px;
+  background-size: cover;
+  border: 1px solid darkgrey;
+}
+
+.product {
+  display: flex;
+  text-align: center;
+  gap: 2rem;
+  border: 1px solid darkgrey;
+  align-content: space-around;
+  align-items: center;
+  margin: 1rem auto;
+  padding: 1rem;
+}
