@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import classes from "../style/ProductDetailPage.module.css";
 
 function ProductDetailsPage() {
+  const navigate = useNavigate();
   // The state variable `product` is currently an empty object {},
   // but you should use it to store the response from the Fake Store API (the product details).
   const [product, setProduct] = useState({});
@@ -26,6 +28,10 @@ function ProductDetailsPage() {
     }
   };
 
+  const handleBackClick = () => {
+    navigate("/"); // Navigates back to the home screen
+  };
+
   // To fetch the product details, set up an effect with the `useEffect` hook:
   useEffect(() => {
     getProduct();
@@ -36,15 +42,24 @@ function ProductDetailsPage() {
   }
 
   return (
-    <div className="ProductDetailsPage">
-      <div className="ProductDetailsPage">
-        <div>
-          <img src={product.image} alt={product.title} />
+    <div className={classes.ProductDetailsPage}>
+      <div>
+        <img src={product.image} alt={product.title} />
+        <div className={classes.ProductDetailText}>
+          <p className={classes.ProductDetailTextCategory}>
+            {product.category}
+          </p>
           <h3>{product.title}</h3>
-          <p>{product.category}</p>
-          <p>${product.price}</p>
-          <p>${product.description}</p>
+          <div className={classes.ProductDetailTextDescription}>
+            <p>{product.description}</p>
+            <p className={classes.ProductDetailTextDescriptionPrice}>
+              ${product.price}
+            </p>
+          </div>
         </div>
+        <button onClick={handleBackClick} className={classes.BackButton}>
+          Go Back
+        </button>
       </div>
     </div>
   );

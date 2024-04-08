@@ -30,7 +30,6 @@ function ProductListPage() {
             <img src={product.image} alt={product.title} />
             <h3>{product.title}</h3>
             <p>{product.category}</p>
-
             <p>${product.price}</p>
             <p>${product.description}</p>
           </div>
