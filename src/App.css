@@ -81,3 +81,34 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column width as needed */
+  gap: 20px;
+}
+
+.product-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-details {
+  padding: 10px;
+}
+
+.product-details h3 {
+  margin: 0;
+}
+
+.product-details p {
+  margin: 5px 0;
+}
