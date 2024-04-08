@@ -1,0 +1,70 @@
+.container {
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.imgContainer {
+  width: 300px;
+  border: 1px solid grey;
+  margin: 20px;
+}
+
+.category {
+  width: fit-content;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.heading {
+  margin: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 900;
+}
+
+.descPrice {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  margin: 20px;
+  width: 500px;
+  text-align: justify;
+}
+
+.price {
+  margin: 20px;
+  font-weight: bolder;
+  color: blue;
+  font-size: 1.3em;
+}
+
+.link {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+.link span {
+  width: 100%;
+  border-bottom: 1px solid grey;
+}
+
+.backBtn {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  width: fit-content;
+}
