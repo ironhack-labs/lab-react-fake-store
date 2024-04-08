@@ -1,0 +1,26 @@
+/* Assuming your existing CSS file is named ProductDetailsPage.css */
+
+.product-details {
+  margin: 0 auto; /* Center the product details horizontally */
+  width: 60%; /* Adjust width as needed */
+  padding: 20px;
+  border: 1px solid #ddd; /* Thin border */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box-shadow */
+}
+
+.product-details img {
+  width: 40%; /* Adjust image width as needed */
+  float: left; /* Position image to the left */
+  margin: 10px; /* Add some margin between image and content */
+}
+
+.product-details h1,
+.product-details h2,
+.product-details p {
+  margin: 5px 0; /* Adjust margin for title, subtitle, and description */
+}
+
+.product-details p {
+  line-height: 1.5; /* Adjust line spacing for better readability */
+}
