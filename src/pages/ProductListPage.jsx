@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function ProductListPage() {
   // The state variable `products` is currently an empty array [],
@@ -33,25 +34,27 @@ function ProductListPage() {
 
       {products.map((prod) => {
         return (
-          <div key={prod.id} className="card">
-            <img src={prod.image} alt="product" />
-            <div className="title">
-              <h3>{prod.title}</h3>
-            </div>
-            <div className="category">
-              <h3>{prod.category}</h3>
-            </div>
-            <div className="price">
-              <h3>{prod.price}</h3>
-            </div>
-            <div className="description">
-              <p>{prod.description}</p>
-            </div>
+          <Link to={`/product/details/${prod.id}`}>
+            <div key={prod.id} className="card">
+              <img src={prod.image} alt="product" />
+              <div className="title">
+                <h3>{prod.title}</h3>
+              </div>
+              <div className="category">
+                <h3>{prod.category}</h3>
+              </div>
+              <div className="price">
+                <h3>{prod.price}</h3>
+              </div>
+              <div className="description">
+                <p>{prod.description}</p>
+              </div>
 
-            <p>
-              Rating: {prod.rating.rate} (Opinions: {prod.rating.count})}
-            </p>
-          </div>
+              <p>
+                Rating: {prod.rating.rate} (Opinions: {prod.rating.count})}
+              </p>
+            </div>
+          </Link>
         );
       })}
     </div>
