@@ -1,0 +1,9 @@
+.productListContainer {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center; /* This will center the items in the container */
+    gap: 16px;
+    padding: 16px;
+  }
+  
