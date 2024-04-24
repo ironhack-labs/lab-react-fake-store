@@ -16,7 +16,7 @@
 
 /* Base styles */
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body {
@@ -55,6 +55,11 @@ select {
   font-size: 1.1rem;
 }
 
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
 label {
   width: 200px;
   display: block;
@@ -80,4 +85,29 @@ nav {
   margin-bottom: 20px;
   background: #94a7c8;
   border-radius: 4px;
+}
+
+h3 {
+  font-weight: 800;
+}
+.product-card {
+  display: flex;
+  border-radius: 10px;
+  margin: 20px;
+  background-color: #fff;
+  border: 3px solid rgb(213, 213, 255);
+}
+.product-card .product-card_thumbnail {
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+.product-card .product-card_thumbnail img {
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.product-card .product-card_desc {
+  padding: 20px;
+  flex: 1;
 }
