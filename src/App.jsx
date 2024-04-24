@@ -1,24 +1,37 @@
-import "./App.css";
-import Navbar from "./components/Navbar";
-import ProductListPage from "./pages/ProductListPage";
-import ProductDetailsPage from "./pages/ProductDetailsPage";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
-import { Routes, Route } from "react-router-dom";
+function ProductDetailsPage() {
+  const { productId } = useParams(); // Accessing productId from URL params
+  const [product, setProduct] = useState(null);
 
-
-function App() {
+  useEffect(() => {
+    axios
+      .get(`https://fakestoreapi.com/products/${productId}`)
+      .then((response) => {
+        setProduct(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [productId]); // Fetch data whenever productId changes
 
   return (
-    <div className="App relative z-20 pt-20">
-      <Navbar />
-
-      <Routes>
-        <Route path="/" element={<ProductListPage />} />
-        <Route path="/product/details/:productId" element={<ProductDetailsPage />} />
-      </Routes>
-
+    <div>
+      <h1>Product Details</h1>
+      {product ? (
+        <div>
+          <h2>{product.title}</h2>
+          <p>{product.description}</p>
+          <p>${product.price}</p>
+          <img src={product.image} alt={product.title} />
+        </div>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 }
 
-export default App;
+export default ProductDetailsPage;
