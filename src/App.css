@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: black;
 }
 
 /* Primary Button */
@@ -12,7 +13,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +26,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -80,4 +80,14 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+.productLine {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  color: #e5e7eb;
+}
+.cartContent {
+  color: #fff;
 }
