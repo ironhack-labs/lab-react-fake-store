@@ -1,0 +1,30 @@
+.productsCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: #ccc;
+
+
+}
+
+.productsCard img {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.productsCard p {
+    width: 400px;
+}
+
+.productsCard h2 {
+    width: 400px;
+    font-weight: 600;
+}
+
+.productsCard section {
+    width: 800px;
+
+}

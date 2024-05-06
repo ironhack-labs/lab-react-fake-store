@@ -1,0 +1,12 @@
+.ProductDetailsPage {
+    /* margin-bottom: 90px; */
+    /* padding: 20px; */
+    /* display: block */
+}
+
+.ProductDetailsPage img {
+    width: 200px;
+    height: 250px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
