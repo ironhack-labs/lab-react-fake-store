@@ -72,6 +72,14 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.card img {
+  width: 200px;
 }
 
 .content {
@@ -80,4 +88,18 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+
+
+a,
+h3,
+p {
+  display: flex;
+  padding: 40px;
+}
+
+
+.ProductDetailsPage img {
+  width: 10%;
 }
