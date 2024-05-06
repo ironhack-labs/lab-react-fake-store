@@ -8,10 +8,10 @@
 
 /* Colors */
 :root {
-    --primary-color: #1E40AF;
-    --secondary-color: #3B82F6;
-    --background-color: #F3F4F6;
-    --text-color: #111827;
+  --primary-color: #1E40AF;
+  --secondary-color: #3B82F6;
+  --background-color: #F3F4F6;
+  --text-color: #111827;
 }
 
 /* Base styles */
