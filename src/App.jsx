@@ -17,6 +17,10 @@ function App() {
         <Route path="/product/details/:productId" element={<ProductDetailsPage />} />
       </Routes>
 
+      <hr />
+
+
+
     </div>
   );
 }
