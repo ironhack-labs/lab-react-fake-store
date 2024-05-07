@@ -81,3 +81,20 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.item-product {
+  display: flex;
+  margin: 20px 0;
+}
+
+.item-product img{
+  width: 100px;
+}
+
+#back-button {
+  width: 100px;
+  height: 50px;
+  border-radius: 30px;
+  color: white;
+  background-color: rgb(6, 156, 1);
+}
