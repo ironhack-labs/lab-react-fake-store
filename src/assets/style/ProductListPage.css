@@ -1,0 +1,31 @@
+.ProductListPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+gap: 20px
+}
+.EachItem {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    border: 2px solid black;
+    box-shadow: 5px 5px;
+}
+.EachItem img{
+    width: 100px
+}
+.ProductDetailsPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.ProductDetailsPage img{
+    width: 400px;
+    border: 1px solid black
+}
+.ProductDetailsPage button {
+    border: 1px solid black;
+    box-shadow: 5px 5px;
+}
