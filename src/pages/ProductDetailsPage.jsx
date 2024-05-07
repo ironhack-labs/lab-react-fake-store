@@ -39,7 +39,7 @@ useEffect(() => {
       <div>Description: {product.description}</div>
       <div>Category: {product.category}</div>
       <div>Price: {product.price}</div>
-      <div> {product.rating}</div>
+      
 
     </div>
   );
