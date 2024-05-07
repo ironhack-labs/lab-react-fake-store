@@ -1,5 +1,5 @@
 /* Typography */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 /* Tailwind directives */
 @tailwind base;
@@ -8,10 +8,10 @@
 
 /* Colors */
 :root {
-    --primary-color: #1E40AF;
-    --secondary-color: #3B82F6;
-    --background-color: #F3F4F6;
-    --text-color: #111827;
+  --primary-color: #1e40af;
+  --secondary-color: #3b82f6;
+  --background-color: #f3f4f6;
+  --text-color: #111827;
 }
 
 /* Base styles */
@@ -20,8 +20,8 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #F3F4F6;
+  font-family: "Inter", sans-serif;
+  background-color: #f3f4f6;
   color: #111827;
   margin: 0;
   background-color: var(--background-color);
@@ -64,7 +64,6 @@ nav {
   position: relative;
   z-index: 20;
 }
-
 
 .Navbar li {
   list-style: none;
