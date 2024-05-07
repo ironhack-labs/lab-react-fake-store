@@ -1,4 +1,8 @@
-import { useState } from "react";
+import axios from "axios";
+
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 
 
 function ProductListPage() {
@@ -9,11 +13,41 @@ function ProductListPage() {
   // To fetch the list of products, set up an effect with the `useEffect` hook:
 
 
+  useEffect(() => {
+    axios
+      .get("https://fakestoreapi.com/products")
+      .then((response) => {
+        setProducts(response.data);
+        
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }, []);
+
+
   return (
     <div className="ProductListPage">
-      {/* Render list of products here */}
+      
+      {products.map((productObj) => {
+
+        return (
+          <div key={productObj.id} className="card">
+
+            <p>Category: {productObj.category}</p>
+            <p>Description: {productObj.description}</p>
+            <img src={productObj.image} alt=":("></img>
+            <p>Price: {productObj.price}</p>
+            <p>Rating: {productObj.rating.rate}</p>
+            <p>Rating: {productObj.rating.count}</p>
+            <p>Title: {productObj.title}</p>
+            <span><Link to={`/product/details/${productObj.id}`}>More Details</Link></span>
+          </div>
+      );
+    })}
     </div>
   );
 }
+
 
 export default ProductListPage;
