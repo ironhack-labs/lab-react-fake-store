@@ -81,3 +81,41 @@ nav {
   background: #94a7c8;
   border-radius: 4px;
 }
+
+.product{
+  width: 98%;
+  margin-top: 20px; 
+  display: flex;
+  align-items: center;
+}
+
+.product img{
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  margin-right: 20px
+}
+
+.product span{
+  flex-grow: 1;
+  flex-basis: 200px;
+}
+
+.product-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.product-details img{
+  width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product-details p{
+  flex-grow: 1;
+  flex-basis: 50px;
+}
