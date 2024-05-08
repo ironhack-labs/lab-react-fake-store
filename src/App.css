@@ -81,3 +81,13 @@
 .content.shifted {
   margin-left: 250px;
 }
+.list-container{
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  flex-direction: row;
+  align-items: center;
+ margin-bottom: 10px;
+ 
+
+}
