@@ -22,7 +22,7 @@ function ProductDetailsPage() {
   .catch((error)=>{
     console.log(error)
   })
-   },[])
+   },[params.productId])
   // The `productId` coming from the URL parameter is available in the URL path.
   // You can access it with the `useParams` hook from react-router-dom.
 
