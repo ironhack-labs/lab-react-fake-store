@@ -9,6 +9,7 @@
   padding: 8px 16px;
   border-radius: 8px;
   transition: background-color 0.3s;
+  border-color: black 2px;
 }
 
 .btn-primary:hover {
@@ -60,7 +61,7 @@
 }
 
 /* Flex utilities */
-.flex-center {
+#flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
