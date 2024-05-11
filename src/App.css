@@ -81,3 +81,100 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.list .product {
+  display: flex;
+  width: 80rem;
+  margin-left: 2rem;
+}
+
+.list .product div {
+  width: 15rem;
+  height: 8;
+  
+}
+
+.list h1{
+  font-size: 1rem;
+  padding-top: 7rem;
+}
+
+.ul-list img {
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid gray;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.price {
+  width: 10rem;
+  padding-top: 7rem;
+}
+
+.category {
+  width: 10rem;
+  padding-top: 7rem;
+}
+
+.description {
+  width: 30rem;
+  padding-top: 6rem;
+  text-overflow: ellipsis;
+}
+
+.detail img {
+  width: 10rem;
+  height: 8rem;
+  margin-top: 2rem;
+}
+
+.detail-item .cat {
+  background-color: rgb(7, 7, 167);
+  color: white;
+  width: 8rem;
+  margin-top: 2rem;
+}
+
+.detail-item h1 {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top:2rem;
+  margin-right: 70rem ;
+  margin-bottom: 0;
+}
+
+
+.flex-detail {
+  display: flex;
+
+}
+
+.flex-detail .price {
+  color: rgb(7, 7, 167);
+}
+
+.flex-detail .description {
+  font-weight: 300;
+  padding-top: 2rem;
+  text-align:justify;
+}
+
+.flex-detail .price {
+  padding-top: 2rem;
+  font-weight: bold;
+}
+
+.back-button {
+  background-color: rgb(59, 168, 59);
+  color: white;
+  width: 4rem;
+  height: 2rem;
+  padding: 0.5rem;
+}
