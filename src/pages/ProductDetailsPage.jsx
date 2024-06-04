@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 
 function ProductDetailsPage() {
@@ -15,19 +15,23 @@ function ProductDetailsPage() {
   useEffect(() => {
     const fetchProductDetail = async () => {
       try {
-        const resp = (await fetch(`https://fakestoreapi.com/products/${productId}`))
-        const data = await resp.json()
-        setProduct(data)
-      } catch (error) {
-      }
+        const resp = await fetch(
+          `https://fakestoreapi.com/products/${productId}`
+        );
+        const data = await resp.json();
+        setProduct(data);
+      } catch (error) {}
     };
-    fetchProductDetail()
-  }, []);
+    fetchProductDetail();
+  }, [productId]); //  <-- The effect will run every time the `productId`` changes
 
   return (
     <div className="ProductDetailsPage">
       {/* Render product details here */}
-      <ProductCard product={product}/>
+      <ProductCard product={product} />
+      <Link to="/">
+        <button className="btn-primary">Back</button>
+      </Link>
     </div>
   );
 }

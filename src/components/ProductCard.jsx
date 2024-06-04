@@ -20,13 +20,6 @@ const ProductCard = ({ product }) => {
           ) : (
             <p>{product.description.slice(0, 100)}...</p>
           )}
-          {/* <button
-          onClick={(event) => {
-            onDelete(event, product.id);
-          }}
-        >
-          Delete
-        </button> */}
         </div>
       </Link>
     </div>
