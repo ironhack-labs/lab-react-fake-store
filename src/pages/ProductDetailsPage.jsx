@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function ProductDetailsPage() {
@@ -9,17 +11,42 @@ function ProductDetailsPage() {
 
   // The `productId` coming from the URL parameter is available in the URL path.
   // You can access it with the `useParams` hook from react-router-dom.
+  const {productId} = useParams()
 
 
   // To fetch the product details, set up an effect with the `useEffect` hook:
 
+  useEffect(()=>{
+    console.log("this is the updating useEffect");
+  
+    const getSingleChar = async () => {
+      try {
+        const response = await fetch(
+          `https://fakestoreapi.com/products/${productId}`
+        );
+      const parsed = await response.json();
+          console.log("parsed in the single page", parsed);
+          setProduct(parsed);
+      } 
+      catch (err) {
+        console.log("there was an error with single char", err);
+      }}
+  
+    getSingleChar();
+  
+  }, [productId]);
 
 
   return (
     <div className="ProductDetailsPage">
     {/* Render product details here */}
-    </div>
-  );
+    <img src={product.image} width={"200"} />
+    <h2>{product.title}</h2>
+    <p>{product.category}</p>
+    <p>{product.description}</p>
+    <p>{product.price}</p>
+    <Link to="/"><button>Back</button></Link>
+  </div>
+);
 }
-
 export default ProductDetailsPage;
