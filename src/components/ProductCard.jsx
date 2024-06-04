@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
+  let location = useLocation();
   return (
     <div>
       <Link key={product.id} to={`/product/details/${product.id}`}>
@@ -14,7 +15,11 @@ const ProductCard = ({ product }) => {
           <b>{product.title}</b>
           <p>{product.category}</p>
           <b>${product.price}</b>
-          <p>{product.description.slice(0,200)}...</p>
+          {location.pathname !== "/" ? (
+            <p>{product.description}</p>
+          ) : (
+            <p>{product.description.slice(0, 100)}...</p>
+          )}
           {/* <button
           onClick={(event) => {
             onDelete(event, product.id);
