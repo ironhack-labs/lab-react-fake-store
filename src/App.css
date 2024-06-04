@@ -28,56 +28,85 @@
   background-color: #E5E7EB;
 }
 
-
-/* Spacing utilities */
-.spacing-xs {
-  margin-top: 4px;
-  margin-bottom: 4px;
+.all-products-list{
+  margin: 10px;
 }
 
-.spacing-sm {
-  margin-top: 8px;
-  margin-bottom: 8px;
+.productListPage{
+  display: flex;
+  border: 1px solid grey;
+  padding:20px;
+  margin:20px;
+  align-items: center;
+  justify-content: space-between;
+
 }
 
-.spacing-md {
-  margin-top: 16px;
-  margin-bottom: 16px;
+
+.productListPage img{
+  width: 150px;
+  height: 150px;
+  border: 1px solid grey;
+
 }
 
-.spacing-lg {
-  margin-top: 32px;
-  margin-bottom: 32px;
+.ProductDetailsPage{  
+  margin: 20px;
+}
+.ProductDetailsPage img{
+  width: 400px;
+  border: 1px solid grey;
 }
 
-/* Text utilities */
-.text-center {
+.ProductDetailsPage label{
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
   text-align: center;
 }
 
-.text-uppercase {
-  text-transform: uppercase;
+.img-block{
+  display:block;
+  
 }
 
-/* Flex utilities */
-.flex-center {
+.product-info{
   display: flex;
   align-items: center;
-  justify-content: center;
+  text-align:left;
+  margin:10px
 }
 
-/* Card styles */
-.card {
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  border-radius: 8px;
+.product-info-more{
+  width: 50%;
 }
 
-.content {
-  transition: margin-left 0.4s ease-in-out;
+.info-price{
+  color:blue;
+  font-size: 2em;
+  font-weight: bold;
 }
 
-.content.shifted {
-  margin-left: 250px;
+.cart-product {
+  display: flex;
+  border: 1px solid grey;
+  padding: 20px;
+  margin: 20px 0;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cart-product img {
+  width: 150px;
+  height: 150px;
+  border: 1px solid grey;
+}
+
+.cart-product h2 {
+  margin: 0;
+}
+
+.cart-product p {
+  margin: 5px 0;
 }
