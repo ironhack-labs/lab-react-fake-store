@@ -81,3 +81,38 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.product-card{
+  border: 1px solid rgb(17, 92, 233);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+  flex-direction: row;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 2rem;
+}
+
+.product-details-card{
+  border: 1px solid rgb(17, 92, 233);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 2rem;
+}
+
+.back-button{
+  border: 1px solid rgb(17, 92, 233);
+  background-color: #3B82F6;
+  color: white;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 02rem;
+  
+}
+
