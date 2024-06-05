@@ -4,31 +4,31 @@ import ProductCard from "../components/ProductCard";
 const Cart = () => {
   const [cart, setCart] = useState([]);
 
-  useEffect(() => {
-    const fetchCart = async () => {
-      try {
-        const res = await fetch("https://fakestoreapi.com/carts/2");
-        const data = await res.json();
-    
-        let cartProducts = []
+  const fetchCart = async () => {
+    try {
+      const res = await fetch("https://fakestoreapi.com/carts/5");
+      const data = await res.json();
 
-        for (let i = 0; i < data.products.length; i++) {
-          const oneProduct = data.products[i];
-          // console.log(oneProduct)
-          const { productId, quantity } = oneProduct;
-          const oneProductResp = await fetch(
-            `https://fakestoreapi.com/products/${productId}`
-          );
-          const oneProductData = await oneProductResp.json();
-          oneProductData.quantity = quantity;
-          cartProducts.push(oneProductData)
-          // setCart([...cart, oneProductData]);
-        }
-        setCart(cartProducts)
-      } catch (error) {
-        console.log(error);
+      let cartProducts = [];
+
+      for (let i = 0; i < data.products.length; i++) {
+        const oneProduct = data.products[i];
+        const { productId, quantity } = oneProduct;
+        const oneProductResp = await fetch(
+          `https://fakestoreapi.com/products/${productId}`
+        );
+        const oneProductData = await oneProductResp.json();
+        oneProductData.quantity = quantity;
+        cartProducts.push(oneProductData);
+        // setCart([...cart, oneProductData]);
       }
-    };
+      setCart(cartProducts);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
     fetchCart();
   }, []);
 
