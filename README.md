@@ -102,7 +102,7 @@ You will use the following API endpoints in this exercise:
 
 ### Iteration 1 | Products List
 
-In the `HomePage` component, make an HTTP request to the Fake Store API endpoint **Get all products** to retrieve the list of all products. <br> The API endpoint you should make a request to is:
+In the `ProductListPage` component, make an HTTP request to the Fake Store API endpoint **Get all products** to retrieve the list of all products. <br> The API endpoint you should make a request to is:
 
 **`GET`** **`https://fakestoreapi.com/products`** 
 
