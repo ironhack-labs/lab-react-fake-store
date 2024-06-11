@@ -15,18 +15,20 @@ function Navbar() {
         </div>
 
         <div className="flex justify-center w-1/2">
-          <span className="text-xl">React Fake Store</span>
+          <Link to={"/"}>
+            <span className="text-xl">React Fake Store</span>
+          </Link>
         </div>
 
         <div className="w-1/4 flex justify-end mr-4">
           {/* User Profile Button */}
-            <button className="flex items-center text-l py-1">
-              <img
-                src={cart}
-                alt="Cart icon"
-                className="h-10 w-auto border-solid border border-white rounded-3xl p-1"
-              />
-            </button>
+          <button className="flex items-center text-l py-1">
+            <img
+              src={cart}
+              alt="Cart icon"
+              className="h-10 w-auto border-solid border border-white rounded-3xl p-1"
+            />
+          </button>
         </div>
       </div>
     </nav>
