@@ -71,7 +71,7 @@ In today's exercise, you will be building a simple React application that displa
 
 To help you get started quickly, we have provided you with the starter code and all the required page components. The React Router was already set up and app has the following pages:
 
-- **`HomePage`** - should display a list of all products
+- **`ProductListPage`** - should display a list of all products
 - **`ProductDetailsPage`** - should display the details of a single product
 
 
