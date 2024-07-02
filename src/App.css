@@ -96,10 +96,13 @@
   justify-content: space-between;
   gap: 2rem;
   width: 90%;
+  height: 20rem;
+  overflow: hidden;
 }
 
 .listItem * {
   width: 20%;
+  overflow: hidden;
 }
 
 .productDetailCard {

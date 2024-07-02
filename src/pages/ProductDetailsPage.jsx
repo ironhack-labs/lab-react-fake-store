@@ -20,7 +20,7 @@ function ProductDetailsPage() {
     axios.get(`https://fakestoreapi.com/products/${productId}`)
     .then((response) => {
 
-      if (!response.status === 200) {
+      if (response.status !== 200) {
         throw new Error("Server response not ok");
       }
 

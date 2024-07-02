@@ -14,7 +14,7 @@ function ProductListPage() {
     axios.get("https://fakestoreapi.com/products")
     .then((response) => {
 
-      if (!response.status === 200) {
+      if (response.status !== 200) {
         throw new Error("Server response not ok");
       }
 
@@ -41,7 +41,7 @@ function ProductListPage() {
                 <p className="productTitle">{product.title}</p>
                 <p>{product.category}</p>
                 <p>€{product.price}</p>
-                <p>{product.description}</p>
+                <p className="productDescription">{product.description}</p>
             </li>
           </Link>
         ))}
