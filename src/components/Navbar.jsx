@@ -19,14 +19,14 @@ function Navbar() {
         </div>
 
         <div className="w-1/4 flex justify-end mr-4">
-          {/* User Profile Button */}
-            <button className="flex items-center text-l py-1">
+          {/* Cart Icon */}
+            <Link to = '/cart' className="flex items-center text-l py-1">
               <img
                 src={cart}
                 alt="Cart icon"
                 className="h-10 w-auto border-solid border border-white rounded-3xl p-1"
               />
-            </button>
+            </Link>
         </div>
       </div>
     </nav>
