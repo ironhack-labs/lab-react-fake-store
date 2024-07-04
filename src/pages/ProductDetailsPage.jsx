@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import fetchProduct from '../helpers/fetchProduct';
 
 
 function ProductDetailsPage() {
@@ -10,35 +11,21 @@ function ProductDetailsPage() {
 
   // The `productId` coming from the URL parameter is available in the URL path.
   // You can access it with the `useParams` hook from react-router-dom.
+  
   const { productId } = useParams();
   console.log("productId: ", productId);
 
 
-  // To fetch the product details, set up an effect with the `useEffect` hook:
-  const fetchProduct = async () => {
-    try{
-      const response = await fetch(`https://fakestoreapi.com/products/${productId}`);
-      if (response.ok) {
-        console.log("Response format: ", response);
-        const productData = await response.json();
-        setProduct(productData);
-        console.log("Product data format: ", productData);
-      }
-    }
-    catch (error) {
-      console.log(error);
-    }
-  }
-
   useEffect(()=>{
-    fetchProduct();
+    fetchProduct(productId, setProduct);
   }, [productId]); // execute fetchProduct() everytime productId changes
 
   return (
     <div className="ProductDetailsPage">
 
       {/* Render product details here */}
-      <div className="card productDetailCard">
+      {product && (
+        <div className="card productDetailCard">
         <img src={product.image} alt={product.title} className="productImg" />
 
         <div className="label">{product.category}</div>
@@ -57,6 +44,10 @@ function ProductDetailsPage() {
 
       </div>
 
+
+
+      )}
+      
     </div>
 
   );

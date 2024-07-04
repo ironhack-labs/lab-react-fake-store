@@ -15,8 +15,10 @@ function App() {
 
       <Routes>
         <Route path="/" element={<ProductListPage />} />
-        <Route path="/product/details/:productId" element={<ProductDetailsPage />} />
+        <Route path="/products/:productId" element={<ProductDetailsPage />} />
         <Route path="/cart" element={<CartPage />} />
+
+        <Route path="*" element={<h1> 404 error </h1>} />
       </Routes>
 
     </div>

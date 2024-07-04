@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { API_URL } from "../helpers/constants";
 
 
 
@@ -11,7 +12,7 @@ function ProductListPage() {
   const fetchAllProducts = async () =>{
     
     try{
-      const response = await fetch("https://fakestoreapi.com/products"); // waiting for promise to be executed, if resolved, returns a response with requested data
+      const response = await fetch(`${API_URL}/products`); // waiting for promise to be executed, if resolved, returns a response with requested data
       if(response.ok) {
         const parsedData = await response.json(); //returns another promise if requested data was parsed to json format
         setProducts(parsedData);  // results property of the parsed object contains list of products => see API documentation
@@ -20,7 +21,7 @@ function ProductListPage() {
       //else throw new Error(response.status);
     }
     catch (error) {
-      console.log(error);
+      console.log(error)
     }
 
   }
@@ -34,8 +35,8 @@ function ProductListPage() {
   return (
     <div className="ProductListPage">
       {/* Render list of products here */}
-      {products.map(currentProduct => (
-        <Link key={currentProduct.id} to = {`/product/details/${currentProduct.id}`} >
+      {products.map(currentProduct => ( // implicit return using => & (), no curlies
+        <Link key={currentProduct.id} to = {`/products/${currentProduct.id}`} >
           <div className="listing-div">
               <div className="img-div">
                 <img src={currentProduct.image} alt={currentProduct.title} />
