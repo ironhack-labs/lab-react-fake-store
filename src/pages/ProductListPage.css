@@ -1,0 +1,29 @@
+.articleCard {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+    margin: 23px;
+}
+
+.imageProduct {
+    width: 100px;
+    margin: 15px;
+}
+
+.titleCard {
+    margin: 15px;
+}
+
+.categoryCard {
+    margin: 15px
+}
+
+.priceCard {
+    margin: 15px
+}
+
+.descriptionCard {
+    margin: 15px
+}
