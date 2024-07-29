@@ -1,0 +1,11 @@
+.ProductCard {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin: 10px;
+}
+
+
+.ProductCard img {
+    width: 20%;
+}
