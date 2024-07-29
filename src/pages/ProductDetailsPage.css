@@ -1,0 +1,24 @@
+.ProductDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+}
+
+.ProductDetails img {
+    width: 250px;
+    /*height: auto;*/
+}
+
+.ProductInfo {
+    display: flex;
+}
+
+
+.btn-back {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}

@@ -1,0 +1,25 @@
+.ProductCartRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.ProductCartRow p {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.ProductCartRow img {
+    width: 150px;
+    height: 150px;
+}
+
+.ProductCartColumn {
+    flex: 2;
+    /* Permite que cada columna ocupe espacio igual */
+    text-align: center;
+    /* Centra el texto dentro de cada columna */
+    padding: 10px;
+    /* Espaciado interno para mejorar la presentación */
+}
