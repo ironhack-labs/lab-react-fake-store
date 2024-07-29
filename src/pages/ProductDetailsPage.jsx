@@ -17,7 +17,7 @@ function ProductDetailsPage() {
 
   return (
     <div className="ProductDetailsPage">
-    {/* Render product details here */}
+      {/* Render product details here */}
     </div>
   );
 }
