@@ -8,10 +8,10 @@
 
 /* Colors */
 :root {
-    --primary-color: #1E40AF;
-    --secondary-color: #3B82F6;
-    --background-color: #F3F4F6;
-    --text-color: #111827;
+  --primary-color: #1E40AF;
+  --secondary-color: #3B82F6;
+  --background-color: #F3F4F6;
+  --text-color: #111827;
 }
 
 /* Base styles */
@@ -80,4 +80,12 @@ nav {
   margin-bottom: 20px;
   background: #94a7c8;
   border-radius: 4px;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: .5rem;
 }
