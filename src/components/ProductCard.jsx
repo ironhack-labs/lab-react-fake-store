@@ -1,4 +1,4 @@
-const ProductCard = ([image, id, title, description, price, category, rating]) => {
+const ProductCard = ({ image, id, title, description, price, category, rating }) => {
 
     /* const productStyle = {
          background: rating >= 95 ? '#e0ffbb' : 'white'
@@ -6,13 +6,13 @@ const ProductCard = ([image, id, title, description, price, category, rating]) =
 
     return (
         <div className="ProductCard" >
-            <img src={image}></img>
-            <p>Id:{id}</p>
-            <p>Title:{title}</p>
-            <p>Description:{description}</p>
-            <p>Price:{price}</p>
-            <p>Category:{category}</p>
-            <p>Rating:{rating}</p>
+            <img src={image} alt={image} />
+            <p>{id}</p>
+            <p>{title}</p>
+            <p>{description}</p>
+            <p>{price}</p>
+            <p>{category}</p>
+            <p>{rating.rate}</p>
         </div>
 
     )

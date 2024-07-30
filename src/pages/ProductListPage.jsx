@@ -7,7 +7,7 @@ import ProductCard from "../components/ProductCard";
 function ProductListPage() {
   // The state variable `products` is currently an empty array [], 
   // but you should use it to store the response from the Fake Store API (the list of products).
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState();
   const [isLoading, setLoading] = useState(true)
 
   // To fetch the list of products, set up an effect with the `useEffect` hook:
@@ -31,21 +31,23 @@ function ProductListPage() {
 
     <div className="ProductListPage">
 
+      {isLoading ?
 
-      {products.map((echProduct) => {
+        <h1>CARGANDO...</h1> :
 
-        console.log(echProduct.price)
-        return (
+        products.map((echProduct) => {
 
+          console.log(echProduct.price)
+          return (
 
-          <Link to={`${echProduct.id}`} key={echProduct.id}>
-            <ProductCard key={echProduct.id} {...echProduct} />
-          </Link>
+            <Link to={`/product/details/${echProduct.id}`} key={echProduct.id}>
+              <ProductCard {...echProduct} />
+            </Link>
 
-        )
+          )
 
-      }
-      )}
+        }
+        )}
 
 
 

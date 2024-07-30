@@ -17,6 +17,7 @@ function ProductDetailsPage() {
 
   return (
     <div className="ProductDetailsPage">
+      <p>aqui esta ProductDeatalsPage</p>
       {/* Render product details here */}
     </div>
   );
