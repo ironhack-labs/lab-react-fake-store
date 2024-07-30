@@ -1,0 +1,36 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    height: 10rem;
+    width: 100%;
+    gap: 20px;
+    img{
+        height: auto;
+        max-height: 10rem;
+        max-width: 12rem;
+        object-fit: contain;
+        padding: 40px;
+    }
+    h3{
+        max-width: 10rem;
+    }
+    h4{
+        max-width: 10rem;
+    }
+    h5{
+        font-size: 0.8em;
+        max-width: 15rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box; /* Use the WebKit-based block container */
+        -webkit-box-orient: vertical; /* Set the orientation to vertical */
+        -webkit-line-clamp: 5; /* Number of lines to display before truncating */
+        white-space: pre-wrap; /* Preserve spaces and line breaks */
+        word-wrap: break-word; /* Ensure long words break to fit the container */
+      
+      
+    }
+
+}

@@ -1,0 +1,5 @@
+.ProductListPage{
+    display: flex;
+    flex-direction: column;
+
+}
