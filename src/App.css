@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -68,10 +67,46 @@
 
 /* Card styles */
 .card {
+  display: flex;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
+  width: 95vw;
+}
+
+.list-image {
+  width: 250px;
+  height: 300px;
+  border: 1px solid black;
+  padding: 2px;
+  margin-right: 50px;
+}
+
+.list-title {
+  font-weight: bold;
+  padding: 10px;
+  width: 200px;
+  margin-right: 20px;
+  justify-content: center;
+}
+
+.list-category {
+  padding: 10px;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.list-price {
+  padding: 10px;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+.list-description {
+  padding: 10px;
+  width: 400px;
+  text-align: justify;
 }
 
 .content {
