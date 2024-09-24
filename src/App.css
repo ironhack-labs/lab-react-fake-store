@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: rgb(214, 215, 231);
 }
 
 /* Primary Button */
@@ -12,7 +13,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +26,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -81,3 +81,77 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.product-card img {
+  width: 250px;
+  border: solid 0.5px grey;
+}
+
+.product-card {
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: white;
+}
+
+
+.product-card h3 {
+  font-weight: bold;
+  margin: 30px 10px;
+  padding: 15px;
+  width: max-content ;
+}
+
+
+.product-card p {
+  margin: 30px 10px;
+  padding: 15px;
+  width:15% ;
+
+}
+
+.product-detail {
+  text-align: left;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+.product-detail img {
+  width: 400px;
+  border: solid 0.5px grey;
+}
+
+.category-label {
+  color: white;
+  background-color: blueviolet;
+  border-radius: 5px;
+  width: max-content;
+  height: max-content;
+}
+
+
+#price {
+  color: blueviolet;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#content {
+  display: flex;
+  justify-content: flex-start;
+  gap: 35px;
+}
+
+#content p {
+  width: 600px;
+}
+button {
+  background-color: grey;
+  border-radius: 15px;
+}
+
