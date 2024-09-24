@@ -33,7 +33,7 @@ function ProductListPage() {
             <Link key={product.id} to={`/product/details/${product.id}`} >
               <div className="card flex-center">
                 <img className="img-100" src={product.image} alt="product image" />
-                <h4 className="text-bold text-left text-overflow margin-left">{product.title}</h4>
+                <h4 className="text-bold text-left text-overflow">{product.title}</h4>
                 <p>{product.category}</p>
                 <p>${product.price}</p>
                 <p className="text-overflow">{product.description}</p>
