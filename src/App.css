@@ -28,10 +28,18 @@
   background-color: #E5E7EB;
 }
 
+/* label style */
+.label {
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
+  padding: 2px 4px;
+  border-radius: 8px;
+  color: white;
+}
 
 /* Spacing utilities */
 .spacing-xs {
-  margin-top: 4px;
+  margin: 4px;
   margin-bottom: 4px;
 }
 
@@ -46,8 +54,7 @@
 }
 
 .spacing-lg {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin: 2%;
 }
 
 /* Text utilities */
@@ -59,11 +66,28 @@
   text-transform: uppercase;
 }
 
+.text-bold {
+  font-weight: bold;
+}
+
+.text-blue {
+  color:blue;
+}
+
 /* Flex utilities */
 .flex-center {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 20px
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 /* Card styles */
@@ -80,4 +104,14 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+/* Image styles*/
+
+.img-100{
+  max-height: 100px;
+}
+
+.img-300{
+  max-height: 300px;
 }
