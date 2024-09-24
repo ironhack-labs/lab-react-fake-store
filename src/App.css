@@ -112,3 +112,49 @@
   text-overflow: ellipsis;
   max-width: 300px;
 }
+
+.ProductDetailsPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  margin: 40px;
+}
+
+.info-detail {
+  display: flex;
+  align-items: center;
+}
+
+.text-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  max-width: 500px;
+}
+
+.text-detail h3 {
+  padding: 15px 0 25px 0;
+}
+
+.price-detail {
+  color: #433BDE;
+  font-weight: bold;
+}
+
+.category-detail {
+  margin: 15px 0;
+  padding: 5px 20px;
+  background-color: #433BDE;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn-back {
+  background-color: #1CBB4D;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}

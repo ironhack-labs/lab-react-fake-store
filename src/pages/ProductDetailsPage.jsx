@@ -25,19 +25,25 @@ function ProductDetailsPage() {
 
 
   return (
-    <div className="ProductDetailsPage">
-    {/* Render product details here */}
-      <div className="image-container">
-        <img src={product.image} alt="product image" />
+    <>
+      <div className="ProductDetailsPage">
+      {/* Render product details here */}
+        <div className="image-container">
+          <img src={product.image} alt="product image" />
+        </div>
+
+        <div className="info-detail">
+          <div className="text-detail">
+            <p className="category-detail">{product.category}</p>
+            <h3><strong>{product.title}</strong></h3>
+            <p className="description-detail">{product.description}</p>
+          </div>
+
+          <p className="price-detail">${product.price}</p>
+        </div>
       </div>
-
-      <h3><strong>{product.title}</strong></h3>
-      <p>{product.category}</p>
-      <p>${product.price}</p>
-      <p className="description">{product.description}</p>
-
-      <Link to="/" className="btn-primary "><button>Back</button></Link>
-    </div>
+      <Link to="/" className="btn-back "><button>Back</button></Link>
+    </>
   );
 }
 
