@@ -81,3 +81,13 @@
 .content.shifted {
   margin-left: 250px;
 }
+.ProductDetailsPage{
+  padding: 30px;
+  margin:30px;
+  background-color: white;
+}
+.lista{
+  padding: 40px;
+  margin:40px;
+  background-color: white;
+}

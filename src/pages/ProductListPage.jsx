@@ -28,14 +28,14 @@ function ProductListPage() {
       <ul>
       {products.map((eachProduct)=>{
         return(
-          <li key={eachProduct.id}>
+          <li key={eachProduct.id} className="lista">
           <h1>{eachProduct.title}</h1>
           <img src={eachProduct.image} alt="imagen producto" width="100px" />
-          <h3> Categoria: {eachProduct.category}</h3>
-          <h3>Precio: {eachProduct.price} </h3>
-          <h3>Descripción del producto: {eachProduct.description}</h3>
+          <h3><strong> Categoria: </strong>{eachProduct.category}</h3>
+          <h3><strong>Precio:</strong> {eachProduct.price} </h3>
+          <h3><strong>Descripción del producto:</strong> {eachProduct.description}</h3>
           <Link to={`/product/details/${eachProduct.id}`}> 
-          <button>Ver producto </button> </Link>
+          <button style={{color:"green"}}>Ver producto </button> </Link>
 
           </li>
            );
