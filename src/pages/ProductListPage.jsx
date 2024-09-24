@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import {Link} from "react-router-dom";
 
 
 function ProductListPage() {
@@ -33,7 +34,8 @@ function ProductListPage() {
           <h3> Categoria: {eachProduct.category}</h3>
           <h3>Precio: {eachProduct.price} </h3>
           <h3>Descripción del producto: {eachProduct.description}</h3>
-
+          <Link to={`/product/details/${eachProduct.id}`}> 
+          <button>Ver producto </button> </Link>
 
           </li>
            );
