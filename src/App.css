@@ -81,3 +81,136 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.products-table thead {
+  background-color: #f4f4f4;
+}
+
+.products-table th,
+.products-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.products-table th {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.products-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.products-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.product-image {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.products-table td a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.products-table td a:hover {
+  text-decoration: underline;
+}
+
+
+.ProductDetailsPage {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.ProductDetailsPage h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.ProductDetailsPage img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: auto;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ProductDetailsPage p {
+  font-size: 1rem;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.ProductDetailsPage p.price {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #2ecc71;
+  margin-top: 20px;
+}
+
+.ProductDetailsPage p.category {
+  font-style: italic;
+  color: #999;
+}
+
+.ProductDetailsPage .description {
+  font-size: 1rem;
+  color: #555;
+  margin: 20px 0;
+}
+.CartPage {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.CartPage h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cart-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.cart-table th,
+.cart-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.cart-table th {
+  background-color: #f4f4f4;
+}
+
+.cart-table td img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+.cart-table td {
+  vertical-align: middle;
+}
