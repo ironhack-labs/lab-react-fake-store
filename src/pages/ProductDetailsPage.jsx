@@ -22,7 +22,7 @@ function ProductDetailsPage() {
     try {
       const response = await fetch(`https://fakestoreapi.com/products/${productId}`)
       const data = await response.json();
-      console.log(data);
+
       setProduct(data);
     } catch (error) {
       console.log(error);

@@ -62,6 +62,10 @@
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -72,6 +76,13 @@
 
 .text-blue {
   color:blue;
+}
+
+.text-overflow {
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
 }
 
 /* Flex utilities */
@@ -109,7 +120,8 @@
 /* Image styles*/
 
 .img-100{
-  max-height: 100px;
+  max-width: 50px;
+  max-height: auto;
 }
 
 .img-300{

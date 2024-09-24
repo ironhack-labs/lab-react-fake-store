@@ -20,7 +20,7 @@ function Navbar() {
 
         <div className="w-1/4 flex justify-end mr-4">
           {/* User Profile Button */}
-          <Link to={"/carts/5"}>
+          <Link to={"/cart"}>
             <button className="flex items-center text-l py-1">
               <img
                 src={cart}
