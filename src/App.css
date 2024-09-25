@@ -81,3 +81,18 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+img {
+  width: 100px;
+}
+
+.product-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border: 1px solid rgb(70, 70, 70);
+  margin: 20px;
+  padding: 10px;
+  border-radius: 12px;
+}
+
