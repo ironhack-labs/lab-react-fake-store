@@ -81,3 +81,33 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.ProductListPage, .ProductDetailsPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.ProductCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.ProductCard img {
+  width: 10rem;
+  height: auto;
+  object-fit: cover; 
+}
+
+.ProductCard h2, .ProductCard p {
+  text-align: center;
+  margin: 1rem;
+}
