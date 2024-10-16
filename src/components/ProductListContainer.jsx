@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 
-function ProductListContainer(productData) {
-
-    //const [productData, setProductsData] = useState([]);
+function ProductListContainer({productData}) {
+    /*
+    const [productData, setProductsData] = useState([]);
     const url = "https://fakestoreapi.com/products/";
     const [loading, setLoading] = useState(true);
 
-    /*
     useEffect(() => {
         fetch(url)
             .then((result) => {
@@ -22,7 +21,8 @@ function ProductListContainer(productData) {
             );
     }, []);
     */
-
+    console.log(productData);
+    
     return (
         <div>
             <div>

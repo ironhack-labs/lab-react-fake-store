@@ -6,30 +6,37 @@ function ProductListPage() {
     const [productsData, setProductsData] = useState([]);
     const url = "https://fakestoreapi.com/products/";
 
-    useEffect(() => {
+    useEffect(getData, []);
+
+    function getData() {
         fetch(url)
             .then((result) => {
-                result.json();
+                return result.json();
             })
             .then((json) => {
-                setProductsData(json);
-                setLoading(false);
+                console.log(json);
+                return setProductsData(json);
             })
             .catch((error) => {
                 console.error(error);
             })
-            .finally(() => { }
-            );
-    }, []);
+            .finally(() => {
+                console.log(productsData);
+                //setLoading(false);
+            });
+    }
 
     return loading ? (
         <div>
             <p>loading...</p>
+            <button onClick={getData}><i>Load-Test</i></button>
         </div>
     ) : (
         <div className="ProductListPage">
             {productsData.map((product) => {
-                <ProductListContainer key={product.id} productData={product} />
+                return (
+                    <ProductListContainer key={product.id} productData={product} />
+                );
             })}
         </div>
     );
