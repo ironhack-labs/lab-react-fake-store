@@ -1,73 +1,55 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 
 function ProductDetailsPage() {
-  // The state variable `product` stores the product details
-  const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
+  // The state variable `product` is currently an empty object {},
+  // but you should use it to store the response from the Fake Store API (the product details).
+  const [product, setProduct] = useState({});
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+  console.log(product);
+  console.log(error);
+  console.log(loading);
 
-  // Get the productId from the URL parameters using useParams
+  // The `productId` coming from the URL parameter is available in the URL path.
+  // You can access it with the `useParams` hook from react-router-dom.
   const { productId } = useParams();
 
-  // Fetch product details using useEffect
+  // To fetch the product details, set up an effect with the `useEffect` hook:
   useEffect(() => {
-    const fetchProduct = async () => {
+    async function fetchProduct() {
       try {
-        const response = await axios.get(
+        setLoading(true);
+        const response = await fetch(
           `https://fakestoreapi.com/products/${productId}`
         );
-        setProduct(response.data);
-        setLoading(false); // Set loading to false once the data is fetched
-      } catch (err) {
-        console.error("Error fetching product:", err);
-        setError("Failed to fetch product details");
+        const data = await response.json();
+        console.log(data);
+        setProduct(data);
+        setLoading(false);
+      } catch (error) {
+        setError(error);
         setLoading(false);
       }
-    };
+    }
+    fetchProduct();
+  }, [productId]);
 
-    fetchProduct(); // Fetch the product data when component mounts
-  }, [productId]); // Re-run the effect if productId changes
+  // The `productId` coming from the URL parameter is available in the URL path.
+  // You can access it with the `useParams` hook from react-router-dom.
 
-  // Show a loading message while fetching data
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // To fetch the product details, set up an effect with the `useEffect` hook:
 
-  // Show an error message if the fetch fails
-  if (error) {
-    return <div>{error}</div>;
-  }
-
-  // Render the product details once the data is fetched
   return (
-    <div className="ProductDetailsPage container mx-auto p-6">
-      {product ? (
-        <>
-          <h1 className="text-3xl font-bold mb-4">{product.title}</h1>
-          <div className="flex">
-            {/* Product Image */}
-            <img
-              src={product.image}
-              alt={product.title}
-              className="w-1/3 object-cover rounded-lg mr-6"
-            />
-
-            {/* Product Details */}
-            <div>
-              <p className="text-lg text-gray-800">{product.description}</p>
-              <p className="text-xl font-bold mt-4 text-gray-900">
-                Price: ${product.price}
-              </p>
-              <p className="text-md text-gray-600 mt-2">
-                Category: {product.category}
-              </p>
-            </div>
-          </div>
-        </>
-      ) : (
-        <div>No product details available</div>
+    <div className="ProductDetailsPage">
+      {/* Render product details here */}
+      {product && (
+        <div>
+          <h1>{product.title}</h1>
+          <img src={product.image} alt={product.title} />
+          <p>{product.description}</p>
+          <p>${product.price}</p>
+        </div>
       )}
     </div>
   );
