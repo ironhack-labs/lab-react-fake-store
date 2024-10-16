@@ -1,19 +1,38 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import ProductListContainer from "../components/ProductListContainer";
 
 function ProductListPage() {
-  // The state variable `products` is currently an empty array [], 
-  // but you should use it to store the response from the Fake Store API (the list of products).
-  const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [productsData, setProductsData] = useState([]);
+    const url = "https://fakestoreapi.com/products/";
 
-  // To fetch the list of products, set up an effect with the `useEffect` hook:
+    useEffect(() => {
+        fetch(url)
+            .then((result) => {
+                result.json();
+            })
+            .then((json) => {
+                setProductsData(json);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error(error);
+            })
+            .finally(() => { }
+            );
+    }, []);
 
-
-  return (
-    <div className="ProductListPage">
-      {/* Render list of products here */}
-    </div>
-  );
+    return loading ? (
+        <div>
+            <p>loading...</p>
+        </div>
+    ) : (
+        <div className="ProductListPage">
+            {productsData.map((product) => {
+                <ProductListContainer key={product.id} productData={product} />
+            })}
+        </div>
+    );
 }
 
 export default ProductListPage;
