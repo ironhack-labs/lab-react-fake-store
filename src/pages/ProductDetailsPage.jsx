@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 
 function ProductDetailsPage() {
@@ -51,7 +51,7 @@ function ProductDetailsPage() {
         </div>
     ) : (
         <div className="ProductDetailsPage">
-            <div style={{ textAlign: "left", width: "50%", margin: "2%"}}>
+            <div style={{ textAlign: "left", width: "50%", margin: "2%" }}>
                 <img src={productData.image} style={{ height: "390px" }} />
                 <br />
                 <p><b>{productData.title}</b></p>
@@ -64,6 +64,11 @@ function ProductDetailsPage() {
                 <p>{productData.price} €</p>
                 <br />
                 <p>{productData.description}</p>
+                <br />
+                <Link to="/" >
+                        <p style={{ color: "white", backgroundColor: "blue", width: "50px", textAlign: "center" }}>back</p>
+                </Link>
+
             </div>
         </div>
     );

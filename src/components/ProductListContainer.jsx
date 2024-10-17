@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function ProductListContainer({ productData, click }) {
     /*
@@ -26,7 +27,7 @@ function ProductListContainer({ productData, click }) {
 
     const style = { display: "flex", width: "25%", }
     return (
-        <button onClick={() => click(productData.id)} className="card" style={{ display: "flex", alignContent: "space-evenly", alignItems: "center", width: "99%", height: "400px" }}>
+        <Link to={"/product/details/" +productData.id} className="card" style={{ display: "flex", alignContent: "space-evenly", alignItems: "center", width: "99%", height: "400px" }}>
             <div style={style}>
                 <div>
                     <img src={productData.image} style={{ height: "390px" }}/>
@@ -44,7 +45,7 @@ function ProductListContainer({ productData, click }) {
             <div style={style}>
                 <p>{productData.description}</p>
             </div>
-        </button>
+        </Link>
     );
 }
 
