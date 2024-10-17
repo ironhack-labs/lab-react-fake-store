@@ -1,25 +1,77 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 
 function ProductDetailsPage() {
-  // The state variable `product` is currently an empty object {},
-  // but you should use it to store the response from the Fake Store API (the product details).
-  const [product, setProduct] = useState({});
+    const [dataLoaded, setDataLoaded] = useState(false);
+    const [productData, setProductData] = useState([]);
+    const id = useParams().productId;
+    const url = "https://fakestoreapi.com/products/" + id;
+    console.log(productData);
 
 
-  // The `productId` coming from the URL parameter is available in the URL path.
-  // You can access it with the `useParams` hook from react-router-dom.
+    useEffect(getData, []);
 
+    function getData() {
+        if (true) {
+            fetch(url)
+                .then((result) => {
+                    //console.log(result);
+                    return result.json();
+                })
+                .then((result) => {
+                    console.log(result);
+                    setProductData(result);
+                })
+                .catch((error) => {
+                    console.error(error);
+                })
+                .finally(() => {
+                    setDataLoaded(true);
+                });
+        }
+        else {
+            axios.get(url)
+                .then((result) => {
+                    console.log(result.data);
+                    setProductData(result.data);
+                })
+                .catch((error) => {
+                    console.error(error);
+                })
+                .finally(() => {
+                    setDataLoaded(true);
+                });
+        }
+    }
+    const stars = productData.rating ? Math.floor(productData.rating.rate) : 0;
+    return !dataLoaded ? (
+        <div>
+            <p>loading...</p>
+        </div>
+    ) : (
+        <div className="ProductDetailsPage">
+            <div style={{ textAlign: "left", width: "50%", margin: "2%" }}>
+                <img src={productData.image} style={{ height: "390px" }} />
+                <br />
+                <p><b>{productData.title}</b></p>
+                <br />
+                <p>{"".padStart(stars, "★").padStart(5, "☆")}</p>
+                <p>{productData.rating.rate} Stars | {productData.rating.count} Ratings</p>
+                <br />
+                <p>{productData.category}</p>
+                <br />
+                <p>{productData.price} €</p>
+                <br />
+                <p>{productData.description}</p>
+                <br />
+                <Link to="/" >
+                        <p style={{ color: "white", backgroundColor: "blue", width: "50px", textAlign: "center" }}>back</p>
+                </Link>
 
-  // To fetch the product details, set up an effect with the `useEffect` hook:
-
-
-
-  return (
-    <div className="ProductDetailsPage">
-    {/* Render product details here */}
-    </div>
-  );
+            </div>
+        </div>
+    );
 }
 
 export default ProductDetailsPage;
