@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function ProductListContainer({productData}) {
+function ProductListContainer({ productData, click }) {
     /*
     const [productData, setProductsData] = useState([]);
     const url = "https://fakestoreapi.com/products/";
@@ -21,28 +21,30 @@ function ProductListContainer({productData}) {
             );
     }, []);
     */
-    console.log(productData);
+
     
+
+    const style = { display: "flex", width: "25%", }
     return (
-        <div>
-            <div>
+        <button onClick={() => click(productData.id)} className="card" style={{ display: "flex", alignContent: "space-evenly", alignItems: "center", width: "99%", height: "400px" }}>
+            <div style={style}>
                 <div>
-                    <img src={productData.image} />
+                    <img src={productData.image} style={{ height: "390px" }}/>
                 </div>
             </div>
-            <div>
+            <div style={style}>
                 <p><b>{productData.title}</b></p>
             </div>
-            <div>
+            <div style={style}>
                 <p>{productData.category}</p>
             </div>
-            <div>
-                <p>{productData.price}</p>
+            <div style={style}>
+                <p>{productData.price} €</p>
             </div>
-            <div>
+            <div style={style}>
                 <p>{productData.description}</p>
             </div>
-        </div>
+        </button>
     );
 }
 
