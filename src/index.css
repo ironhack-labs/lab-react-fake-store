@@ -35,6 +35,11 @@ body {
   padding: 16px;
 }
 
+.container img {
+  width: 100px;
+  height: 100px;
+}
+
 /* Styles */
 h1 {
   font-size: 2rem;
@@ -80,4 +85,9 @@ nav {
   margin-bottom: 20px;
   background: #94a7c8;
   border-radius: 4px;
+}
+
+.product img {
+  width: 350px;
+  height: 350px;
 }
