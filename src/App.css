@@ -81,3 +81,12 @@
 .content.shifted {
   margin-left: 250px;
 }
+.ProductListPage{
+  border:2px solid black;
+  width: 100%;
+ 
+}
+.ProductDetailsPage{
+ border:2px solid black;
+ width:100%
+}
