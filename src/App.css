@@ -81,3 +81,37 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.productDetails {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.productTitle {
+  width: 300px;
+  margin: 10px;
+}
+
+.productPrice {
+  width: 100px;
+  margin: 10px;
+}
+
+.productCategory {
+  width: 300px;
+  margin: 10px;
+}
+
+.productDescription {
+  width: 500px;
+  margin: 10px;
+}
+
+.productDetailsContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+
