@@ -1,0 +1,13 @@
+.ProductDetailsPage{
+
+}
+
+.ProductDetailsPage img{
+    width: 200px;
+}
+
+.ProductDetailsPage button {
+    padding: 16px;
+    background-color: blue;
+    color: white;
+}
