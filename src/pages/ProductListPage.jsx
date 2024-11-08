@@ -3,14 +3,17 @@ import { useState } from "react"
 import axios from 'axios'
 import ProductCard from "../components/ProductCard/ProductCard"
 
+const APIURL = 'https://fakestoreapi.com'
 
 function ProductListPage() {
   
-  const APIURL = 'https://fakestoreapi.com/products'
+
+  const [products, setProducts] = useState()
+
 
   useEffect(() => {
     axios
-    .get (APIURL)
+    .get (`${APIURL}/products`)
     .then (response => {
       setProducts(response.data)
       setIsLoading(false)
@@ -18,7 +21,6 @@ function ProductListPage() {
     )
   }, [] )
 
-  const [products, setProducts] = useState()
   const [isLoading, setIsLoading] = useState(true)
 
   return (

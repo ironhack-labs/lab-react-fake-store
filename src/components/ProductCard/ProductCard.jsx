@@ -1,13 +1,21 @@
-const ProductCard = ({image, title, category, price, description}) => {
+import './ProductCard.css'
+import { Link } from 'react-router-dom'
 
-    return(
-        <div className="ProductCard">
-            <img src={image} alt="" />
-            <h2> {title} </h2>
-            <p> {category} </p>
-            <p> {price} </p>
-            <p> {description} </p>
-        </div>
+const ProductCard = ({ image, title, category, price, description, id }) => {
+
+
+    return (
+
+        <Link to={`/product/details/${id}`}>
+            <div className="ProductCard">
+                <img src={image} alt="" />
+                <h2> {title} </h2>
+                <p> {category} </p>
+                <p> ${price} </p>
+                <p> {description} </p>
+            </div>
+        </Link>
+
     )
 
 }
