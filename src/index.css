@@ -8,10 +8,10 @@
 
 /* Colors */
 :root {
-    --primary-color: #1E40AF;
-    --secondary-color: #3B82F6;
-    --background-color: #F3F4F6;
-    --text-color: #111827;
+  --primary-color: #1E40AF;
+  --secondary-color: #3B82F6;
+  --background-color: #F3F4F6;
+  --text-color: #111827;
 }
 
 /* Base styles */
@@ -73,11 +73,87 @@ nav {
 }
 
 .card {
-  width: 400px;
+  width: 100%;
   padding: 10px;
   box-shadow: 0px 2px 3px grey;
   margin: 0 auto;
   margin-bottom: 20px;
   background: #94a7c8;
   border-radius: 4px;
+  display: flex;
+}
+
+.card .widthInfo {
+  width: 20%;
+  text-align: center;
+  align-self: center;
+}
+
+.card img {
+  height: 70px;
+}
+
+.ProductListPage {
+  padding: 10px;
+}
+
+.ProductDetailsPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.CardEstructure {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.CardEstructure img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.CardEstructure h2:nth-child(2) {
+  font-size: 1rem;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.CardEstructure h2:nth-child(3) {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.CardEstructure h2:nth-child(4) {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.CardEstructure h2:nth-child(5) {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #007acc;
+  margin-bottom: 1.5rem;
+}
+
+.CardEstructure a {
+  text-decoration: none;
+  background-color: rgb(226, 226, 226);
+  color: #007acc;
+  font-weight: bold;
 }
