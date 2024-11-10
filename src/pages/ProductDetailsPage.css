@@ -1,0 +1,7 @@
+.DetailsData {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    padding: 8px 8px;
+}
