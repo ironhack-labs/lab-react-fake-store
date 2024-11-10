@@ -1,0 +1,57 @@
+.ProductDetailsPage img {
+    width: 250px;
+    margin-top: 50px;
+    margin-left: 50px;
+    background-color: white;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.ProductDetailsPage h2 {
+    text-align: center;
+    width: 150px;
+    margin-top: 30px;
+    margin-left: 50px;
+    color: white;
+    background-color: rgb(82, 62, 195);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.ProductDetailsPage .title {
+    margin-top: 20px;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.DetailsContainer {
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 500px;
+    display: flex;
+    gap: 30px;
+}
+
+.DetailsContainer h3 {
+    color: rgb(82, 62, 195);
+    font-weight: bold;
+}
+
+.ButtonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.BackButton {
+    color: white;
+    background-color: rgb(65, 183, 65);
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.BackButton:hover {
+    background-color: rgb(40, 112, 40);
+}
