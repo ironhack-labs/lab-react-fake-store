@@ -1,0 +1,44 @@
+
+.ProductDetailsPage {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    }
+  .category {
+    background-color: rgb(84, 84, 255);
+    width: 150px;
+    border-radius: 5px;
+    color: white
+  }
+  .price {
+    color: blue;
+    font-size: 20px;
+    text-align: right;
+  }
+  .description{
+    text-align: left;
+  }
+  
+  a {
+    background-color: rgb(26, 233, 26);
+    color: white;
+    border-radius: 8px;
+    width: 100px;
+    align-self: center;
+  }
+
+}

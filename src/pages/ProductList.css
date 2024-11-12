@@ -1,0 +1,33 @@
+.ProductListPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.product-container {
+  padding: 20px;
+  width: 80rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  img {
+    border: 1px solid rgba(94, 94, 94, 0.399);
+    width: 100px;
+    padding: 10px;
+  }
+
+  h3 {
+    font-weight: 900;
+    font-size: 14px;
+  }
+
+  p {
+    width: 300px;
+  }
+
+}
