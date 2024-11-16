@@ -1,7 +1,85 @@
 .App {
   text-align: center;
+  font-size: 18px;
 }
 
+/*MY CSS*/
+
+.product-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  margin: 20px;
+}
+
+.product-list img {
+  width: 150px;
+  border: 2px rgba(196, 187, 187, 0.685) solid;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.width {
+  width: 15%;
+}
+
+.product-details {
+  background-color: white;
+  margin: 30px 20px;
+  padding: 20px;
+  text-align: left;
+}
+
+.product-details img {
+  width: 25%;
+  margin-bottom: 20px;
+}
+
+.product-details h2 {
+  font-size: 21px;
+  margin: 30px 0;
+}
+
+.product-details-box {
+  display: flex;
+}
+
+.product-details-box p {
+  width: 31%;
+  margin-right: 15px;
+}
+
+.details-price {
+  font-weight: bold;
+  color: blue;
+}
+
+.details-category {
+  color: white;
+  background-color: blue;
+  width: fit-content;
+  padding-inline: 5px;
+}
+
+.fifty-chars {
+  width: 50ch;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.btn {
+  display: flex;
+  background-color: rgb(129, 206, 13);
+  color: white;
+  border-radius: 5px;
+  margin: 50px auto 10px auto;
+}
 /* Primary Button */
 .btn-primary {
   background-color: var(--primary-color);
@@ -12,7 +90,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +103,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -72,6 +149,10 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
+}
+
+.product {
+  display: flex;
 }
 
 .content {
