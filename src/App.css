@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -80,4 +79,30 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+.allProds img {
+  width: 150px;
+  height: 150px;
+}
+.allProds {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.allProds h1 {
+  font-size: 14px;
+}
+.productsInfo {
+  font-size: 14px;
+  width: 200px;
+}
+.prodDesc {
+  width: 30%;
+}
+.price {
+  width: 10%;
+}
+.title {
+  width: 20%;
 }
