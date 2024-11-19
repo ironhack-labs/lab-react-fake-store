@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -72,6 +71,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
+  display: flex;
 }
 
 .content {
@@ -80,4 +80,93 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+/**************Product List Page*****************/
+.homepage-list {
+  display: flex;
+  height: 300px;
+  width: 96%;
+  margin: 15px auto 15px auto;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+}
+
+.homepage-list img {
+  width: 200px;
+  height: 190px;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+.card-title {
+  width: 30%;
+}
+.card-content {
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+}
+.card-description {
+  width: 180px;
+  height: 70px;
+  text-overflow: clip;
+  overflow: hidden;
+}
+/**************Product Details Page*****************/
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px;
+  width: 60%;
+}
+
+.ProductDetailsPage img {
+  width: fit-content;
+  height: 190px;
+  border-radius: 8px;
+}
+
+.label {
+  background-color: #3b82f6;
+  padding: 7px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.text {
+  display: flex;
+}
+
+.text p {
+  text-align: left;
+  font-size: 15px;
+}
+
+.price {
+  color: blue;
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 16px !important;
+}
+.shadow-line {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.back-btn {
+  background-color: green;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  margin: 0 auto 15px auto;
 }
