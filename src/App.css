@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -80,4 +79,33 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+.image {
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.card {
+  border: 1px solid black;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card div {
+  margin: 20px;
+}
+
+.card p {
+  font-size: 10px;
+  width: 400px;
+}
+
+.card h4 {
+  margin: 10px;
 }
