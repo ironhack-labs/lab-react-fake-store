@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams,  } from "react-router-dom";
+
 
 
 
@@ -8,6 +9,7 @@ function ProductDetailsPage() {
   // but you should use it to store the response from the Fake Store API (the product details).
   const [product, setProduct] = useState({});
   const {productId}= useParams()
+  
 
 
   const fetchData = async () => {
@@ -34,13 +36,15 @@ fetchData();
 
 
   return (
-    <div className="ProductDetailsPage">
-    <ul>
-    <li></li>
-    </ul>
-    {}
+    <div className="product-details">
+      <h1>{product.title}</h1>
+      <img src={product.image} alt={product.title} />
+      <p><strong>Price:</strong> ${product.price}</p>
+      <p><strong>Description:</strong> {product.description}</p>
+      <p><strong>Category:</strong> {product.category}</p>
     </div>
-  );
+  )
+  
 }
 
 export default ProductDetailsPage;
