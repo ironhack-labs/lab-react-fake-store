@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./ProductListPage.css"
 
 
 function ProductListPage() {
@@ -25,7 +26,15 @@ function ProductListPage() {
     <div className="ProductListPage">
        
       {products.map((product) => {
-    return <p key={product.id}> {product.title} </p>;
+    return ( 
+      <div key={product.id} className="product">
+      <img className= "productImage" src={product.image} alt="product image"/>
+      <p > {product.title} </p>
+      <p > {product.category} </p>
+      <p > {product.price} </p>
+      <p > {product.description} </p>
+      </div>
+      )
   })}
     </div>
   );
