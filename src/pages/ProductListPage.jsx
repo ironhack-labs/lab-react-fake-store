@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./ProductListPage.css"
+import { Link } from "react-router-dom";
 
 
 function ProductListPage() {
@@ -27,12 +28,14 @@ function ProductListPage() {
        
       {products.map((product) => {
     return ( 
-      <div key={product.id} className="product">
+      <div key={product.id} >
+      <Link to = {`product/details/${product.id}`} className="product">
       <img className= "productImage" src={product.image} alt="product image"/>
       <p > {product.title} </p>
       <p > {product.category} </p>
       <p > {product.price} </p>
       <p > {product.description} </p>
+      </Link>
       </div>
       )
   })}
