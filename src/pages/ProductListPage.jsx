@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 function ProductListPage() {
@@ -19,23 +20,25 @@ function ProductListPage() {
     <div className="ProductListPage">
       {/* Render list of products here */}
       {products.map(product => (
-        <div className="d-flex flex-row align-items-center gap-5 bg-light my-2" key={product.id}>
-          <div className="col-2 p-3 ">
-            <img style={{ border : "1px solid black",maxWidth: "150px" }} src={product.image} alt={product.title} />
+        <Link to={`product/details/${product.id}`} key={product.id}>
+          <div className="d-flex flex-row align-items-center gap-5 bg-light my-2 hover-shadow" >
+            <div className="col-2 p-3 ">
+              <img style={{ border: "1px solid black", maxWidth: "150px" }} src={product.image} alt={product.title} />
+            </div>
+            <div className="col-2 d-flex justify-self-center">
+              <h2 className="fs-6 fw-bold">{product.title}</h2>
+            </div>
+            <div className="col-2 d-flex justify-content-center">
+              <h3 className="fs-5">{product.category}</h3>
+            </div>
+            <div className="col-1 d-flex justify-self-center">
+              <h3 className="fs-5">{product.price}</h3>
+            </div>
+            <div className="col-2 d-flex justify-self-center">
+              <h3 className="fs-6">{product.description.slice(0, 50)}</h3>
+            </div>
           </div>
-          <div className="col-2 d-flex justify-self-center">
-            <h2 className="fs-6 fw-bold">{product.title}</h2>
-          </div>
-          <div className="col-2 d-flex justify-content-center">
-            <h3 className="fs-5">{product.category}</h3>
-          </div>
-          <div className="col-1 d-flex justify-self-center">
-            <h3 className="fs-5">{product.price}</h3>
-          </div>
-          <div className="col-2 d-flex justify-self-center">
-            <h3 className="fs-6">{product.description.slice(0, 50)}</h3>
-          </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
