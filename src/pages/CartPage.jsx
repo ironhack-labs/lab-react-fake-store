@@ -1,41 +1,49 @@
-import { useState, useEffect } from "react"; 
-import axios from "axios"; 
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function CartPage() {
   const [cartItems, setCartItems] = useState([]);
-  const [products, setProducts] = useState([]); 
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchCart = async () => {
       try {
-        const cartId = 5; // Cambia esto al ID del carrito que desees usar
+        const cartId = 5;
         const response = await axios.get(`https://fakestoreapi.com/carts/${cartId}`);
-        setCartItems(response.data.products); 
+        setCartItems(response.data.products);
       } catch (error) {
-        console.error("Error fetching cart:", error);
+        setError("Error al cargar el carrito.");
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchCart();
-  }, []); 
+  }, []);
 
   useEffect(() => {
     const fetchProductDetails = async () => {
       try {
         const productRequests = cartItems.map(item =>
-          axios.get(`https://fakestoreapi.com/products/${item.id}`)
+          axios.get(`https://fakestoreapi.com/products/${item.productId}`)
         );
+        console.log(cartItems);
         const productResponses = await Promise.all(productRequests);
-        setProducts(productResponses.map(response => response.data)); 
+        setProducts(productResponses.map(response => response.data));
       } catch (error) {
-        console.error("Error fetching product details:", error);
+        setError("Error al cargar los detalles de los productos.");
       }
     };
 
     if (cartItems.length > 0) {
-      fetchProductDetails(); 
+      fetchProductDetails();
     }
-  }, [cartItems]); 
+  }, [cartItems]);
+
+  if (loading) return <p>Cargando...</p>;
+  if (error) return <p>{error}</p>;
 
   return (
     <div className="CartPage">
