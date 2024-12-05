@@ -1,12 +1,8 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function ProductListPage() {
-  // The state variable `products` is currently an empty array [], 
-  // but you should use it to store the response from the Fake Store API (the list of products).
-
   const [products, setProducts] = useState([]);
-
- // To fetch the list of products, set up an effect with the `useEffect` hook:
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -16,13 +12,24 @@ function ProductListPage() {
   }, []);
 
   return (
-    <div className="ProductListPage">  {/* Render list of products here */}
-      <h1 className="text-3xl font-bold mb-4">Products</h1>
+    <div className="ProductListPage">
+      <h1 className="font-bold mb-4">Products</h1>
       <ul className="grid grid-cols-1 gap-4">
         {products.map((product) => (
-          <li key={product.id} className="p-4 border rounded">
-            <h2 className="text-lg font-semibold">{product.title}</h2>
-            <p className="text-sm text-gray-700">${product.price}</p>
+          <li
+            key={product.id}
+            className="flex-row space-around p-4 border rounded gap-2"
+          >
+            <Link to={`/product/details/${product.id}`} className="w-full">
+              <img
+                src={product.image}
+                className="w-full h-48 object-contain mb-4"
+              />
+              <p className="text-lg font-bold">{product.title}</p>
+              <p className="text-lg">{product.category}</p>
+              <p className="text-sm text-gray-700">${product.price}</p>
+              <p className="text-sm text-gray-700">{product.description}</p>
+            </Link>
           </li>
         ))}
       </ul>
@@ -31,4 +38,3 @@ function ProductListPage() {
 }
 
 export default ProductListPage;
-
