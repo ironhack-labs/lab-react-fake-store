@@ -1,5 +1,6 @@
 import { useEffect , useState } from "react"
 import axios from "axios"
+import { Link } from "react-router-dom";
 
 
 
@@ -32,8 +33,9 @@ function ProductListPage() {
 
   return (
     <div className="ProductListPage">
-      
+
       {products.map((eachProduct) => (
+        <Link to={`/product/details/${eachProduct.id}`}> 
         <div key={eachProduct.id} className="product-card">
 
           <img 
@@ -54,6 +56,7 @@ function ProductListPage() {
           </p>
 
         </div>
+        </Link>
       ))}
     </div>
   );
