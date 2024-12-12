@@ -143,3 +143,38 @@
   }
 }
 
+/* details page */
+
+.product-details-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.product-details-info {
+  flex: 1;
+}
+
+.product-details-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.product-details-category {
+  font-size: 1.2rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.product-details-price {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.product-details-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
