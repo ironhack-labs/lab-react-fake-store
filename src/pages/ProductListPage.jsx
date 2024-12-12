@@ -1,39 +1,36 @@
 import { useEffect, useState } from "react";
+import axios from "axios"
 
-
-
+const apiURL = "https://fakestoreapi.com/products"
 
 function ProductListPage() {
   // The state variable `products` is currently an empty array [], 
   // but you should use it to store the response from the Fake Store API (the list of products).
   const [products, setProducts] = useState([]);
-  
+  const [fetching, setFetching] = useState(true)
 
   // To fetch the list of products, set up an effect with the `useEffect` hook:
-  async function getProducts() {
-    try {
-      const response = await fetch('https://fakestoreapi.com/products')
-      .then(res=>res.json())
-      .then(json=>console.log(json))
-
-
-      const jsonResponse = await response.json();
-      setProducts(jsonResponse);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
   useEffect(() => {
-    getProducts();
+    axios.get(apiURL).then((response) => {
+      setProducts(response.data);
+      setFetching(false);
+    });
   }, []);
+   
   
 
 
   return (
     <div className="ProductListPage">
+    {fetching && <p>Loading...</p>}
       {products.map((product) => {
-        return
+        return (
+        <div key={product.id}>
+          <img src={product.image} alt="image" />
+          <h3>{product.title}</h3>
+          <p>Price: {product.price}</p>
+        </div>
+        )
       })/* Render list of products here */}
     </div>
   );
