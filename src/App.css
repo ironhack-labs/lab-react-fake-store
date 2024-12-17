@@ -81,3 +81,16 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+/* LENA */
+
+.productCardDiv,
+.productCardDiv div {
+  display: flex;
+  flex-direction: row;
+  background-color: aliceblue;
+}
+
+.productCardDiv div {
+  justify-content: space-evenly;
+}
