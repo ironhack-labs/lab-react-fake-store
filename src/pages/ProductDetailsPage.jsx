@@ -23,7 +23,7 @@
 // }
 
 // export default ProductDetailsPage;
-
+import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
@@ -32,13 +32,18 @@ function ProductDetailsPage() {
   const { productId } = useParams(); // Get productId from the URL parameter
 
   useEffect(() => {
-    // Fetch product details by ID from the Fake Store API
-    fetch(`https://fakestoreapi.com/products/${productId}`)
-      .then((res) => res.json())
-      .then((data) => setProduct(data))
-      .catch((error) => console.error("Error fetching product details:", error));
-  }, [productId]);
+    const fetchProductDetails = async () => {
+      try {
+        const response = await axios.get(`https://fakestoreapi.com/products/${productId}`);
+        if (response === 200){
+        setProduct(response.data)} // Axios automatically parses JSON data
+      } catch (error) {
+        console.error("Error fetching product details:", error); // Log any errors
+      }
+    };
 
+    fetchProductDetails(); // Call the async function
+  }, [productId]); // Dependency array ensures this effect runs whenever productId changes
   if (!product) return <p>Loading...</p>;
 
   return (

@@ -26,11 +26,28 @@ function ProductListPage() {
 
   useEffect(() => {
     // Fetch list of products from the Fake Store API
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data))
-      .catch((error) => console.error("Error fetching products:", error));
-  }, []);
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch("https://fakestoreapi.com/products");
+        if (!response.ok) {
+          // Handle HTTP errors
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        setProducts(data); // Update state with fetched data
+      } catch (error) {
+        console.error("Error fetching products:", error); // Log any errors
+      }
+    };
+
+    // Call the async function
+    fetchProducts();
+  }, []); // Empty dependency array ensures the fetch runs only once
+  //   fetch("https://fakestoreapi.com/products")
+  //     .then((res) => res.json())
+  //     .then((data) => setProducts(data))
+  //     .catch((error) => console.error("Error fetching products:", error));
+  // }, []);
 
   return (
     <div className="ProductListPage">
