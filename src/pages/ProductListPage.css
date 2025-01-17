@@ -1,0 +1,47 @@
+.ProductListPage {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Add spacing between items */
+    width: 100%; /* Ensure the container takes the full width of the screen */
+  }
+  
+  .product {
+    display: flex; /* Flexbox for content alignment inside the card */
+    flex-direction: row; /* Arrange image and details side by side */
+    align-items: center; /* Center align the content vertically */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Make the product card take the full width */
+    padding: 15px;
+    background: #fff;
+  }
+  
+  .product-image {
+    width: 150px; /* Fixed size for images */
+    height: auto;
+    margin-right: 15px; /* Space between image and details */
+  }
+  
+  .product-details {
+    flex: 1; /* Take the remaining space for the details */
+  }
+  
+  .product-details h2 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+  }
+  
+  .product-details p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 0.5em 0;
+  }
+  
+  .description {
+    font-size: 0.8em;
+    color: #777;
+  }
+  
+  
+  
