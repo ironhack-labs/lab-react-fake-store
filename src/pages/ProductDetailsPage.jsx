@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
 function ProductDetailsPage() {
   // The state variable `product` is currently an empty object {},
