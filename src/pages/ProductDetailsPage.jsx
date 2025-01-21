@@ -26,7 +26,7 @@ function ProductDetailsPage() {
 
   return (
     <div className="ProductDetailsPage">
-      <div className="wrapper w-50 m-2">
+      <div className="container-sm m-2">
         <div className="container d-flex flex-column align-items-start">
           <img
             className=" img-fluid border rounded mb-3"
@@ -34,13 +34,18 @@ function ProductDetailsPage() {
             alt="..."
             style={{ height: "20rem", objectFit: "contain" }}
           />
-          <p className="fw-medium btn-primary">{product.category}</p>
-          <h6 className="fw-bold">{product.title}</h6>
+          <p className="fw-medium btn btn-primary">{product.category}</p>
+          <h3 className="fw-bold h3 mt-4">{product.title}</h3>
         </div>
         <div className="container d-flex justify-content-start">
           <p className="fw-medium text-start">{product.description}</p>
-          <p className="fw-medium">${product.price}</p>
+          <p className="fw-bold h3 text-primary">${product.price}</p>
         </div>
+      </div>
+      <div className="border-top d-flex justify-content-center">
+        <Link to={"/"} className="mt-3">
+          <button className="btn btn-success">Back</button>
+        </Link>
       </div>
     </div>
   );
