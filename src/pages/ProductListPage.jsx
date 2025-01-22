@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import ProductCard from "../components/ProductCard";
 
@@ -9,23 +8,21 @@ function ProductListPage() {
   const [products, setProducts] = useState([]);
 
   // To fetch the list of products, set up an effect with the `useEffect` hook:
-  const getAllProducts = () => {
-    axios
-      .get("https://fakestoreapi.com/products")
-      .then((response) => setProducts(response.data))
-      .catch((error) => console.log(error));
-  };
-
   useEffect(() => {
+    const getAllProducts = () => {
+      axios
+        .get("https://fakestoreapi.com/products")
+        .then((response) => setProducts(response.data))
+        .catch((error) => console.log(error));
+    };
+
     getAllProducts();
   }, []);
 
   return (
     <div className="ProductListPage">
       {products.map((product) => (
-        <Link key={product.id} to={`/product/details/${product.id}`}>
-          <ProductCard product={product} />
-        </Link>
+        <ProductCard key={product.id} product={product} />
       ))}
     </div>
   );

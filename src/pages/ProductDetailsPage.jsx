@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function ProductDetailsPage() {
@@ -8,21 +7,25 @@ function ProductDetailsPage() {
   // but you should use it to store the response from the Fake Store API (the product details).
   const [product, setProduct] = useState({});
   const { productId } = useParams();
+  const navigate = useNavigate();
 
+  const handleBack = () => {
+    navigate(-1);
+  };
   // The `productId` coming from the URL parameter is available in the URL path.
   // You can access it with the `useParams` hook from react-router-dom.
 
   // To fetch the product details, set up an effect with the `useEffect` hook:
-  const getProduct = () => {
-    axios
-      .get(`https://fakestoreapi.com/products/${productId}`)
-      .then((response) => setProduct(response.data))
-      .catch((error) => console.log(error));
-  };
-
   useEffect(() => {
+    const getProduct = () => {
+      axios
+        .get(`https://fakestoreapi.com/products/${productId}`)
+        .then((response) => setProduct(response.data))
+        .catch((error) => console.log(error));
+    };
+
     getProduct();
-  }, []);
+  }, [productId]);
 
   return (
     <div className="ProductDetailsPage">
@@ -43,9 +46,9 @@ function ProductDetailsPage() {
         </div>
       </div>
       <div className="border-top d-flex justify-content-center">
-        <Link to={"/"} className="mt-3">
-          <button className="btn btn-success">Back</button>
-        </Link>
+        <button className="mt-3 btn btn-success" onClick={handleBack}>
+          Back
+        </button>
       </div>
     </div>
   );
