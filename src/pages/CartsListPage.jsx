@@ -7,14 +7,10 @@ function CartsListPage() {
 
   // To fetch the list of carts, set up an effect with the `useEffect` hook:
   useEffect(() => {
-    const getCarts = () => {
-      axios
-        .get(`https://fakestoreapi.com/carts`)
-        .then((response) => setCarts(response.data))
-        .catch((error) => console.log(error));
-    };
-
-    getCarts();
+    axios
+      .get(`https://fakestoreapi.com/carts`)
+      .then((response) => setCarts(response.data))
+      .catch((error) => console.log(error));
   }, []);
 
   return (

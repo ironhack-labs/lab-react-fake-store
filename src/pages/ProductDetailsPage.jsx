@@ -17,14 +17,10 @@ function ProductDetailsPage() {
 
   // To fetch the product details, set up an effect with the `useEffect` hook:
   useEffect(() => {
-    const getProduct = () => {
-      axios
-        .get(`https://fakestoreapi.com/products/${productId}`)
-        .then((response) => setProduct(response.data))
-        .catch((error) => console.log(error));
-    };
-
-    getProduct();
+    axios
+      .get(`https://fakestoreapi.com/products/${productId}`)
+      .then((response) => setProduct(response.data))
+      .catch((error) => console.log(error));
   }, [productId]);
 
   return (
