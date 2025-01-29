@@ -10,7 +10,7 @@ function ProductDetailsPage() {
 
   // The `productId` coming from the URL parameter is available in the URL path.
   // You can access it with the `useParams` hook from react-router-dom.
-  const { productId } = useParams()
+  const { productId } = useParams();
 
 
   // To fetch the product details, set up an effect with the `useEffect` hook:
