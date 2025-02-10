@@ -1,5 +1,5 @@
 /* Typography */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 /* Tailwind directives */
 @tailwind base;
@@ -8,10 +8,10 @@
 
 /* Colors */
 :root {
-    --primary-color: #1E40AF;
-    --secondary-color: #3B82F6;
-    --background-color: #F3F4F6;
-    --text-color: #111827;
+  --primary-color: #1e40af;
+  --secondary-color: #3b82f6;
+  --background-color: #f3f4f6;
+  --text-color: #111827;
 }
 
 /* Base styles */
@@ -20,8 +20,8 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #F3F4F6;
+  font-family: "Inter", sans-serif;
+  background-color: #f3f4f6;
   color: #111827;
   margin: 0;
   background-color: var(--background-color);
@@ -30,16 +30,17 @@ body {
 
 /* Container */
 .container {
-  max-width: 1400px;
+  max-width: 1700px;
   margin: 0 auto;
   padding: 16px;
 }
 
 /* Styles */
-h1 {
-  font-size: 2rem;
-  font-weight: 700;
+h2 {
+  font-size: 25px;
+  font-weight: 500;
   margin-bottom: 16px;
+  text-align: left;
 }
 
 a {
@@ -65,7 +66,6 @@ nav {
   z-index: 20;
 }
 
-
 .Navbar li {
   list-style: none;
   font-size: 1.7rem;
@@ -73,11 +73,76 @@ nav {
 }
 
 .card {
-  width: 400px;
-  padding: 10px;
-  box-shadow: 0px 2px 3px grey;
-  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-radius: 8px;
+  padding: 50px;
   margin-bottom: 20px;
-  background: #94a7c8;
-  border-radius: 4px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.ProductListPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-product {
+  height: 200px;
+  width: 170px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.description {
+  max-height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.ProductDetailsPage {
+  padding: 40px;
+}
+
+.back-button {
+  background: rgb(77, 150, 77);
+  color: white;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+.category {
+  background: rgb(62, 117, 212);
+  border-radius: 5px;
+  width: 200px;
+  margin: 15px 0px;
+}
+
+.product-image {
+  height: 300px;
+  width: 250px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.price {
+  font-size: larger;
+  font-weight: bolder;
+  color: rgb(62, 117, 212);
+  margin: 10px 60px;
+}
+
+.information {
+  display: flex;
+  margin: 30px 0px;
+}
+
+.description-detail {
+  width: 500px;
 }
