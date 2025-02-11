@@ -11,7 +11,7 @@ function ProductListPage() {
 
   // To fetch the list of products, set up an effect with the `useEffect` hook:
   useEffect(() => {
-    console.log("useEffect hook - fetching products");
+    /* console.log("useEffect hook - fetching products"); */
     axios.get(allProductsURL).then((response) => {
       setProducts(response.data);
       /* console.log(response.data) */

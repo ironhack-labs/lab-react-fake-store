@@ -149,6 +149,10 @@
   font-size: 1.5em;
 }
 
+hr {
+  width: 100%;
+}
+
 .btn-secondary {
   margin: 0 auto;
   padding: 0;

@@ -17,10 +17,10 @@ function ProductDetailsPage() {
   const singleProductURL = `https://fakestoreapi.com/products/${productId}`
   // To fetch the product details, set up an effect with the `useEffect` hook:
   useEffect(() => {
-    console.log("useEffect hook - fetching a single product");
+    /* console.log("useEffect hook - fetching a single product"); */
     axios.get(singleProductURL).then((response) => {
       setProduct(response.data);
-      console.log(response.data)
+      /* console.log(response.data) */
     })
       .catch((error) => { //Establece un catch por si ocurre algún error al traer la información
         console.log(error);
