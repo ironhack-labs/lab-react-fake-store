@@ -1,0 +1,52 @@
+.products-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90vw;
+  padding: 10px 12px;
+  background-color: white;
+  margin: auto auto 1vh auto;
+}
+
+.products-list img {
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+}
+
+.products-list p {
+  width: 400px;
+}
+.ProductDetailsPage{
+  margin: 10vh;
+}
+.ProductDetailsPage p{
+  text-align: start;
+}
+.ProductDetailsPage img{
+height: 600px;
+width: 500px;
+}
+
+.product-category {
+background-color: blue;
+width: fit-content;
+}
+.product-pricedescription {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 70%;
+}
+
+.product-pricedescription p:first-child {
+  flex: 3;
+  margin-right: 20px; 
+  text-align: start;
+}
+
+.product-pricedescription p:last-child {
+  flex: 1; 
+  font-weight: bold;
+  text-align: right;
+}
