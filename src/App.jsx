@@ -4,21 +4,23 @@ import ProductListPage from "./pages/ProductListPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 
 import { Routes, Route } from "react-router-dom";
+import ErrorPage from "./pages/ErrorPage";
 
 
 function App() {
 
-  return (
-    <div className="App relative z-20 pt-20">
-      <Navbar />
+	return (
+		<div className="App relative z-20 pt-20">
+			<Navbar />
 
-      <Routes>
-        <Route path="/" element={<ProductListPage />} />
-        <Route path="/product/details/:productId" element={<ProductDetailsPage />} />
-      </Routes>
+			<Routes>
+				<Route path="/" element={<ProductListPage />} />
+				<Route path="/product/details/:productId" element={<ProductDetailsPage />} />
+				<Route path="*" element={<ErrorPage/>} />
+			</Routes>
 
-    </div>
-  );
+		</div>
+	);
 }
 
 export default App;
