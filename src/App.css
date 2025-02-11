@@ -81,3 +81,101 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.box{
+display:flex;
+align-items: center;
+  border: 1px solid #dfdcdc;
+  padding: 8px;
+  margin: 16px;
+background-color: #fcfcfc;
+
+}
+.ProductListPage{
+  background-color: rgb(219, 213, 213);
+  
+}
+.box img{
+  width:10%;
+  padding:5px;
+  border: 2px solid rgb(207, 207, 207);
+  margin: 24px;
+}
+.box h2{
+  width: 250px;
+padding:10px;
+margin:24px;
+}
+.box p{
+  width: 400px;
+  margin: 24px;
+}
+
+.ProductDetailsPage{
+  display:flex;
+  flex-direction: column;
+  justify-content: left;
+  
+}
+.ProductDetailsPage img{
+  width:20%;
+  padding:5px;
+  border: 2px solid rgb(207, 207, 207);
+  margin:24px;
+}
+
+.ProductDetailsPage label{
+  background-color: rgb(87, 9, 233);
+  color: #fcfcfc;
+  width: 150px;
+  margin:24px;
+  border-radius: 5px;
+}
+.info{
+display:flex;
+flex-direction: row;
+align-items: flex-start;
+margin:24px;
+width:500px;
+ 
+}
+.info :last-child{
+  color:blue;
+  padding:20px;font-weight: bold;
+}
+
+.ProductDetailsPage h2{
+  align-self: flex-start;
+  margin:24px;
+  font-size: larger;
+}
+.ProductDetailsPage button{
+  color:#fcfcfc;
+  background-color: rgb(87, 167, 7);
+  border-radius: 5px;
+}
+.cartItem{
+  display:flex;
+align-items: center;
+  border: 1px solid #dfdcdc;
+  padding: 8px;
+  margin: 16px;
+background-color: #fcfcfc;
+}
+
+.cartItem img{
+ 
+    width:10%;
+    padding:5px;
+    border: 2px solid rgb(207, 207, 207);
+    margin: 24px;
+ 
+}
+.cartItem p{
+  padding:20px;
+}
+.mainPage button{
+  color:#fcfcfc;
+  background-color: rgb(87, 167, 7);
+  border-radius: 5px;
+}
