@@ -23,15 +23,15 @@ function ProductListPage() {
         {products.length > 0 ? (
           products.map((product) => (
             <div key={product.id} className="product">
-              <h2>
+              <h3>
                 {/* Link to ProductDetailsPage with product id */}
                 <Link to={`/product/details/${product.id}`}>
-                  {product.title}
+                <img src={product.image} alt={product.title} width={150} />
+                  {product.title}  {product.category}
                 </Link>
-              </h2>
-              <p>{product.description}</p>
-              <img src={product.image} alt={product.title} width={100} />
+              </h3>                       
               <p>Price: ${product.price}</p>
+              <p>{product.description}</p>
             </div>
           ))
         ) : (

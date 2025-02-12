@@ -2,89 +2,51 @@
   text-align: center;
 }
 
-/* Primary Button */
-.btn-primary {
-  background-color: var(--primary-color);
+.product {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-details {
+  display: grid;
+  grid-template-columns: repeat(5, 100px); /* Image and text in two columns */
+  gap: 5px;  /* Space between image and text */
+  align-items: center; /* Vertically align the content */
+
+}
+
+.product img {
+  max-width: 150px; /* Ensure image doesn’t stretch more than 150px */
+  height: auto;
+}
+
+.product-info {
+  display: gtid;
+  grid-template-columns: repeat(5, 100px);
+}
+
+.product h1 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.back-button {
+  background-color: #007bff;
   color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
-.btn-primary:hover {
-  background-color: #3B82F6;
+.back-button:hover {
+  background-color: #0056b3;
 }
-
-/* Secondary Button */
-.btn-secondary {
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-}
-
-.btn-secondary:hover {
-  background-color: #E5E7EB;
-}
-
-
-/* Spacing utilities */
-.spacing-xs {
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-.spacing-sm {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.spacing-md {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.spacing-lg {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-
-/* Text utilities */
-.text-center {
-  text-align: center;
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-/* Flex utilities */
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Card styles */
-.card {
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  border-radius: 8px;
-}
-
-.content {
-  transition: margin-left 0.4s ease-in-out;
-}
-
-.content.shifted {
-  margin-left: 250px;
-}
-
-
-
-
-
-
-
