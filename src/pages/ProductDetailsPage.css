@@ -1,0 +1,25 @@
+.ProductDetailsPage {
+    padding: 16px;
+  }
+  
+  .ProductDetailsPage h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .ProductDetailsPage .product-image {
+    max-width: 30%;
+    height: auto;
+    margin-bottom: 16px;
+  }
+  
+  .ProductDetailsPage p {
+    margin: 8px 0;
+  }
+  
+  .ProductDetailsPage .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }

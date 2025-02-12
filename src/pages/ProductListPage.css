@@ -1,0 +1,52 @@
+.ProductListPage {
+    padding: 16px;
+  }
+  
+  .ProductListPage h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .ProductListPage ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .ProductListPage li {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .ProductListPage li a {
+    text-decoration: none;
+    color: inherit;
+    flex-grow: 1;
+  }
+
+  .product-image {
+    width: 10%;
+    height: auto;
+  }
+  
+  .ProductListPage li h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .ProductListPage li p {
+    margin: 4px 0;
+  }
+  
+  .ProductListPage li p.price {
+    font-size: 18px;
+    font-weight: bold;
+  }
