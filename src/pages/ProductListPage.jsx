@@ -30,7 +30,7 @@ function ProductListPage() {
               <div className="product-details-card">
                 <img src={product.image} alt={product.title} className="product-image" />
                 <h2 className="product-title">{product.title}</h2>
-                <p>Categoría: {product.category}</p>
+                <p>{product.category}</p>
                 <p>${product.price}</p>
                 <p>{product.description.slice(0, 100)}...</p>
               </div>
