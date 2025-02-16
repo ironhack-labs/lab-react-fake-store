@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 function ProductListPage() {
@@ -7,13 +8,29 @@ function ProductListPage() {
   const [products, setProducts] = useState([]);
 
   // To fetch the list of products, set up an effect with the `useEffect` hook:
-
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products')
+    .then(res=>res.json())
+    .then(json=>setProducts(json))
+  }, [] );
 
   return (
     <div className="ProductListPage">
-      {/* Render list of products here */}
+      {products.map(product => (
+        <div className="card">
+        <Link to={`/product/details/${product.id}`} key={product.id}>
+          <img src={product.image} alt={product.title} />
+          <b>{product.title}</b>
+          <p>{product.category}</p>
+          <p>{product.price}</p>
+          <p>{product.description}</p>
+        </Link>
+        </div>
+      ))}
     </div>
   );
 }
 
 export default ProductListPage;
+
+
