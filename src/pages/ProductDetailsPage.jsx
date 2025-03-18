@@ -30,7 +30,7 @@ function ProductDetailsPage() {
     <div className="ProductDetailsPage ">
       {/* Render product details here */}
       <div className="spacing-md card">
-        <img src={product.image} alt={product.title} width="300" />
+        <img src={product.image} alt={product.title} className="card-image" />
         <p>{product.category}</p>
         <h2>{product.title}</h2>
         <p>{product.description}</p>

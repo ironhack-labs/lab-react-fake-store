@@ -68,11 +68,19 @@
 
 /* Card styles */
 .card {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
   width: fit-content;
+}
+.card-image{
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 12px;
 }
 
 .content {
@@ -82,8 +90,9 @@
 .content.shifted {
   margin-left: 250px;
 }
-.ProductDetailsPage{
+.ProductListPage, .ProductDetailsPage{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 1rem;
   width: 100%;
