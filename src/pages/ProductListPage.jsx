@@ -10,7 +10,7 @@ function ProductListPage() {
 
   // To fetch the list of products, set up an effect with the `useEffect` hook:
 useEffect(()=>{
-  axios.get("https://fakestoreapi.com/products")
+  axios.get(`https://fakestoreapi.com/products`)
     .then((response) => {
       // Handle success
       setProducts(response.data)
