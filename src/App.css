@@ -68,10 +68,16 @@
 
 /* Card styles */
 .card {
+  display: flex;
+  flex-direction: row;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
+  height: 150px;
+  width: 100vw;
+  font-size: x-small;
+  margin-right: 20px;
 }
 
 .content {
@@ -80,4 +86,9 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+img {
+  width: 100px;
+  height: auto;
 }
