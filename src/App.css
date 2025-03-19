@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -72,12 +71,41 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.card img {
+  width: 200px;
+  margin: 50px;
 }
 
 .content {
   transition: margin-left 0.4s ease-in-out;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; */
 }
 
 .content.shifted {
   margin-left: 250px;
+  display: flex;
+  flex-direction: row;
 }
+/* 
+.product-card img {
+  height: 50px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: row;
+}
+
+.prod-info {
+  display: flex;
+  flex-direction: row;
+  width: 100;
+} */
