@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+.prod-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.prod-info{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+
 /* Primary Button */
 .btn-primary {
   background-color: var(--primary-color);
