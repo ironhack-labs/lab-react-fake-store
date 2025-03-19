@@ -7,6 +7,18 @@ function ProductListPage() {
   // but you should use it to store the response from the Fake Store API (the list of products).
   const [products, setProducts] = useState([]);
 
+  //  useEffect(()=>{
+    //   fetch('url')
+    //   .then((response)=>{
+    //     return response.json()
+    //   })
+    //   .then((data)=>{
+    //     console.log("Here is the data : ",data);
+    //     setProduct(data);
+    //   })
+    //   .catch(err => console.log(err))
+    // },[])
+
   // To fetch the list of products, set up an effect with the `useEffect` hook:
   // Code to run when the component mounts
   useEffect(() => {

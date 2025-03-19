@@ -2,61 +2,47 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 export const CartPage = () => {
-  const [cart, setCart] = useState([]);
-  const [products, setProducts] = useState([]);
-  const [myProducts, setMyProducts] = useState([]);
-
+  const [cartProducts, setCartProducts] = useState([])
+  const [total, setTotal] = useState(0)
   useEffect(() => {
-    // get the "random "cart
-    axios
-      .get("https://fakestoreapi.com/carts/5")
-      .then(({ data }) => {
-        // Handle success
-        console.log(data);
-        setCart(data);
-      })
-      .catch((error) => {
-        // Handle error
+    async function getCart() {
+      try {
+        const { data } = await axios("https://fakestoreapi.com/carts/5");
+          console.log(data);
+          const arrayOfProduct = [];
+          for(let i=0; i<data.products.length; i++){
+            const theProductId = data.products[i].productId;
+            const theProduct = await axios(`https://fakestoreapi.com/products/${theProductId}`);
+            theProduct.data.quant = data.products[i].quantity;
+            console.log("One prooduct : ", theProduct);
+            arrayOfProduct.push(theProduct.data);
+          }
+        setCartProducts(arrayOfProduct);
+        let total = 0;
+        arrayOfProduct.forEach(prod=>{
+          const sub = prod.price * prod.quant;
+          total += sub;
+        })
+        setTotal(total);
+      } catch (error) {
         console.log(error);
-      });
-    // get all products
-    axios
-      .get("https://fakestoreapi.com/products")
-      .then(({ data }) => {
-        // Handle success
-        console.log(data);
-        setProducts(data);
-      })
-      .catch((error) => {
-        // Handle error
-        console.log(error);
-      });
+      }
+    }
+    getCart();
   }, []);
 
-  useEffect(() => {
-    let productsInMyCart = cart.products;
-    let myProductArray = [];
-    if (productsInMyCart && productsInMyCart.length > 0) {
-      myProductArray = productsInMyCart.map((product) => {
-        products.filter((prod) => prod.id == product.id);
-      });
-    }
-    console.log("myProductArray : ", myProductArray);
-    setMyProducts(myProductArray);
-  }, [cart, products]);
-  console.log("Cart : ", cart);
   return (
     <>
-      <div>CartPage</div>
-      <p>cart.date = {cart.date}</p>
-      <p>cart.id = {cart.id}</p>
-      <div>cart.products =</div>
-      {/* {cart.products.map(prod => {(
-            <div>
-                <p>{prod.productId}</p>
-                <p>{prod.quantity}</p>
+      {cartProducts?.map(product => (
+            <div key={`productInCart_${product.id}`}>
+                <img src={product.image} alt={product.title} className="card-image" />
+                <p>{product.name}</p>
+                <p>{product.quantity}</p>
+                <p>{product.price}</p>
+                <p>Sub-total: ${product.quant * product.price}</p>
             </div>
-        )})} */}
+        ))}
+        <h2>Total: {total}</h2>
     </>
   );
 };

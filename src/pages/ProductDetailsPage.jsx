@@ -12,6 +12,7 @@ function ProductDetailsPage() {
   const { productId } = useParams();
 
   // To fetch the product details, set up an effect with the `useEffect` hook:
+
   useEffect(() => {
     axios
       .get(`https://fakestoreapi.com/products/${productId}`)
