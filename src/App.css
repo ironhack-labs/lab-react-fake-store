@@ -81,3 +81,31 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.product-container {
+  border: 1px solid black;
+  margin: 10px 20px;
+  padding: 0px 30px;
+  height: 190px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-container p {
+  width: 200px;
+}
+
+.product-img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid grey
+
+}
+
+.multi-line-clip {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
