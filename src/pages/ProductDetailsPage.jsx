@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function ProductDetailsPage() {
@@ -9,9 +10,11 @@ function ProductDetailsPage() {
 
   const {productId} = useParams();
 
+  console.log(productId)
+
   async function getProduct (id) {
     console.log("fetching right product")
-    const response = await fetch(`https://fakestoreapi.com/carts/${id}`)
+    const response = await fetch(`https://fakestoreapi.com/products/${id}`)
     const responseData = await response.json();
 
     setProduct(responseData)
@@ -21,7 +24,7 @@ function ProductDetailsPage() {
     getProduct(productId)
   }, [])
 
-  console.log(productId)
+  console.log("current product; ", product)
 
 
 
@@ -36,8 +39,19 @@ function ProductDetailsPage() {
   return (
     <div className="ProductDetailsPage">
     {/* Render product details here */}
-    <h1>Hello</h1>
+    <img className="detail-img" src={product.image} alt={product.title} />
+    <div className="category-label">{product.category}</div>
+    <h3 className="detail-title">{product.title}</h3>
+    <div className="text-container">
+    <p className="detail-description">{product.description}</p>
+    <span>{product.price}€</span>
     </div>
+    <hr />
+    <Link to="/" className="back-btn-link">
+    <button id="back-btn">Back</button>
+    </Link>
+    </div>
+
   );
 }
 
