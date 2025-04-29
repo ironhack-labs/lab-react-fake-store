@@ -81,3 +81,51 @@ nav {
   background: #94a7c8;
   border-radius: 4px;
 }
+
+.homepage{
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: calc(100% - 40px);
+  max-width: 3000px;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between ;
+}
+
+.image{
+  width: 10%;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #555;
+  margin: 10px 0;
+}
+
+.ProductDetailsPage {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.backButton {
+  background-color: green;
+  color: white;  
+  border: none;  
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  cursor: pointer;  
+  transition: background-color 0.3s;
+}
+
+.backButton:hover {
+  background-color: darkgreen; 
+}
