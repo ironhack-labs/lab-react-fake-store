@@ -1,0 +1,44 @@
+.ProductListPage {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.ProductListPage div {
+    display: flex;
+    align-items:flex-start;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ProductListPage img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.ProductListPage h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.ProductListPage p {
+    margin: 5px 0;
+}
+
+.ProductDetails {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.ProductDetails p:last-child {
+    color: #555;
+    font-size: 0.9em;
+}
