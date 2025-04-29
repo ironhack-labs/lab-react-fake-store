@@ -87,6 +87,21 @@ nav {
   border-radius: 4px;
 }
 
+.card-wide {
+  width: 90vw;
+  height: 400px;
+  padding: 10px;
+  box-shadow: 0px 2px 3px grey;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: #94a7c8;
+  border-radius: 4px;
+}
+
+.cart-container {
+  display: flex;
+}
+
 .product-title {
   font-weight: 800;
 }
@@ -99,6 +114,13 @@ nav {
   width: 400px;
   height: 400px;
   object-fit: cover;
+}
+
+.cart-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-left: 100px;
 }
 
 .card p {
