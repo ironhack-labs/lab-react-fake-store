@@ -69,9 +69,9 @@ In today's exercise, you will be building a simple React application that displa
 
 
 
-To help you get started quickly, we have provided you with the starter code and all the required page components. The React Router was already set up and app has the following pages:
+To help you get started quickly, we have provided you with the starter code and all the required page components. React Router was already set up and the app has the following pages:
 
-- **`HomePage`** - should display a list of all products
+- **`ProductListPage`** - should display a list of all products
 - **`ProductDetailsPage`** - should display the details of a single product
 
 
@@ -102,7 +102,7 @@ You will use the following API endpoints in this exercise:
 
 ### Iteration 1 | Products List
 
-In the `HomePage` component, make an HTTP request to the Fake Store API endpoint **Get all products** to retrieve the list of all products. <br> The API endpoint you should make a request to is:
+In the `ProductListPage` component, make an HTTP request to the Fake Store API endpoint **Get all products** to retrieve the list of all products. <br> The API endpoint you should make a request to is:
 
 **`GET`** **`https://fakestoreapi.com/products`** 
 
@@ -120,7 +120,7 @@ Once you have received the response with the list of products, save it in the co
   <summary><b>See Expected Result</b></summary>
 
 
-![home page](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-fake-store/Iteration+1.gif)
+![products list page](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-fake-store/Iteration+1.gif)
 
   <br>
 
@@ -222,7 +222,7 @@ The `productId` should be replaced with the actual `id` of the selected product.
 
   <summary><b>See Expected Result</b></summary>
 
-![home page links](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-fake-store/Iteration+2.gif)
+![product list links](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/lab-react-fake-store/Iteration+2.gif)
 
   <br>
 
@@ -431,7 +431,7 @@ root.render(
 import { Routes, Route } from "react-router-dom";
 ```
 
-4. Define the routes (pages) in your app using the components `Routes` and `Route` component:
+4. Define the routes (pages) in your app using the components `Routes` and `Route` component. For example:
 
 ```jsx
 import { Routes, Route } from "react-router-dom";
