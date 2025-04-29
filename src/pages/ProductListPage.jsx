@@ -1,13 +1,13 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function ProductListPage() {
-  // The state variable `products` is currently an empty array [],
-  // but you should use it to store the response from the Fake Store API (the list of products).
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  // To fetch the list of products, set up an effect with the `useEffect` hook:
   useEffect(() => {
+    setIsLoading(true);
     axios
       .get('https://fakestoreapi.com/products')
       .then((response) => {
@@ -15,21 +15,28 @@ function ProductListPage() {
       })
       .catch((err) => {
         console.log(err);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   }, []);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div className="ProductListPage">
       {products.map((elm) => {
         return (
           <div className="card" key={elm.id}>
-            <img src={elm.image} alt="product image" />
-            <p>
-              <b>{elm.title}</b>
-            </p>
-            <p>{elm.category}</p>
-            <p>${elm.price}</p>
-            <p>{elm.description}</p>
+            <Link to={`/product/details/${elm.id}`} products={products}>
+              {elm.image && <img src={elm.image} alt="product image" />}
+              <p className="product-title">{elm.title}</p>
+              <p>{elm.category}</p>
+              <p>${elm.price}</p>
+              <p className="product-description">{elm.description}</p>
+            </Link>
           </div>
         );
       })}

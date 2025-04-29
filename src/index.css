@@ -87,6 +87,14 @@ nav {
   border-radius: 4px;
 }
 
+.product-title {
+  font-weight: 800;
+}
+
+.product-description {
+  font-size: 0.8rem;
+}
+
 .card img {
   width: 400px;
   height: 400px;
@@ -95,4 +103,26 @@ nav {
 
 .card p {
   margin: 20px auto;
+}
+
+.details-container {
+  display: flex;
+  margin: 50px;
+}
+
+.details-text-container {
+  display: flex;;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: auto 50px;
+}
+
+.details-text-container p {
+  margin: 30px;
+}
+
+.details-container img {
+  width: 500px;
+  height: 600px;
+  object-fit: contain;
 }
