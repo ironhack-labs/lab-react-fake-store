@@ -72,6 +72,11 @@ nav {
   font-weight: 600;
 }
 
+.ProductListPage {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .card {
   width: 400px;
   padding: 10px;
@@ -80,4 +85,66 @@ nav {
   margin-bottom: 20px;
   background: #94a7c8;
   border-radius: 4px;
+}
+
+.card-wide {
+  width: 90vw;
+  height: 400px;
+  padding: 10px;
+  box-shadow: 0px 2px 3px grey;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: #94a7c8;
+  border-radius: 4px;
+}
+
+.cart-container {
+  display: flex;
+}
+
+.product-title {
+  font-weight: 800;
+}
+
+.product-description {
+  font-size: 0.8rem;
+}
+
+.card img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.cart-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-left: 100px;
+}
+
+.card p {
+  margin: 20px auto;
+}
+
+.details-container {
+  display: flex;
+  margin: 50px;
+}
+
+.details-text-container {
+  display: flex;;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: auto 50px;
+}
+
+.details-text-container p {
+  margin: 30px;
+}
+
+.details-container img {
+  width: 500px;
+  height: 600px;
+  object-fit: contain;
 }
