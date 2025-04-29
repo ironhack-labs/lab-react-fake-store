@@ -8,10 +8,10 @@
 
 /* Colors */
 :root {
-    --primary-color: #1E40AF;
-    --secondary-color: #3B82F6;
-    --background-color: #F3F4F6;
-    --text-color: #111827;
+  --primary-color: #1E40AF;
+  --secondary-color: #3B82F6;
+  --background-color: #F3F4F6;
+  --text-color: #111827;
 }
 
 /* Base styles */
@@ -72,12 +72,91 @@ nav {
   font-weight: 600;
 }
 
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+}
+
 .card {
-  width: 400px;
-  padding: 10px;
-  box-shadow: 0px 2px 3px grey;
+  width: 100%;
+  padding: 1.5rem 3rem;
+  box-shadow: 0px 2px 15px #ddd;
   margin: 0 auto;
-  margin-bottom: 20px;
-  background: #94a7c8;
-  border-radius: 4px;
+  background: #fff;
+  border-radius: .75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover
+}
+
+.card .title {
+  font-weight: 600;
+  max-width: 15%;
+}
+
+.card .desc {
+  max-width: 20%;
+  font-size: 90%;
+}
+
+.ProductDetailsPage {
+  padding: 2rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.ProductDetailsPage .image {
+  width: 35%;
+}
+
+.ProductDetailsPage .image img {
+  border-radius: .75rem;
+  padding: 3rem;
+  background-color: white;
+}
+
+.ProductDetailsPage .details {
+  width: 65%;
+}
+
+.ProductDetailsPage .details h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.ProductDetailsPage .details .category {
+  margin-bottom: 16px;
+  background-color: #3B82F6;
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  display: inline-block;
+  text-transform: uppercase
+}
+
+.ProductDetailsPage .details .price {
+  margin-bottom: 16px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.ProductDetailsPage .details .desc {
+  margin-bottom: 16px;
+}
+
+.ProductDetailsPage .details .desc h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
