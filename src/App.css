@@ -81,3 +81,81 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.list {
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.list img {
+  width: 150px;
+}
+
+.desc {
+  max-width: 300px;
+}
+
+.product {
+  max-width: 300px;
+}
+
+.ProductDetailsPage {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+  align-items:flex-start;
+  gap: 20px;
+}
+
+
+.ProductDetailsPage img {
+  width: 300px;
+  margin-top: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.3)
+}
+
+.bebo {
+  display: flex;
+  justify-content:space-between;
+  gap: 20px;
+  align-items:flex-start;
+}
+
+.bebida {
+  max-width: 500px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.manu {
+  background-color: rgb(73, 76, 255);
+  color: white;
+  border-radius: 5px;
+  padding: 3px;
+  width: 120px;
+  font-size: 14px;
+}
+
+.otamendi {
+  font-size: 25px;
+}
+
+.pavlidis {
+  font-size: 22px;
+  color: rgb(70, 1, 160);
+}
+
+.vida {
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+}
+
+.bel {
+  text-align: center;
+
+}
