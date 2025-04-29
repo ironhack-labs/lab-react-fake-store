@@ -72,6 +72,11 @@ nav {
   font-weight: 600;
 }
 
+.ProductListPage {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .card {
   width: 400px;
   padding: 10px;
@@ -80,4 +85,14 @@ nav {
   margin-bottom: 20px;
   background: #94a7c8;
   border-radius: 4px;
+}
+
+.card img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.card p {
+  margin: 20px auto;
 }
