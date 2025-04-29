@@ -1,8 +1,9 @@
-import logo from "./../assets/logo-ironhack-blue.png";
-import cart from "./../assets/cart.png";
-import { Link } from "react-router-dom";
+import logo from './../assets/logo-ironhack-blue.png';
+import cart from './../assets/cart.png';
+import { Link } from 'react-router-dom';
+import '../index.css';
 
-function Navbar() {
+function Navbar({ cartCount }) {
   return (
     <nav className="bg-blue-600 text-white shadow-md fixed top-0 left-0 w-full z-50">
       <div className="flex justify-between h-20 items-center px-4">
@@ -19,14 +20,20 @@ function Navbar() {
         </div>
 
         <div className="w-1/4 flex justify-end mr-4">
-          {/* User Profile Button */}
+          <Link to="/cart">
             <button className="flex items-center text-l py-1">
               <img
                 src={cart}
                 alt="Cart icon"
                 className="h-10 w-auto border-solid border border-white rounded-3xl p-1"
               />
+              {cartCount > 0 && (
+                <span className="absolute top-10 right-10 bg-red-500 text-white text-xs rounded-full px-2 py-1">
+                  {cartCount}
+                </span>
+              )}
             </button>
+          </Link>
         </div>
       </div>
     </nav>
