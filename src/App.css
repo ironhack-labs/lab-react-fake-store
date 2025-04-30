@@ -81,3 +81,41 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.ProductDetailsPage img {
+  width: 300px;
+  margin: 50px 0;
+}
+
+.ProductDetailsPage {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  text-align: left;
+  width: 80%;
+  margin-bottom: 50px;
+}
+
+#row {
+  display: flex;
+  justify-content: space-between;
+}
+
+#row h3 {
+  color: blue;
+  font-weight: bold;
+}
+
+#tag {
+  margin-bottom: 20px;
+  background-color: #3B82F6;
+  width: 111px;
+  color: white;
+}
+
+#backButton button {
+  color: white;
+  background-color: green;
+  width: 100px
+}
+
