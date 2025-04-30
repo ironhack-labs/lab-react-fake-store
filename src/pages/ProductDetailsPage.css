@@ -1,0 +1,17 @@
+.ProductDetailsPage {
+  text-align: center;
+}
+
+.ProductDetailsPage img {
+  margin: 0 auto;
+  width: 400px;
+  align-items: center;
+}
+
+.ProductDetailsPage h1 {
+  margin-top: 20px;
+}
+
+.ProductDetailsPage p {
+  margin: 15px;
+}
