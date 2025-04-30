@@ -81,3 +81,99 @@ nav {
   background: #94a7c8;
   border-radius: 4px;
 }
+
+.ProductListPage {
+  padding: 20px;
+  background-color: #f3f4f6;
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #706868;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 12px;
+  
+}
+
+.product-card:hover{
+  background-color: rgb(244, 241, 237);
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.product-main-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product-main-info h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.product-main-info .category,
+.product-main-info .price {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.ProductDetailsPage {
+  padding: 20px;
+  background-color: #f3f4f6;
+}
+
+.product-details-card {
+  display: flex;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  gap: 30px;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.details-image {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
+
+.details-info {
+  flex: 1;
+}
+
+.details-info h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.info-line {
+  display: flex;
+  gap: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.category {
+  color: #555;
+  text-transform: capitalize;
+}
+
+.price {
+  color: #1E40AF;
+}
+
