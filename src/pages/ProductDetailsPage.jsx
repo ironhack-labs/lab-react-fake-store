@@ -1,23 +1,48 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom"; // Import useParams to get the product ID from the URL
+import axios from "axios";
 
 function ProductDetailsPage() {
-  // The state variable `product` is currently an empty object {},
-  // but you should use it to store the response from the Fake Store API (the product details).
   const [product, setProduct] = useState({});
+  const { productId } = useParams(); // Get productId from the URL params
+  const navigate = useNavigate(); // Hook to navigate programmatically
+
+  useEffect(() => {
+    // Fetch product details using the productId from the URL
+    axios
+      .get(`https://fakestoreapi.com/products/${productId}`)
+      .then((response) => {
+        setProduct(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching product details:", error);
+      });
+  }, [productId]); // Re-fetch when productId changes
 
 
-  // The `productId` coming from the URL parameter is available in the URL path.
-  // You can access it with the `useParams` hook from react-router-dom.
-
-
-  // To fetch the product details, set up an effect with the `useEffect` hook:
-
-
+   // Handle "Back" button click to navigate to the product list
+   const handleBackClick = () => {
+    navigate("/"); // Navigate to the main product list page
+  };
 
   return (
     <div className="ProductDetailsPage">
-    {/* Render product details here */}
+      {product.title ? (
+        <div>
+          <h1>{product.title}</h1>
+          <img src={product.image} alt={product.title} width={200} />
+          <p>{product.description}</p>
+          <p>Price: ${product.price}</p>
+          <p>Category: {product.category}</p>
+
+           {/* "Back" button to navigate to the Product List */}
+          <button onClick={handleBackClick} className="back-button">
+            &larr; Back to Product List
+          </button>
+        </div>
+      ) : (
+        <p>Loading product details...</p>
+      )}
     </div>
   );
 }
