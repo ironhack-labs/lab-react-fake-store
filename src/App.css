@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -80,4 +79,87 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+.product-listing {
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+}
+.product-listing img {
+  border: 1px solid black;
+  width: 250px;
+  height: 300px;
+}
+
+.products-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.products-text h4 {
+  font-weight: bold;
+  width: 250px;
+  height: 40px;
+}
+
+.products-text p {
+  width: 250px;
+  height: auto;
+}
+
+.price-description {
+  display: flex;
+}
+
+.ProductDetailPage {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 30px;
+  padding: 20px;
+}
+
+.ProductDetailPage img {
+  border: 1px solid black;
+  width: 250px;
+  height: 300px;
+}
+
+.ProductDetailsPage button {
+  background-color: #1cb94e;
+  color: white;
+  border-radius: 5px;
+  width: 70px;
+  margin-top: 150px;
+}
+
+.ProductDetailPage h4 {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.description {
+  width: 500px;
+  margin-right: 50px;
+}
+
+.blue {
+  background-color: #453bde;
+  width: 150px;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.price {
+  color: #453bde;
+  font-weight: bold;
+  font-size: 1.5em;
 }
