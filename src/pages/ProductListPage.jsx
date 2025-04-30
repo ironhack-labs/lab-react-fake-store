@@ -1,4 +1,6 @@
 import { useState } from "react";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 function ProductListPage() {
@@ -7,11 +9,33 @@ function ProductListPage() {
   const [products, setProducts] = useState([]);
 
   // To fetch the list of products, set up an effect with the `useEffect` hook:
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products').then(async (response) => {
+      if (response.status == 200) {
+        const productList = await response.json();
+        setProducts(productList);
+      }
+    }).catch(error => {
+      console.error('Error fetching data:', error);
+    });
+  }, [])
 
 
   return (
     <div className="ProductListPage">
-      {/* Render list of products here */}
+      <h1>Products</h1>
+      <ul>
+        {/* Render list of products here */
+
+          products.map(product => (
+            <li key={product.id}>
+              <Link to={`/product/details/${product.id}`}>
+                {product.title} - ${product.price}
+              </Link>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   );
 }
