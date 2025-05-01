@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 /* Primary Button */
@@ -80,4 +91,84 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+.ProductCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 2%;
+
+}
+
+.ProductCard img {
+  height: 100px;
+  aspect-ratio: 1/1;
+}
+
+.ProductDetailsPage {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+  gap: 20px;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 20px;
+  padding: 5%;
+}
+
+.ProductDetailsPage h2 {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.ProductDetailsPage img {
+  width: 50%;
+  aspect-ratio: 1/1;
+  border: solid 0.5px black;
+}
+
+.ProductDetailsPage .category {
+  padding: 5px 10px;
+  background-color: #2563ea;
+  border-radius: 10px;
+  color: white;
+}
+
+.ProductDetailsPage .informations {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+} 
+
+.ProductDetailsPage .informations p {
+  width: 75%;
+}
+
+.ProductDetailsPage .informations div {
+  color:  #2563ea;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.ProductDetailsPage button {
+  padding: 5px 10px;
+  min-width: 100px;
+  background-color: green;
+  border-radius: 10px;
+  color: white;
+}
+
+hr {
+  border: 0.5px solid black;
+  width: 100%;
 }
