@@ -81,3 +81,96 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.ProductListPage {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.divProducts {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  min-width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.divProducts img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.divProducts h4 {
+  font-size: 1em;
+  margin: 10px 0;
+  max-width: 400px;
+}
+
+.divProducts p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.ProductDetailsPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.divDetails {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.divDetails img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.divDetails h4 {
+  font-size: 1.8em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.divDetails p {
+  margin: 10px 0;
+  color: #555;
+  font-size: 1.1em;
+}
+
+.divDetails p span {
+  font-weight: bold;
+}
+
+.backButton {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1em;
+}
+
+.backButton:hover {
+  background-color: #0056b3;
+}
