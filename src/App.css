@@ -72,12 +72,19 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+
+.card:hover {
+  background-color: #E5E7EB;
 }
 
 .content {
   transition: margin-left 0.4s ease-in-out;
 }
 
-.content.shifted {
-  margin-left: 250px;
+img{
+  width: 200px;
 }
