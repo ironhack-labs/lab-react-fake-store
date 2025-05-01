@@ -3,6 +3,7 @@ import cart from "./../assets/cart.png";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  
   return (
     <nav className="bg-blue-600 text-white shadow-md fixed top-0 left-0 w-full z-50">
       <div className="flex justify-between h-20 items-center px-4">
@@ -20,6 +21,7 @@ function Navbar() {
 
         <div className="w-1/4 flex justify-end mr-4">
           {/* User Profile Button */}
+          <Link to="/cart/5">
             <button className="flex items-center text-l py-1">
               <img
                 src={cart}
@@ -27,6 +29,7 @@ function Navbar() {
                 className="h-10 w-auto border-solid border border-white rounded-3xl p-1"
               />
             </button>
+            </Link>
         </div>
       </div>
     </nav>
