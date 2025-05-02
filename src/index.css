@@ -81,3 +81,42 @@ nav {
   background: #94a7c8;
   border-radius: 4px;
 }
+
+.ProductListPage {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.product-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 0.1rem solid black;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.image-card {
+  width: 20%;
+  height: auto;
+  float: left;
+  padding: 0.5rem;
+}
+
+.product-image {
+  width: 60%;
+  height: auto;
+  padding: 1rem;
+  border-radius: 0.1rem solid grey;
+}
+
+.price {
+  color: blue;
+  font-weight: 700;
+}
+.button {
+  background-color: green;
+  color: white;
+  padding: 0.5rem;
+}
