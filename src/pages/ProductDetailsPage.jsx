@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 
 function ProductDetailsPage() {
@@ -12,13 +13,30 @@ function ProductDetailsPage() {
 
 
   // To fetch the product details, set up an effect with the `useEffect` hook:
+const {productId} = useParams()
 
+const fetchProduct = async() => {
+  try {
+    const response = await fetch(`https://fakestoreapi.com/products/${productId}`)
+    if(response.ok) {
+      const productData = await response.json()
+      console.log(productData)
+      setProduct(productData)
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+useEffect(() => {
+  fetchProduct()
+}, [])
 
 
   return (
     <div className="ProductDetailsPage">
-    {/* Render product details here */}
-    </div>
+      <h1>{product.title}</h1>
+     </div>
   );
 }
 
