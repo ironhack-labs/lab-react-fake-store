@@ -1,0 +1,51 @@
+/* styles.css */
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Contenedor principal */
+  .ProductDetailsPage {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Imagen del producto */
+  .ProductDetailsPage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Título del producto */
+  .ProductDetailsPage h3 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+  }
+  
+  /* Información adicional */
+  .ProductDetailsPage p {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #666;
+  }
+  
+  /* Precio */
+  .ProductDetailsPage p:nth-of-type(2) {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
