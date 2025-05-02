@@ -81,3 +81,29 @@ nav {
   background: #94a7c8;
   border-radius: 4px;
 }
+
+.product-list-container{
+  display: flex;
+  border: solid 1px black;
+  gap: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 2%;
+}
+
+.list-container-image{
+  width: 100px;
+  height: 100px;
+}
+
+.list-container-title{
+  width: 150px;
+}
+
+.list-container-category{
+  width: 150px;
+}
+
+.list-container-description{
+  width: 500px;
+}
