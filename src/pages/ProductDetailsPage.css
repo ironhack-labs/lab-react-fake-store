@@ -1,0 +1,39 @@
+.ProductDetailsPage {
+	margin: 3rem;
+	text-align: left;
+	img {
+		width: 16rem;
+		margin-bottom: 2rem;
+	}
+	.category {
+		padding: 0.3rem 0.6rem;
+		background: blue;
+		display: inline-block;
+		color: white;
+		margin-bottom: 1rem;
+	}
+	.title {
+		font-size: 1.6rem;
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+	.description-price {
+        display: flex;
+        gap: 2rem;
+        justify-content: flex-start;
+		.description {
+			margin-bottom: 1rem;
+		}
+		.price {
+			color: blue;
+			font-weight: 600;
+			font-size: 1.6rem;
+		}
+	}
+    .back-button {
+        background-color: #e6e6e6;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 0.3rem;
+    }
+}
