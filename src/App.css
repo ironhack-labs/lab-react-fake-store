@@ -81,3 +81,56 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.product{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  margin: 20px;
+}
+
+section div img{
+  width: 300px;
+}
+
+.ProductDetailsPage{
+  margin:20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  gap: 20px;
+}
+
+.ProductDetailsPage img{
+  width: 400px;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+.descriptionPrice{
+  display: flex;
+  
+  gap: 20px;
+}
+.descriptionPrice p{
+  width: 40%;
+}
+
+.price{
+  font-size: 1.8rem;
+  color: #3B82F6;
+}
+
+.back{
+  background-color: green;
+  width: 100px;
+  align-self: center;
+}
+.category{
+  background-color: #3B82F6;
+}
