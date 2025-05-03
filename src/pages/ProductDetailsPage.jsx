@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import fetchProduct from '../helpers/fetchProduct';
 
 
 function ProductDetailsPage() {
@@ -9,17 +11,66 @@ function ProductDetailsPage() {
 
   // The `productId` coming from the URL parameter is available in the URL path.
   // You can access it with the `useParams` hook from react-router-dom.
+  
+  const { productId } = useParams();
+  console.log("productId: ", productId);
 
 
-  // To fetch the product details, set up an effect with the `useEffect` hook:
-
-
+  useEffect(()=>{
+    fetchProduct(productId, setProduct);
+  }, [productId]); // execute fetchProduct() everytime productId changes
 
   return (
     <div className="ProductDetailsPage">
-    {/* Render product details here */}
+
+      {/* Render product details here */}
+      {product && (
+        <div className="card productDetailCard">
+        <img src={product.image} alt={product.title} className="productImg" />
+
+        <div className="label">{product.category}</div>
+        <h2 className = 'product-title'> {product.title}</h2>
+        <div className="productDetailText">
+          <p>{product.description}</p>
+          <p>Price: <span> ${product.price} </span></p>
+        </div>
+        <hr />
+
+        <div className="flex-center">
+          <Link to="/">
+            <button className="btn-primary">Back</button>
+          </Link>
+        </div>
+
+      </div>
+
+
+
+      )}
+      
     </div>
+
   );
 }
-
 export default ProductDetailsPage;
+
+ /* Fetch data using axios:
+useEffect(() => {
+    axios.get(`https://fakestoreapi.com/products/${productId}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(response.status);
+      }
+
+      const productData = response.data;
+      console.log(productData);
+
+      setProduct(productData);
+
+    })
+    .catch((error) => {
+      console.log("error: ", error);
+    });
+  }, [productId]);
+  
+  */
