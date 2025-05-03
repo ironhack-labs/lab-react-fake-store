@@ -1,19 +1,36 @@
-import { useState } from "react";
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
+function ProductListPage () {
+  const [products, setProducts] = useState([])
 
-function ProductListPage() {
-  // The state variable `products` is currently an empty array [], 
-  // but you should use it to store the response from the Fake Store API (the list of products).
-  const [products, setProducts] = useState([]);
-
-  // To fetch the list of products, set up an effect with the `useEffect` hook:
-
+  useEffect(() => {
+    axios
+      .get('https://fakestoreapi.com/products')
+      .then(res => {
+        setProducts(res.data)
+        console.log(res.data)
+      })
+      .catch(e => console.log(`this is our error`, e))
+  }, [])
 
   return (
-    <div className="ProductListPage">
-      {/* Render list of products here */}
+    <div className='ProductListPage'>
+      {products.map(product => (
+        <Link key={product.id} to={`/product/details/${product.id}`}>
+          <div className='card'>
+            <div className='img-frame'>
+              <img src={product.image} alt='' />
+            </div>
+            <div className='description'>
+              <p>{product.category}</p>
+            </div>
+          </div>
+        </Link>
+      ))}
     </div>
-  );
+  )
 }
 
-export default ProductListPage;
+export default ProductListPage
