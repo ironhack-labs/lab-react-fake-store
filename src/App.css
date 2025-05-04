@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -80,4 +79,50 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+.card div {
+  padding: 8px 16px; /* Spacing for text elements */
+  color: #333; /* Dark gray text */
+  font-size: 14px;
+}
+
+.card p {
+  margin: 0;
+  padding: 0 16px;
+  font-size: 12px;
+  color: #666; /* Subtle text for category */
+}
+
+.ProductDetailsPage {
+  display: flex;
+  justify-content: flex-start;
+  text-align: start;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+}
+
+.ProductDetailsPage img {
+  width: 20vw;
+  aspect-ratio: 5/8;
+}
+
+.ProductDetailsPage h1 {
+  font-size: medium;
+}
+
+.ProductDetailsPage label {
+  background-color: #3b82f6;
+  padding: 3px;
+  margin: 3px;
+}
+
+.ProductDetailsPage span {
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+.ProductDetailsPage button {
+  background-color: aquamarine;
+  border-radius: 5px;
 }
