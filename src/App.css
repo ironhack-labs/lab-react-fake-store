@@ -81,3 +81,11 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.CartProduct .image {
+  max-width: 10rem;
+}
+
+.CartProduct .product-info {
+  max-width: 30rem;
+}
