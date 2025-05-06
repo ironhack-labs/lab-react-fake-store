@@ -81,3 +81,221 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+/* Estilos para la página de lista de productos */
+.ProductListPage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.ProductList {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 100px 2fr;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.2s ease-in-out;
+  gap: 15px;
+}
+
+.ProductList:hover {
+  transform: scale(1.05);
+}
+
+.ProductList img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.ProductList p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.ProductList p:nth-child(2) {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.ProductList p:nth-child(4) {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Estilos para la página de detalles del producto */
+.ProductDetailsPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.productDetailsList {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 80%;
+}
+
+.productDetailsList img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.productDetailsList p:nth-child(2) {
+  background-color: #007bff;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: left;
+}
+
+.productDetailsList p:nth-child(3) {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.productDetailsList div {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+  align-items: center;
+}
+
+.productDetailsList div p:first-child {
+  color: black;
+}
+
+.productDetailsList div p:last-child {
+  font-weight: bold;
+  color: #007bff;
+  background: none;
+}
+
+.productDetailsList::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  margin-top: 15px;
+}
+
+.ProductDetailsPage button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.ProductDetailsPage button:hover {
+  background-color: #218838;
+}
+
+/* Estilo para el contenedor principal de CartPage*/
+.CartPage {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+/* Estilo para el título */
+.CartPage h2 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Estilo para cuando el carrito está vacío */
+.CartPage p {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 20px 0;
+}
+
+/* Estilo para la lista de items */
+.cartItemsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Estilo para cada item del carrito */
+.cartItem {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  text-align: left;
+  overflow: hidden;
+}
+
+.cartItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cartItem img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Estilo para el título del item */
+.cartItem p strong {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Estilo para el precio */
+.cartItem p:nth-child(2) {
+  font-size: 1.1rem;
+  color: #28a745;
+  margin: 10px 0;
+}
+
+/* Estilo para la cantidad */
+.cartItem p:nth-child(3) {
+  font-size: 1rem;
+  color: #007bff;
+}
+
+/* Estilo para cuando no hay items */
+.cartItemsList p {
+  font-size: 1.2rem;
+  color: #999;
+  margin-top: 50px;
+}
