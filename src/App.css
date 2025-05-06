@@ -81,3 +81,145 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+/* Carrito */
+.cart-page {
+  padding: 16px;
+}
+
+.loading-message, .error-message {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.error-message {
+  color: red;
+}
+
+.cart-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .cart-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cart-item {
+  border: 1px solid #ddd;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-item img {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+}
+
+.cart-item h2 {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.cart-item p {
+  color:#0e53c3 ;
+  font-weight: bold;
+}
+
+/* Detalles del producto */
+.product-details-page {
+  padding: 16px;
+  text-align: left;
+}
+
+.product-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .product-content {
+    flex-direction: row;
+  }
+}
+
+.product-content img {
+  height: 320px;
+  width: 320px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #0e53c3;
+}
+
+.product-description {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.product-category-label {
+  font-weight: bold;
+}
+
+/* Lista de productos */
+.product-list-page {
+  padding: 16px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 16px;
+  box-shadow: 0 4px 6px #0000001a;
+  border-radius: 8px;
+  display: block;
+  transition: box-shadow 0.3s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 10px #0000001a;
+}
+
+.product-card img {
+  height: 160px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 8px
+}
+
+.product-card h2 {
+    font-weight: bold;
+    margin-bottom: 12px;
+};
+
+.product-card p {
+  font-weight: bold;
+  color: #0e53c3;
+};
