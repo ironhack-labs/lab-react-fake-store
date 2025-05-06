@@ -81,3 +81,39 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.contendor-principal{
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+img{
+width: 200px;
+padding: 20px;
+}
+p{
+  font-weight: 600;
+  text-align: left;
+}
+
+.grande{
+  width: 600px;
+}
+
+.mediano {
+  width: 200px;
+}
+
+.chico {
+  width: 50px;
+}
+
+.ProductDetailsPage button {
+  margin-top: 20px;
+  padding: 12px 20px 12px 20px;
+  width: 100px;
+  border-radius: 20px;
+  border-width: 1px;
+  background-color: #57f276;
+  box-shadow: 1px 1px 2px #b78c5a70
+}
