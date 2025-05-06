@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Primary Button */
@@ -80,4 +81,31 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+.card {
+  width: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+}
+
+
+.ProductDetailsPage {
+  background-color: black;
+  height: 1125px;
+  color: white;
+
+}
+.imagens {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.buttonBack {
+
+  border: 2px solid greenyellow;
+
 }
