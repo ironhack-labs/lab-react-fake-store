@@ -1,0 +1,21 @@
+.cardContainer {
+  margin: 0.7rem;
+  height: 300px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.imgContainer {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background-size: cover;
+}
