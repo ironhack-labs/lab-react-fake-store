@@ -81,3 +81,47 @@ nav {
   background: #94a7c8;
   border-radius: 4px;
 }
+
+.product-box img {
+  width: 150px;
+}
+.product-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  border: 1px solid gray;
+}
+.description {
+  max-width: 800px;
+}
+.ProductDetailsPage{
+  margin-left: 40px;
+  margin-top: 40px;
+}
+.ProductDetailsPage img {
+  width: 250px;
+  border: 1px solid gray;
+}
+.ProductDetailsPage label {
+  background-color: #1E40AF;
+  color: white;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+.price {
+  font-size: 50px;
+  color: #1E40AF;
+}
+.ProductDetailsPage p{
+  text-align: left;
+}
+.flexbox {
+  display: flex;
+  align-items: center;
+}
+.ProductDetailsPage button {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+}
