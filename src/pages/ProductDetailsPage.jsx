@@ -1,23 +1,52 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 function ProductDetailsPage() {
-  // The state variable `product` is currently an empty object {},
-  // but you should use it to store the response from the Fake Store API (the product details).
-  const [product, setProduct] = useState({});
+  const { productId } = useParams(); 
+  const [product, setProduct] = useState(null);
+  const [displayError, setDisplayError] = useState(false);
 
+  useEffect(() => {
+    async function fetchProduct() {
+      try {
+        console.log(`Fetching product with ID: ${productId}`);
+        setDisplayError(false); 
 
-  // The `productId` coming from the URL parameter is available in the URL path.
-  // You can access it with the `useParams` hook from react-router-dom.
+        const response = await fetch(`https://fakestoreapi.com/products/${productId}`);
+        
+        if (!response.ok) {
+          console.log(`Failed to fetch product details. Status code: ${response.status}`);
+          setDisplayError(true);
+          return;
+        }
 
+        const jsonResponse = await response.json();
+        setProduct(jsonResponse); 
+        console.log("Fetched product:", jsonResponse);
+      } catch (error) {
+        console.log("There was an error:", error.message);
+        setDisplayError(true); 
+      }
+    }
 
-  // To fetch the product details, set up an effect with the `useEffect` hook:
+    fetchProduct();
+  }, [productId]);
 
+  if (displayError) {
+    return <p>There was an error loading the product details. Please try again later.</p>;
+  }
 
+  if (!product) {
+    return <p>Loading product details...</p>;
+  }
 
   return (
     <div className="ProductDetailsPage">
-    {/* Render product details here */}
+      <h2>{product.title}</h2>
+      <p>Price: ${product.price}</p>
+      <img src={product.image} alt={product.title} width="200" />
+      <p>{product.description}</p>
+      <p>Category: {product.category}</p>
     </div>
   );
 }
