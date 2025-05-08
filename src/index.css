@@ -27,57 +27,15 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
-
-/* Container */
-.container {
-  max-width: 1400px;
+.productListPage {
   margin: 0 auto;
-  padding: 16px;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-
-/* Styles */
-h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
-a {
-  list-style: none;
-  color: black;
-}
-
-button,
-select {
-  padding: 5px 10px;
-  min-width: 50px;
-  margin: 5px;
-  font-size: 1.1rem;
-}
-
-label {
-  width: 200px;
-  display: block;
-}
-
-nav {
-  position: relative;
-  z-index: 20;
-}
-
-
-.Navbar li {
-  list-style: none;
-  font-size: 1.7rem;
-  font-weight: 600;
-}
-
-.card {
-  width: 400px;
-  padding: 10px;
-  box-shadow: 0px 2px 3px grey;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  background: #94a7c8;
-  border-radius: 4px;
+.productDetailsPage {
+  width: 60vw;
+  padding: 25px;
+  text-align: left;
 }
