@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem;
+
+    img {
+        width: 100px;
+    }
+}

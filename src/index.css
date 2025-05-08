@@ -81,3 +81,11 @@ nav {
   background: #94a7c8;
   border-radius: 4px;
 }
+
+.card {
+  button {
+    background-color: rgb(29, 170, 4);
+    color: white;
+    
+  }
+}
