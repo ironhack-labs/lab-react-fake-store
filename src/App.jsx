@@ -3,7 +3,10 @@ import Navbar from "./components/Navbar";
 import ProductListPage from "./pages/ProductListPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 
-import { Routes, Route } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import { BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+
 
 
 function App() {
