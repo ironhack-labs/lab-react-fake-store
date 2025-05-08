@@ -1,0 +1,48 @@
+.ProductDetailsPage {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    min-height: 100vh; /* Ensures the div takes at least the full viewport height */
+    padding: 20px;
+    background: #f0f0f0; /* A light background color */
+  }
+  
+  .productDetailCard {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); /* Soft box shadow */
+    border-radius: 8px; /* Rounded corners */
+    background: white; /* White background for the card */
+    padding: 20px;
+    margin: 20px;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 1000px; /* Maximum width of the card */
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center; /* Align items in the center */
+  }
+  
+  .productImage {
+    max-width: 50%; /* Image is responsive to the container width */
+    height: auto; /* Keep the image's aspect ratio */
+    border-radius: 4px; /* Slightly rounded corners for the image */
+    margin-bottom: 20px; /* Space between the image and the text */
+  }
+  
+  .productTitle {
+    font-size: 24px; /* Larger font size for the title */
+    margin-bottom: 10px;
+  }
+  
+  .productInfo {
+    text-align: left; /* Aligns the text to the left */
+    width: 100%; /* Info section takes the full width */
+    margin-bottom: 10px; /* Space between each info section */
+  }
+  
+  .productRating {
+    display: flex;
+    align-items: center; /* Aligns the rating stars and number on the same line */
+    gap: 10px; /* Adds space between the stars and the rating number */
+  }
+  
+  /* Rest of your styles */
+  

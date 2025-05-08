@@ -1,0 +1,54 @@
+.productItem {
+    display: flex;
+    flex-direction: row; /* Ensures the image and details are in a row */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    gap: 10px;
+    overflow: hidden; /* Ensures the content respects the border-radius */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds shadow to the card */
+    margin-bottom: 16px; /* Adds space between cards */
+  }
+  
+  .productImage {
+    flex: 0 0 200px; /* Fixed size, not allowed to grow or shrink */
+    height: 200px;
+    width :200px;
+    object-fit: cover; /* Ensures the image covers the area, might crop it */
+  }
+  
+  .productDetails {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+    padding: 16px; /* Adjust padding as needed */
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between; /* Spaces out the child elements */
+  }
+  
+  .productTitle {
+    flex: 0 0 200px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+
+  }
+  
+  .productCategory,
+  .productPrice {
+    flex: 0 0 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .productDescription {
+    margin: 4px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limits the text block to three lines */
+    -webkit-box-orient: vertical;
+    text-align: center; /* Justifies the text */
+    max-height: 72px; /* Adjust this based on your line-height */
+  }
+  
