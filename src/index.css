@@ -81,3 +81,26 @@ nav {
   background: #94a7c8;
   border-radius: 4px;
 }
+
+.product-card {
+  display: flex;
+  width: 95vw;
+  padding: 5vw;
+  margin: 2vw;
+  border: 1px solid black;
+}
+
+.product-card img {
+  width: 15vw;
+  height: 15vw;
+  padding: 0.5vh;
+  border: 2px solid rgb(181, 180, 180);
+}
+
+.product-card p {
+  padding: 1vh;
+}
+
+.ProductDetailsPage img {
+  width: 20vh;
+}
