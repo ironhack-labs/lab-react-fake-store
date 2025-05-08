@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -80,4 +79,133 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+/*Estilos para la Product List Page*/
+
+.ProductListPage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/*<ul>*/
+.product-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para cada producto en la lista <li> */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 20px;
+  height: 200px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.product-details:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+/* Estilos para la tarjeta de detalles del producto <div> */
+.product-details-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-self: center;
+  gap: 20px;
+  height: 200px;
+}
+
+.product-image {
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: solid lightgray 1px;
+  padding: 7px;
+}
+
+.product-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.product-details-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.product-details-card p:nth-child(2) {
+  font-size: 14px;
+  color: #888;
+}
+
+.product-details-card p:nth-child(3) {
+  font-weight: bold;
+}
+
+/*Product Details Page*/
+.ProductDetailsPage {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #ffffff;
+  min-width: 700px;
+  height: 100%;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ProductDetailsPage-card {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 40vw;
+  gap: 20px;
+}
+
+.ProductDetailsPage-card h3,
+.product-description {
+  display: flex;
+  text-align: justify;
+}
+.card-title {
+  font-weight: bold;
+}
+
+.product-category {
+  border-radius: 8px;
+  background-color: rgb(35, 35, 127);
+  color: white;
+  text: bold;
+  width: 250px;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(36, 36, 169);
+}
+
+.description-price {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
