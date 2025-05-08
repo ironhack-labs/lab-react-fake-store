@@ -1,19 +1,55 @@
-import { useState } from "react";
-
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function ProductListPage() {
-  // The state variable `products` is currently an empty array [], 
-  // but you should use it to store the response from the Fake Store API (the list of products).
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([])
 
-  // To fetch the list of products, set up an effect with the `useEffect` hook:
+  useEffect(() => {
+    getData()
+  }, [])
 
+  const getData = async () => {
+    try {
+      const response = await fetch('https://fakestoreapi.com/products')
+      const results = await response.json()
+      setProducts(results)
+    } catch (error) {
+      console.error('Failed to fetch products', error)
+    }
+  }
+
+  if (products === null) {
+    return <h3>...cosas</h3>
+  }
 
   return (
     <div className="ProductListPage">
-      {/* Render list of products here */}
+      {products.map((cadaProducto) => {
+        return (
+          <Link
+            key={cadaProducto.id}
+            to={`/product/details/${cadaProducto.id}`}
+          >
+            <div className="card">
+              <div>
+                <img
+                  style={{ width: '100px' }} // Adjust image width
+                  src={cadaProducto.image}
+                  alt={cadaProducto.title}
+                />
+              </div>
+              <h4>
+                <strong>{cadaProducto.title}</strong>
+              </h4>
+              <p> {cadaProducto.category}</p>
+              <p>{cadaProducto.price}€</p>
+              <p className="descripcion">{cadaProducto.description}</p>
+            </div>
+          </Link>
+        )
+      })}
     </div>
-  );
+  )
 }
 
-export default ProductListPage;
+export default ProductListPage
