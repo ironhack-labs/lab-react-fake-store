@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -80,4 +79,20 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+.ProductListPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+  align-items: center;
+  gap: 16px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-radius: 8px;
+  margin: 24px;
+}
+
+.ProductListPage > img {
+  height: 150px;
 }
