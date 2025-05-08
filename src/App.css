@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+img {
+  width: 10%;
+}
+
 /* Primary Button */
 .btn-primary {
   background-color: var(--primary-color);
