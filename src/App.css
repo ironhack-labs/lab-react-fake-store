@@ -81,3 +81,7 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.eachProductStyle {
+  border: black 1px solid;
+}
