@@ -1,4 +1,4 @@
-import { useState } from "react";
+/*import { useState } from "react";
 
 
 function ProductDetailsPage() {
@@ -17,7 +17,53 @@ function ProductDetailsPage() {
 
   return (
     <div className="ProductDetailsPage">
-    {/* Render product details here */}
+    {/* Render product details here 
+    </div>
+  );
+}
+
+export default ProductDetailsPage; */
+
+//-----------------------
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+
+function ProductDetailsPage() {
+  const { productId } = useParams();
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get(`https://fakestoreapi.com/products/${productId}`)
+      .then((response) => {
+        setProduct(response.data);
+      })
+      .catch((error) => {
+        console.error(
+          "There was an error fetching the product details!",
+          error
+        );
+      });
+  }, [productId]);
+
+  if (!product) return <div>Loading...</div>;
+
+  return (
+    <div className="container">
+      <div className="details-content">
+        <img
+          src={product.image}
+          alt={product.title}
+          className="details-image"
+        />
+        <div className="details-info">
+          <span className="product-category">{product.category}</span>
+          <h2>{product.title}</h2>
+          <p>{product.description}</p>
+          <span className="product-price">${product.price}</span>
+        </div>
+      </div>
     </div>
   );
 }
