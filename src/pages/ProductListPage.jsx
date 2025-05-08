@@ -1,17 +1,37 @@
-import { useState } from "react";
+import { data } from "autoprefixer";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 
 function ProductListPage() {
-  // The state variable `products` is currently an empty array [], 
-  // but you should use it to store the response from the Fake Store API (the list of products).
   const [products, setProducts] = useState([]);
+  
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+    fetch("https://fakestoreapi.com/products/:id")
+    .then(response => response.json)
+    .then(data => setProducts(data.message))
+  },[])
 
-  // To fetch the list of products, set up an effect with the `useEffect` hook:
+  axios.get("https://fakestoreapi.com/products")
+  .then((response) => {
+    console.log(response);
+  })
+  .catch((error) => {
+    console.log(error);
+  })
 
+  axios.get("https://fakestoreapi.com/products/:id")
+  .then((response) => {
+    console.log(response);
+  })
+  .catch((error) => {
+    console.log(error);
+  })
 
   return (
     <div className="ProductListPage">
-      {/* Render list of products here */}
+      {products}
     </div>
   );
 }
