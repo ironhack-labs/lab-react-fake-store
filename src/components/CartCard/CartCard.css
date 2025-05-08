@@ -1,0 +1,15 @@
+.cart-product-card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.cart-image {
+    width: 20%;
+    margin-left: calc(50% - 10%);
+    margin-bottom: 10px;
+}
+
+.cart-title {
+    font-weight: bold;
+}
