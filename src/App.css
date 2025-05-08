@@ -72,6 +72,27 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.card img {
+  width: 200px;
+  border: 1px solid #cccccc;
+  padding: 10px;
+}
+
+.title {
+  font-weight: bold;
+  margin: 40px;
+}
+
+.card p {
+  margin: 40px;
 }
 
 .content {
