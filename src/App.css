@@ -81,3 +81,12 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.back {
+  border: 0px;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+ 
+}
+
