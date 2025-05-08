@@ -68,12 +68,19 @@
 
 /* Card styles */
 .card {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
 }
-
+.card img{
+  width: 24%;
+}
 .content {
   transition: margin-left 0.4s ease-in-out;
 }
