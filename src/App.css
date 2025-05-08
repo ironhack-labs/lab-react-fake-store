@@ -81,3 +81,34 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.price {
+  color: blue;
+}
+.label {
+  color: white;
+  background-color: blue;
+  width: 200px;
+}
+
+.product-image {
+  width: 250px;
+}
+
+.backbutton {
+  background-color: rgb(113, 189, 0);
+  color: white;
+  font-weight: 700;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: capitalize;
+}
+
+.produc-title{
+font-weight: 700;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: capitalize;
+}
