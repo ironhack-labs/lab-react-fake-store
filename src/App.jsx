@@ -1,8 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import ProductListPage from "./pages/ProductListPage";
-import ProductDetailsPage from "./pages/ProductDetailsPage";
-
+import ProductDetailsPage from "./components/ProductDetailsPage.jsx";
+import ProductListPage from "./components/ProductListPage.jsx";
 import { Routes, Route } from "react-router-dom";
 
 
