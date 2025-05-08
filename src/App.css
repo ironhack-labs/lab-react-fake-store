@@ -81,3 +81,68 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.productImg {
+  aspect-ratio: 1 / 1;
+  padding: 1rem;
+  border: 1px solid rgb(171, 170, 170)
+}
+
+.productTitle {
+  font-weight: bold;
+}
+
+.listItem {
+  justify-content: space-between;
+  gap: 2rem;
+  width: 90%;
+  height: 20rem;
+  overflow: hidden;
+}
+
+.listItem * {
+  width: 20%;
+  overflow: hidden;
+}
+
+.productDetailCard {
+  width: 90%;
+  text-align: left;
+}
+
+.productDetailCard * {
+  margin-bottom: 1.5rem;
+}
+
+.productDetailCard .productImg {
+  width: 40%
+}
+
+.productDetailCard .label {
+  margin-top: 1rem;
+  padding: 5px;
+  background-color: #3B82F6;
+  color: white;
+  max-width: fit-content;
+  border-radius: 8px;
+}
+
+.productDetailCard h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.productDetailText {
+  display: flex;
+  gap: 2rem;
+}
+
+.productDetailText * {
+  max-width: 70%;
+}
+
+.productDetailText p:last-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3B82F6
+}
