@@ -26,7 +26,9 @@ body {
   margin: 0;
   background-color: var(--background-color);
   color: var(--text-color);
+padding: 16px;
 }
+
 
 /* Container */
 .container {
@@ -36,12 +38,16 @@ body {
 }
 
 /* Styles */
-h1 {
+h1{
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 16px;
 }
-
+h2{
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
 a {
   list-style: none;
   color: black;
