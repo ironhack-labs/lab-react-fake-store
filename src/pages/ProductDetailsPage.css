@@ -1,0 +1,10 @@
+.productDetailsPage{
+    min-width: 50%;
+    display: flex;
+    border: 1px solid #3B82F6;
+    margin: 5px auto;
+    padding: 1rem 2rem;
+}
+.ProductDetailsPage img{
+    width: 200px;
+}
