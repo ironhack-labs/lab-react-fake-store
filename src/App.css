@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -80,4 +79,145 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+/* format of the table */
+.ProductListPage {
+  /* display: flex;
+  flex-wrap: wrap; */
+  gap: 20px;
+}
+
+/* CSS for Product Row */
+.row-product {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* width: calc(33.33% - 20px);  */
+}
+
+/* CSS for Unordered List */
+.ul-product {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+/* CSS for Product Image */
+.prod-img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid grey;
+}
+
+.ul-product li {
+  flex: 1;
+  margin: 10px;
+  /* min-width: 0; */
+}
+
+/* CSS for Product Title */
+.ul-product li:nth-child(2) {
+  font-weight: bold;
+}
+
+CSS for Product Price .ul-product li:nth-child(3) {
+  color: green;
+}
+
+/* CSS for Product Description */
+.ul-product li:nth-child(4) {
+  font-style: italic;
+}
+
+.ul-product li:nth-child(5) {
+  min-width: 0; /* Allow text to wrap if necessary */
+  width: 50ch; /* Limiting each column to 50 characters */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Show ellipsis (...) for overflow text */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* CSS for Product Rating */
+.ul-product li:nth-child(6) {
+  margin-top: 10px;
+}
+
+/* details page */
+/* CSS for Product Details Page */
+.ProductDetailsPage {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS for Product Image */
+.detail-img {
+  width: 100%;
+  max-width: 300px; /* Adjust the max-width as needed */
+  height: auto;
+  border-radius: 5px;
+}
+
+.ProductDetailsPage p:nth-of-type(1) {
+  color: white;
+  background-color: rgb(90, 77, 189);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+  width: 150px;
+}
+
+.description-price p:nth-of-type(1) {
+  flex: 1;
+  color: black; /* Set text color to black */
+  background-color: transparent; /* Remove background color */
+  padding: 0; /* Remove padding */
+}
+
+/* CSS for Product Title */
+.ProductDetailsPage p:nth-of-type(2) {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* CSS for Description and Price */
+.description-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* CSS for Product Description */
+.description-price p:nth-of-type(1) {
+  flex: 1;
+}
+
+/* CSS for Product Price */
+.description-price p:nth-of-type(2) {
+  font-weight: bold;
+  color: rgb(90, 77, 189);
+}
+
+/* CSS for Button */
+.ProductDetailsPage button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ProductDetailsPage button:hover {
+  background-color: #4caf50;
 }
