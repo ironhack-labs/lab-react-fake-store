@@ -53,6 +53,7 @@ select {
   min-width: 50px;
   margin: 5px;
   font-size: 1.1rem;
+  border: 1px solid grey;
 }
 
 label {
@@ -80,4 +81,25 @@ nav {
   margin-bottom: 20px;
   background: #94a7c8;
   border-radius: 4px;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card *{
+  text-align: center;
+  display: flex;
+  width: 22.5vw;
+  display: flex;
+  justify-content: center;
+}
+
+img{
+  border: 1px solid rgb(215, 215, 215);
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+  margin-right: 50px;
 }
