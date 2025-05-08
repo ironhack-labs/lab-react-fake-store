@@ -1,25 +1,29 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-
-function ProductDetailsPage() {
-  // The state variable `product` is currently an empty object {},
-  // but you should use it to store the response from the Fake Store API (the product details).
+const ProductDetailsPage = () => {
   const [product, setProduct] = useState({});
+  const { id } = useParams();
 
-
-  // The `productId` coming from the URL parameter is available in the URL path.
-  // You can access it with the `useParams` hook from react-router-dom.
-
-
-  // To fetch the product details, set up an effect with the `useEffect` hook:
-
-
+  useEffect(() => {
+    fetch(`https://fakestoreapi.com/products/${id}`)
+      .then((response) => response.json())
+      .then((data) => setProduct(data));
+  }, [id]);
 
   return (
-    <div className="ProductDetailsPage">
-    {/* Render product details here */}
+    <div className="ProductDetailspage">
+      <h1>Product Details</h1>
+      {product && (
+        <div className="card">
+          <img src={product.image} alt={product.title} />
+          <h2>{product.title}</h2>
+          <p>Price: {product.price}</p>
+          <p>Description: {product.description}</p>
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default ProductDetailsPage;
