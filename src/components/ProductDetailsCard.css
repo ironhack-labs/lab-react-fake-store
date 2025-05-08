@@ -1,0 +1,40 @@
+.card-details{
+    padding: 0;
+    height: 40rem;
+    width: 100%;
+    gap: 20px;
+    img{
+        height: auto;
+        max-height: 30rem;
+        max-width: 40rem;
+        object-fit: contain;
+        padding: 40px;
+    }
+    h3{
+        max-width: 10rem;
+    }
+    h4{
+        max-width: 10rem;
+    }
+    h5{
+        font-size: 0.8em;   
+        max-width: 15rem;  
+    }
+    .back-btn{
+        background-color: green;
+        color: white;
+        border-radius: 30%;
+    }
+
+}
+
+.container{
+    position: absolute;
+    top: 120px;
+    left: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: baseline;
+    gap: 20px;
+}
