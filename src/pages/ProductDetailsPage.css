@@ -1,0 +1,21 @@
+.ProductDetailsPage {
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    img {
+        width: 60vw;
+        height: 60vh;
+        object-fit: contain;
+
+    }
+}
+
+.ProductDetailsPage h3 {
+    font-size: 20px;
+    font-weight: 900;
+}
