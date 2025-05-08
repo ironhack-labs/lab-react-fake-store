@@ -1,83 +1,75 @@
-.App {
-  text-align: center;
-}
-
-/* Primary Button */
-.btn-primary {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-}
 
 .btn-primary:hover {
   background-color: #3B82F6;
+  background-color: #3b82f6;
 }
-
-/* Secondary Button */
-.btn-secondary {
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-}
-
 .btn-secondary:hover {
   background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
 
 
 /* Spacing utilities */
 .spacing-xs {
   margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-.spacing-sm {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.spacing-md {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.spacing-lg {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-
-/* Text utilities */
-.text-center {
-  text-align: center;
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-/* Flex utilities */
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Card styles */
-.card {
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  border-radius: 8px;
-}
-
-.content {
-  transition: margin-left 0.4s ease-in-out;
-}
-
 .content.shifted {
   margin-left: 250px;
+}}
+
+.ProductListPage {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
 }
+.product-card img {
+  width: 7vw;
+  border: 1px solid black;
+}
+.product-card p {
+  width: 20%;
+  padding: 5px;
+  margin: 10px;
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+
+#detail-page{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0 20px 20px;
+}
+
+#detail-page h2{
+  font-weight: 800;
+}
+#category{
+  background-color: rgb(87, 87, 217);
+  color: white;
+  font-weight: 700;
+  width: 7%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+#detail-page img{
+  width: 15vw;
+
+}
+.first-div{
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  margin-top: 20px;}
+
+.first-div-price{
+margin-left: 50px;}
