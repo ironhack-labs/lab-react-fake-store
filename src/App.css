@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -72,6 +71,28 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card > * {
+  width: 25vw;
+}
+
+.card img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+h4 {
+  font-weight: bold;
 }
 
 .content {
@@ -80,4 +101,51 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+.ProductDetailsPage {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2vh;
+}
+
+.ProductDetailsPage img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.tag {
+  background-color: purple;
+  color: white;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.two-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10vw;
+  text-align: left;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: purple;
+  padding: 0 10px;
+}
+
+.back-btn {
+  background-color: lightgray;
+  border-radius: 5px;
+  align-self: center;
+  position: fixed;
+  bottom: 20px;
 }
