@@ -1,0 +1,61 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute products evenly */
+  margin: 0 auto; /* Center the list horizontally */
+  width: 80%; /* Adjust width as needed */
+}
+
+.product-list-title {
+  color: white; /* Set title color to white */
+  text-align: center; /* Center the title text */
+  margin-bottom: 20px; /* Add some space below the title */
+}
+
+.product-item {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd; /* Thin border */
+  border-radius: 5px;
+  position: relative; /* For hover effects */
+  overflow: hidden; /* Prevent image overflow */
+  width: calc(
+    33% - 20px
+  ); /* Adjust based on desired product width and gutters */
+  box-sizing: border-box;
+}
+
+.product-item:hover {
+  /* Add hover effect on product item */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box-shadow on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.product-image {
+  width: 100%; /* Image takes full width of product item */
+  height: 200px; /* Adjust image height as desired */
+  object-fit: cover; /* Crop image to fit within container */
+  transition: transform 0.2s ease-in-out; /* Smooth hover transition for image */
+}
+
+.product-info {
+  position: absolute; /* Position product info on top of image */
+  bottom: 0; /* Align to bottom */
+  left: 0; /* Align to left */
+  width: 100%; /* Take full width of product item */
+  padding: 10px; /* Add some padding */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #fff; /* White text for better readability */
+  opacity: 0; /* Initially hide product info */
+  transition: opacity 0.2s ease-in-out; /* Smooth fade-in on hover */
+}
+
+.product-item:hover .product-info {
+  opacity: 1; /* Show product info on hover */
+}
+
+.product-info h2 {
+  margin: 0; /* Remove default margin */
+  font-weight: normal; /* Lighter font weight for a modern look */
+  color: white;
+}
