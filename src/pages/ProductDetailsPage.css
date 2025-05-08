@@ -1,0 +1,55 @@
+.ProductDetailsPage {
+    padding: 2em;
+    width: 90vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    img{
+        width: 20rem;
+        height: 20rem;
+        border: solid 2px gray;
+        padding: 0.5rem;
+        object-fit: cover;
+    }
+
+    hr{
+        border: solid 1px gray;
+    }
+
+    button {
+        background-color: limegreen;
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 1em;
+    }
+}
+
+#category {
+    background-color: blue;
+    color: white;
+    padding: 0.5rem;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.info{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1em;
+    gap: 2em;
+
+    h3 {
+        font-size: 1.3em;
+        font-weight: bold;
+        color: blue;
+    }
+}
