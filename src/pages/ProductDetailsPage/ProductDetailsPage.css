@@ -1,0 +1,52 @@
+.ProductDetailsPage {
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    margin: 15px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.ProductDetailsPage img {
+    height: auto;
+    width: 250px;
+}
+
+.DescriptionAndPrice {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.Category {
+    background: midnightblue;
+    color: white;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+.Description {
+    width: 70%;
+}
+
+.Price {
+    color: midnightblue;
+    font-size: 25px;
+    font-weight: 400;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.BackBtn {
+    background-color: midnightblue;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px 0px;
+
+}
