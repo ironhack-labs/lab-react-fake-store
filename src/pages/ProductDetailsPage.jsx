@@ -1,23 +1,30 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 
 function ProductDetailsPage() {
-  // The state variable `product` is currently an empty object {},
-  // but you should use it to store the response from the Fake Store API (the product details).
+  
   const [product, setProduct] = useState({});
+  const { productId } = useParams();
+  const navigate = useNavigate();
 
+  async function getObjectData() {
+    const response = await fetch(`https://fakestoreapi.com/products/${productId}`)
+    const responseJson = await response.json();
+    setProduct(responseJson);
+  }
 
-  // The `productId` coming from the URL parameter is available in the URL path.
-  // You can access it with the `useParams` hook from react-router-dom.
-
-
-  // To fetch the product details, set up an effect with the `useEffect` hook:
-
-
+  useEffect(() => {
+    getObjectData();
+  }, [productId]); ////why does this work with empty array, too?
 
   return (
     <div className="ProductDetailsPage">
-    {/* Render product details here */}
+      <img src={product.image} alt="" />
+      <span>{product.category}</span>
+      <h2>{product.title}</h2>
+      <p>{product.description}</p>
+      <strong>{product.price}</strong>
+      <button onClick={()=>{navigate("/")}}>Back</button>
     </div>
   );
 }
