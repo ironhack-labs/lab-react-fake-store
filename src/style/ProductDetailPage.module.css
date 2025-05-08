@@ -1,0 +1,81 @@
+.ProductDetailsPage {
+  margin: 0 auto;
+  padding: 3rem;
+  width: fit-content;
+  display: flex; /* Ensures flex properties apply */
+  flex-direction: column; /* Stacks children vertically */
+  align-items: flex-start;
+}
+
+.ProductDetailsPage img {
+  max-width: 30%;
+  height: auto;
+  border: solid 1px gray;
+  padding: 1rem;
+}
+
+.ProductDetailText {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.ProductDetailText h3 {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.ProductDetailTextCategory {
+  background-color: rgb(88, 2, 226);
+  border-radius: 0.5rem;
+  width: 17%;
+  height: 1.7rem;
+
+  text-align: center;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.ProductDetailTextDescription {
+  display: flex;
+  flex-direction: row;
+
+  flex: 2 1;
+  gap: 10rem;
+}
+
+.ProductDetailTextDescription p:first-child {
+  width: 40%;
+}
+
+.ProductDetailTextDescriptionPrice {
+  color: rgb(37, 0, 172);
+  font-weight: bold;
+}
+
+.BackButton {
+  background-color: green; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding around the text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  margin-top: 20px; /* Margin at the top to separate it from content */
+  align-self: center; /* Center the button when parent is flex */
+}
+
+/* Example media query for tablets */
+@media (max-width: 851px) {
+  .ProductDetailTextCategory {
+    width: 30%; /* Slightly larger width for smaller screens */
+  }
+}
+
+/* Example media query for mobile devices */
+@media (max-width: 480px) {
+  .ProductDetailTextCategory {
+    width: 43%; /* Even larger width for very small screens */
+  }
+}
