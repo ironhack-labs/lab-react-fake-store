@@ -1,0 +1,32 @@
+.ProductListPage {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #eeeff2;
+}
+.cardsHome {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: space-between;
+  background-color: white;
+}
+.productListImg {
+  width: 150px;
+  height: 120px;
+  margin-left: 20px;
+  margin-block: 10px;
+  border: 1px solid #eeeff2;
+  padding: 3px;
+}
+.productListImg img {
+  width: 140px;
+  height: 115px;
+  object-fit: cover;
+}
+.cardsHome h4 {
+  width: 200px;
+}
+.cardsHome p {
+  width: 200px;
+}
