@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Primary Button */
@@ -12,7 +14,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +27,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -72,6 +73,11 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
 }
 
 .content {
@@ -80,4 +86,56 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+.product-image > img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.product-description {
+  max-width: 30vw;
+}
+
+.product-details-category {
+  width: fit-content;
+  padding: 0.5em;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  border-radius: 1em;
+}
+.product-details-image > img {
+  height: 300px;
+}
+.ProductDetailsPage {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-height: 100vh;
+  gap: 20px;
+  padding: 1em;
+}
+
+.product-details-name {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.details-price-description {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.product-details-description {
+  max-width: 80vw;
+}
+
+.product-details-price {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #3b82f6;
 }
