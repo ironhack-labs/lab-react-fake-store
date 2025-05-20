@@ -1,23 +1,51 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function ProductDetailsPage() {
-  // The state variable `product` is currently an empty object {},
-  // but you should use it to store the response from the Fake Store API (the product details).
-  const [product, setProduct] = useState({});
+  const { productId } = useParams();
+  const navigate = useNavigate();
+  const [product, setProduct] = useState(null);
 
+  useEffect(() => {
+    axios
+      .get(`https://fakestoreapi.com/products/${productId}`)
+      .then((response) => {
+        setProduct(response.data);
+      })
+      .catch((error) => {
+        console.log("Error al obtener detalles del producto:", error);
+      });
+  }, [productId]);
 
-  // The `productId` coming from the URL parameter is available in the URL path.
-  // You can access it with the `useParams` hook from react-router-dom.
-
-
-  // To fetch the product details, set up an effect with the `useEffect` hook:
-
-
+  if (!product) return <h3>Cargando detalles del producto...</h3>;
 
   return (
     <div className="ProductDetailsPage">
-    {/* Render product details here */}
+      {/* BOTÓN BACK */}
+      
+      <button
+        onClick={() => navigate(-1)}
+        style={{
+          backgroundColor: "#28a745", // verde llamativo
+          color: "white",             // texto blanco
+          padding: "10px 20px",
+          border: "none",
+          borderRadius: "8px",
+          cursor: "pointer",
+          fontWeight: "bold",
+          marginBottom: "20px"
+        }}
+      >
+        Back
+      </button>
+
+      {/* DETALLES DEL PRODUCTO */}
+      <h1>{product.title}</h1>
+      <img src={product.image} alt={product.title} width="200px" />
+      <h3>Precio: ${product.price}</h3>
+      <p>Descripción: {product.description}</p>
+      <p>Categoría: {product.category}</p>
     </div>
   );
 }
