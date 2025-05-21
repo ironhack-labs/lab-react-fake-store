@@ -1,0 +1,44 @@
+.ProductListPage {
+  padding: 20px;
+}
+
+.product-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.product-card img {
+  width: 120px;
+  object-fit: contain;
+}
+
+.product-info {
+  flex-grow: 1;
+}
+
+.product-info h3 {
+  font-size: 1.1rem;
+  margin: 0 0 10px;
+}
+
+.product-info .category {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.product-info .price {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-info .description {
+  color: #555;
+  font-size: 0.9rem;
+}
