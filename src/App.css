@@ -81,3 +81,11 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.products-container {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid gray;
+  padding: 30px;
+  align-items: center;
+}
