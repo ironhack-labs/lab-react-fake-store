@@ -1,0 +1,25 @@
+.productList{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.productList h1{
+    font-size: medium;
+}
+
+.productList p{
+    width: 500px;
+}
+
+.imgList{
+    height: 300px;
+    max-width: 100%;
+    border: solid lightgray;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
