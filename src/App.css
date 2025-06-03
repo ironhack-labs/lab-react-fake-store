@@ -1,83 +1,87 @@
-.App {
-  text-align: center;
+body {
+  
+  
 }
 
-/* Primary Button */
-.btn-primary {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #3B82F6;
-}
-
-/* Secondary Button */
-.btn-secondary {
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-}
-
-.btn-secondary:hover {
-  background-color: #E5E7EB;
-}
-
-
-/* Spacing utilities */
-.spacing-xs {
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-.spacing-sm {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.spacing-md {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.spacing-lg {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-
-/* Text utilities */
-.text-center {
-  text-align: center;
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-/* Flex utilities */
-.flex-center {
+.product-card {
+  background-color: rgb(255, 255, 255);
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-shadow: 1px rgb(38, 38, 38);
+  padding: 20px 20px;
+  margin: 10px 10px;
+  justify-content:space-around;
   align-items: center;
-  justify-content: center;
+  align-content: center;
+  width: 98%;
+  height: 300px;
 }
 
-/* Card styles */
-.card {
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  border-radius: 8px;
+.product-card img{
+  width:150px;
+border: 1px solid rgb(117, 117, 117);
+border-radius: 10px;
+padding:5px;
 }
 
-.content {
-  transition: margin-left 0.4s ease-in-out;
+h1{
+  font-size: 24px;
+  width:400px;
+  margin: 0px 30px;
 }
 
-.content.shifted {
-  margin-left: 250px;
+h2 {
+  font-weight: 600;
+  margin: 0px 30px;
+}
+
+.product-description {
+  width:500px;
+  
+  
+}
+
+.ProductDetailsPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ProductDetailsPage img{
+  width:350px;
+  border: 1px solid rgb(184, 184, 184);
+  margin: 10px 10px 30px 10px;
+  padding: 10px;
+  border-radius: 10px
+}
+
+.ProductDetailsPage h2{
+  background-color: rgb(81, 81, 223);
+  max-width: fit-content;
+  padding: 5px 20px;
+  border-radius: 20px;
+  margin: 10px 10px 30px 10px;
+  color: white;
+}
+.ProductDetailsPage h1{
+  margin: 10px 10px 30px 10px;
+}
+
+.ProductDetailsPage h3{
+  margin: 10px 10px 30px 10px;
+  font-weight: 700;
+  font-size: 24px;
+  color: rgb(81, 81, 223);
+}
+
+.ProductDetailsPage h4{
+  margin: 0px 10px 30px 10px;
+}
+
+.back-btn{
+  background-color: green;
+  max-width: 150px;
+  border-radius: 15px;
+  color: white;
 }
