@@ -81,3 +81,32 @@
 .content.shifted {
   margin-left: 250px;
 }
+.ProductListPage{
+  display: flex;
+  flex-direction: column;
+}
+.ProductListPage div{
+  display: flex;
+ border: 1px solid gray;
+  box-shadow: gray;
+  margin: 10px;
+  justify-content: space-evenly;
+
+  align-items: center;
+}
+.ProductListPage img{
+  min-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 15px;
+  border: 1px solid darkgray;
+  display: block;
+  object-position: center;
+  
+}
+.ProductListPage p, h4{
+  white-space: normal;
+  word-wrap: break-word;
+  width: 200px;
+}
+
