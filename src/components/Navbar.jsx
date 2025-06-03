@@ -8,25 +8,27 @@ function Navbar() {
       <div className="flex justify-between h-20 items-center px-4">
         <div className="flex items-center space-x-2 w-1/4">
           <Link to="/">
-            <button className="flex items-center text-l py-1">
+            <button className="flex items-center text-l py-1 hover:opacity-80 transition-opacity">
               <img src={logo} alt="Logo" className="h-8 w-auto" />
             </button>
           </Link>
         </div>
-
         <div className="flex justify-center w-1/2">
-          <span className="text-xl">React Fake Store</span>
+          <Link to="/" className="hover:opacity-80 transition-opacity">
+            <span className="text-xl font-semibold">React Fake Store</span>
+          </Link>
         </div>
-
         <div className="w-1/4 flex justify-end mr-4">
-          {/* User Profile Button */}
-            <button className="flex items-center text-l py-1">
+          {/* Cart Button - Link to cart page for bonus iteration */}
+          <Link to="/cart">
+            <button className="flex items-center text-l py-1 hover:opacity-80 transition-opacity">
               <img
                 src={cart}
                 alt="Cart icon"
                 className="h-10 w-auto border-solid border border-white rounded-3xl p-1"
               />
             </button>
+          </Link>
         </div>
       </div>
     </nav>
