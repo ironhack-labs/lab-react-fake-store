@@ -19,7 +19,7 @@ function ProductDetailsPage() {
     .get(`https://fakestoreapi.com/products/${productId}`)
     .then((response) => setProduct(response.data))
     .catch((error) => console.error(error));
-  }, []);
+  }, [productId]);
 
 
   return (
