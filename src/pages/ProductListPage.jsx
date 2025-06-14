@@ -1,4 +1,5 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 
 function ProductListPage() {
@@ -7,11 +8,28 @@ function ProductListPage() {
   const [products, setProducts] = useState([]);
 
   // To fetch the list of products, set up an effect with the `useEffect` hook:
+  useEffect(() => {
+    listProducts();
+  }, []);
 
+  const listProducts = () => {
+    axios
+      .get('https://fakestoreapi.com/products')
+      .then((response) => {setProducts(response.data); console.log(response.data)})
+      .catch((error) => console.error(error))
+  }
 
   return (
-    <div className="ProductListPage">
-      {/* Render list of products here */}
+    <div className="ProductListPage container">
+      {products && products.map((product) => (
+        <div className="flex-center card" key={product.id}>
+          <img className="" src={product.image}></img>
+          <span>{product.title}</span>
+          <span>{product.category}</span>
+          <span>{product.price}</span>
+          <span>{product.description}</span>
+        </div>
+      ))}
     </div>
   );
 }
