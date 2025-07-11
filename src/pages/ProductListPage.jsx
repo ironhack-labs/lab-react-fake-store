@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ProductListPageComponent from "../components/ProductListPage";
 
 
 function ProductListPage() {
@@ -11,7 +12,7 @@ function ProductListPage() {
 
   return (
     <div className="ProductListPage">
-      {/* Render list of products here */}
+      <ProductListPageComponent />
     </div>
   );
 }
