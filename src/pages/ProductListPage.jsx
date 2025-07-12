@@ -34,7 +34,8 @@ function ProductListPage() {
             <p>${product.price}</p>
           </Link>
     </div>
+  ))}
+    </div>
   );
 }
-
 export default ProductListPage;
