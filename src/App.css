@@ -81,3 +81,25 @@
 .content.shifted {
   margin-left: 250px;
 }
+.productItem{
+  display: flex;
+  border: #E5E7EB 2px solid;
+  margin: 10px;
+}
+.image{
+  max-width: 150px;
+  height: auto;
+  margin: 20px;
+  border: #E5E7EB 1px solid;
+}
+
+.productItem p{
+  margin: 20px;
+}
+
+.backBtn{
+  border: #3B82F6 2px solid;
+  background-color: #3B82F6;
+  color: white;
+  padding: 2px;
+}
