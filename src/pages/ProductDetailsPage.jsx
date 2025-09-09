@@ -1,23 +1,49 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function ProductDetailsPage() {
-  // The state variable `product` is currently an empty object {},
-  // but you should use it to store the response from the Fake Store API (the product details).
   const [product, setProduct] = useState({});
+  const [fetching, setFetching] = useState(true);
+  const { productId } = useParams();
+  const navigate = useNavigate();
 
-
-  // The `productId` coming from the URL parameter is available in the URL path.
-  // You can access it with the `useParams` hook from react-router-dom.
-
-
-  // To fetch the product details, set up an effect with the `useEffect` hook:
-
+  useEffect(() => {
+    if (productId) {
+      const apiURL = `https://fakestoreapi.com/products/${productId}`;
+      axios.get(apiURL)
+        .then((response) => {
+          setProduct(response.data);
+          setFetching(false);
+        })
+        .catch((error) => {
+          console.error("Error fetching product:", error);
+          setFetching(false);
+        });
+    }
+  }, [productId]);
 
 
   return (
     <div className="ProductDetailsPage">
-    {/* Render product details here */}
+      
+      
+      <div className="product-details-card">
+        <img src={product.image} alt={product.title} />
+        <div className="product-details-content">
+          <h1>{product.title}</h1>
+            <div className="product-info">
+             <span className="tag">{product.category}</span>
+             <p>${product.price}</p>
+            </div>
+          <div className="product-description">
+            <p>{product.description}</p>
+          </div>
+        </div>
+      </div>
+      <button onClick={() => navigate("/")} className="btn-secondary spacing-md">
+        Back
+      </button>
     </div>
   );
 }

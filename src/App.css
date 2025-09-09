@@ -68,10 +68,135 @@
 
 /* Card styles */
 .card {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+  margin: 16px 0;
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid #0a0707;
+}
+
+.card-text {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.card-text h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  flex: 1;
+  text-align: center;
+}
+
+.card-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.4;
+  flex: 1;
+  text-align: center;
+}
+
+.clickable-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Product Details Page Styles */
+.ProductDetailsPage {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.loading, .error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6b7280;
+  padding: 40px;
+}
+
+.product-details-card {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  border-radius: 8px;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.product-details-card img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.product-details-content {
+  flex: 1;
+}
+
+.product-details-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.product-info {
+  margin-bottom: 24px;
+}
+
+.product-info p {
+  margin: 8px 0;
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #3B82F6;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-right: 12px;
+}
+
+.product-description h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.product-description p {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
 }
 
 .content {
