@@ -1,5 +1,5 @@
 /* Typography */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 /* Tailwind directives */
 @tailwind base;
@@ -8,10 +8,10 @@
 
 /* Colors */
 :root {
-    --primary-color: #1E40AF;
-    --secondary-color: #3B82F6;
-    --background-color: #F3F4F6;
-    --text-color: #111827;
+  --primary-color: #1e40af;
+  --secondary-color: #3b82f6;
+  --background-color: #f3f4f6;
+  --text-color: #111827;
 }
 
 /* Base styles */
@@ -20,12 +20,16 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #F3F4F6;
+  font-family: "Inter", sans-serif;
+  background-color: #f3f4f6;
   color: #111827;
   margin: 0;
   background-color: var(--background-color);
   color: var(--text-color);
+}
+
+img {
+  max-width: 120px;
 }
 
 /* Container */
@@ -65,7 +69,6 @@ nav {
   z-index: 20;
 }
 
-
 .Navbar li {
   list-style: none;
   font-size: 1.7rem;
@@ -73,11 +76,29 @@ nav {
 }
 
 .card {
-  width: 400px;
+  display: flex;
+  width: 100vw;
+  max-height: 200px;
   padding: 10px;
   box-shadow: 0px 2px 3px grey;
-  margin: 0 auto;
+  margin: 20px;
   margin-bottom: 20px;
   background: #94a7c8;
   border-radius: 4px;
+
+  align-items: center;
+  justify-content: space-between;
+
+  text-overflow: clip;
+}
+
+#description {
+  text-overflow: clip;
+  max-width: 200px;
+}
+
+.product-details-page {
+  margin: 80px;
+  padding: 40px;
+  line-height: 2em;
 }
