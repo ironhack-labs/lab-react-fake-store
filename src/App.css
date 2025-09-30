@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -80,4 +79,19 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+.item-name {
+  display: flex;
+  position: absolute;
+  width: 120px;
+  padding-top: 60px;
+  left: 260px;
+}
+
+#item-info {
+  display: flex;
+  position: absolute;
+  left: 460px;
+  gap: 130px;
 }
