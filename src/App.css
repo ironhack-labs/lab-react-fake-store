@@ -81,3 +81,49 @@
 .content.shifted {
   margin-left: 250px;
 }
+.product{
+  border: 3px black solid;
+  margin: 5px 0 5px 0;
+  display: inline-flex;
+  width: 100%;
+}
+.caja{
+  margin: 0 5px 0 5px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product .caja img {
+  max-height: 150px;   /* ajusta la altura a lo que quieras */
+  width: auto;         /* mantiene proporción */
+  object-fit: contain; /* hace que la imagen no se deforme */
+  display: block;
+  margin: 0 auto;      /* la centra horizontalmente */
+}
+.caja .titulo{
+  font-weight: bold;
+}
+.ProductDetailsPage{
+  justify-content: center;
+  align-content: center;
+}
+.imagenproduct{
+  justify-self: center;
+  margin: 15px;
+  }
+  .category{
+    margin: 10px;
+    padding: 5px;
+    background-color: blue;
+    color: white;
+    border: 1px black solid;
+    border-radius: 10%;
+  }
+  .textos{
+    margin: 5px;
+  }
+  .descprice{
+    display: inline-flex;
+    justify-content: center;
+  }
