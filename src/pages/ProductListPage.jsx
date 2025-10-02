@@ -1,17 +1,30 @@
-import { useState } from "react";
-
+import {useState, useEffect} from 'react';
+import axios from 'axios';
+const apiURL = 'https://fakestoreapi.com/products';
 
 function ProductListPage() {
-  // The state variable `products` is currently an empty array [], 
-  // but you should use it to store the response from the Fake Store API (the list of products).
   const [products, setProducts] = useState([]);
 
-  // To fetch the list of products, set up an effect with the `useEffect` hook:
-
+  useEffect(() => {
+    console.log('Mounting');
+    axios.get(apiURL).then((response) => {
+      setProducts(response.data);
+    });
+  }, []);
 
   return (
-    <div className="ProductListPage">
-      {/* Render list of products here */}
+    <div className='cards'>
+      {products.map((prod) => {
+        return (
+          <div key={prod.id} className='card-item'>
+            <div className='img-container'><img src={prod.image} /></div>
+            <div className='title'>{prod.title}</div>
+            <div className='category'>{prod.category}</div>
+            <div className='price'>{prod.price} €</div>
+            <div className='description'>{prod.description}</div>
+          </div>
+        );
+      })}
     </div>
   );
 }

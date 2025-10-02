@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -67,11 +66,47 @@
 }
 
 /* Card styles */
-.card {
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-item {
+  width: 70%;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 16px;
   border-radius: 8px;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  text-overflow: clip;
+  align-items: center;
+  overflow: hidden;
+  height: 20rem;
+  margin: 1rem;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+.card-item div {
+  margin: 1rem;
+}
+.description {
+  text-align: start;
+  display: -webkit-box; /* нужно для line-clamp */
+  -webkit-line-clamp: 12; /* максимум 3 строки */
+  -webkit-box-orient: vertical; /* вертикальное направление */
+  overflow: hidden; /* скрыть лишний текст */
+  text-overflow: ellipsis; /* добавить "..." */
+}
+
+.card-item img {
+  height: 15rem;
+  object-fit: contain;
+  margin: 1rem;
 }
 
 .content {
