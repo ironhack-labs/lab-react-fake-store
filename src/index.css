@@ -81,3 +81,7 @@ nav {
   background: #94a7c8;
   border-radius: 4px;
 }
+
+.ProductListPage {
+  display: "flex"
+}
