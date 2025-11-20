@@ -1,0 +1,61 @@
+/* Ironhack Logo */
+
+/* Whole blue bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;                 /* height of the bar */
+  background-color: #2563eb;    /* blue */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 50;
+}
+
+/* Sections */
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  flex: 0 0 80px;               /* small fixed width left/right */
+}
+
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Logo on the left */
+.navbar-logo {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+/* Title in the middle */
+.navbar-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Cart icon on the right */
+.navbar-cart {
+  height: 32px;
+  width: 32px;
+  border: 2px solid #ffffff;
+  border-radius: 9999px;
+  padding: 4px;
+  background: transparent;
+  display: block;
+}
+
+/* Remove default link/button decoration if any */
+.navbar a {
+  text-decoration: none;
+}
