@@ -1,83 +1,68 @@
-/* Typography */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-/* Tailwind directives */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Colors */
 :root {
-    --primary-color: #1E40AF;
-    --secondary-color: #3B82F6;
-    --background-color: #F3F4F6;
-    --text-color: #111827;
-}
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
-/* Base styles */
-html {
-  font-size: 16px;
-}
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #F3F4F6;
-  color: #111827;
-  margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-/* Container */
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 16px;
-}
-
-/* Styles */
-h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 16px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  list-style: none;
-  color: black;
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
 }
 
-button,
-select {
-  padding: 5px 10px;
-  min-width: 50px;
-  margin: 5px;
-  font-size: 1.1rem;
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-label {
-  width: 200px;
-  display: block;
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-nav {
-  position: relative;
-  z-index: 20;
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-
-.Navbar li {
-  list-style: none;
-  font-size: 1.7rem;
-  font-weight: 600;
-}
-
-.card {
-  width: 400px;
-  padding: 10px;
-  box-shadow: 0px 2px 3px grey;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  background: #94a7c8;
-  border-radius: 4px;
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
 }

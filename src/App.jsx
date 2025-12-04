@@ -1,24 +1,22 @@
-import "./App.css";
-import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductListPage from "./pages/ProductListPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
-
-import { Routes, Route } from "react-router-dom";
-
+import Navbar from "./components/Navbar";
 
 function App() {
-
   return (
-    <div className="App relative z-20 pt-20">
+    <Router>
       <Navbar />
 
-      <Routes>
-        <Route path="/" element={<ProductListPage />} />
-        <Route path="/product/details/:productId" element={<ProductDetailsPage />} />
-      </Routes>
-
-    </div>
+      <div style={{ paddingTop: "80px" }}>
+        <Routes>
+          <Route path="/" element={<ProductListPage />} />
+          <Route path="/product/details/:productId" element={<ProductDetailsPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
