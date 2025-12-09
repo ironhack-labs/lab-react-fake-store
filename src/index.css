@@ -81,3 +81,45 @@ nav {
   background: #94a7c8;
   border-radius: 4px;
 }
+.ProductListPage {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 100px 260px;
+  align-items: center;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.product-row img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+.product-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.product-category {
+  color: #4B5563;
+  font-size: 0.9rem;
+}
+
+.product-price {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.product-description {
+  font-size: 0.85rem;
+  line-height: 1.25rem;
+  color: #374151;
+}
