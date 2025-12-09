@@ -1,23 +1,40 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function ProductDetailsPage() {
-  // The state variable `product` is currently an empty object {},
-  // but you should use it to store the response from the Fake Store API (the product details).
-  const [product, setProduct] = useState({});
 
+  const { productId } = useParams()
 
-  // The `productId` coming from the URL parameter is available in the URL path.
-  // You can access it with the `useParams` hook from react-router-dom.
+  const [product, setProduct] = useState(null);
 
+  useEffect(() => {
+    axios.get(`https://fakestoreapi.com/products/${productId}`)
+      .then((response) => {
+        setProduct(response.data)
+      })
+      .catch((e) => {
+        console.log(e)
+      })
+  }, [productId])
 
-  // To fetch the product details, set up an effect with the `useEffect` hook:
-
-
+  if (product === null) {
+    return <h2>Loading...</h2>
+  }
 
   return (
     <div className="ProductDetailsPage">
-    {/* Render product details here */}
+      {product.image && <img className="ProductImgDetails" src={product.image} alt="Product image" />}
+            <h2>{product.title}</h2>
+            <label>{product.category}</label>
+            <p className="price">{product.price}€</p>
+            <p>{product.description}</p>
+
+            <Link to="/">
+                <button>Back</button>
+            </Link>
     </div>
   );
 }
