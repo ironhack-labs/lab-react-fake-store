@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -66,14 +65,84 @@
   justify-content: center;
 }
 
+.ProductListPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  margin: 10px;
+}
+
 /* Card styles */
 .card {
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 10px;
+}
+.card img {
+  width: 100px;
 }
 
+.card-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid blue;
+  margin: 10px;
+}
+.card-detail a {
+  align-self: center;
+}
+.card-detail img {
+  width: 100px;
+  margin: 10px;
+}
+.card-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px;
+}
+.category {
+  background-color: rgb(27, 27, 63);
+  color: white;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 8px;
+}
+div .descp {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(27, 27, 63);
+}
+.back {
+  background-color: darkolivegreen;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 30px;
+}
+.back:hover {
+  background-color: lightgray;
+  color: black;
+  transform: scale(1.2);
+}
 .content {
   transition: margin-left 0.4s ease-in-out;
 }
