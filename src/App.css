@@ -72,6 +72,10 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   border-radius: 8px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
 }
 
 .content {
@@ -81,3 +85,12 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.product-line {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  text-align: left;
+  flex: 1;
+}
+
