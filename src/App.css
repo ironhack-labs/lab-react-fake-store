@@ -81,3 +81,30 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.product-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2px solid gray;
+  margin: 10px;
+}
+
+.product-card img {
+  width: 10%;
+  height: auto;
+}
+
+.product-card h3 {
+  width: 20%;
+}
+
+#product-title{
+  font-weight: bold;
+}
+
+#back-button{
+  background-color: green;
+  color: white;
+}
