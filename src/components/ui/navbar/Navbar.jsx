@@ -1,8 +1,12 @@
-import logo from "./../assets/logo-ironhack-blue.png";
-import cart from "./../assets/cart.png";
-import { Link } from "react-router-dom";
+import logo from './../../../assets/logo-ironhack-blue.png'
+import cart from './../../../assets/cart.png'
+import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate();
+  function goCartPage() {
+    navigate("/cart");
+    } 
   return (
     <nav className="bg-blue-600 text-white shadow-md fixed top-0 left-0 w-full z-50">
       <div className="flex justify-between h-20 items-center px-4">
@@ -25,6 +29,7 @@ function Navbar() {
                 src={cart}
                 alt="Cart icon"
                 className="h-10 w-auto border-solid border border-white rounded-3xl p-1"
+                onClick={() => goCartPage()}
               />
             </button>
         </div>

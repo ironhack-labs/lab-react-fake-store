@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import * as StoreService from '../services/store-service';
+import ProductItem from "../components/products/product-item/product-item";
 
 
 function ProductListPage() {
@@ -8,10 +10,22 @@ function ProductListPage() {
 
   // To fetch the list of products, set up an effect with the `useEffect` hook:
 
+  useEffect (() => {
+    async function fetchStoreItems() {
+      const storeItems = await StoreService.getStoreProducts();
+      setProducts(storeItems);
+    }
+    fetchStoreItems()
+  }, [])
+
 
   return (
     <div className="ProductListPage">
-      {/* Render list of products here */}
+      {products.map((product) => (
+        <div key={product.id}>
+          <ProductItem {...product} isList={true} isDetail={false}></ProductItem>
+        </div>
+      ))}
     </div>
   );
 }

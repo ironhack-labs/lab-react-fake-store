@@ -1,7 +1,6 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import ProductListPage from "./pages/ProductListPage";
-import ProductDetailsPage from "./pages/ProductDetailsPage";
+import Navbar from './components/ui/navbar/Navbar'
+import { ProductListPage, ProductDetailsPage, ProductCartPage } from "./pages";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -15,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ProductListPage />} />
         <Route path="/product/details/:productId" element={<ProductDetailsPage />} />
+        <Route path="/cart" element={<ProductCartPage />} />
       </Routes>
 
     </div>
