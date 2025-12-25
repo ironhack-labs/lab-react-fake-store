@@ -1,0 +1,25 @@
+.ProductDetailsPage img{
+  max-width: 300px;
+  max-height: 300px;
+  margin: 5%;
+}
+
+.ProductDetailsPage span{
+  display: inline-block;
+  background-color: blueviolet;
+  padding: 0.5% 2%;
+  margin: 1%;
+  border-radius: 8px;
+  color: white;
+}
+
+.description{
+  font-style: italic;
+  padding: 1%;
+}
+
+.price{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(25, 96, 228);
+}
