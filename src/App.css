@@ -81,3 +81,145 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+/* Product List Page */
+.ProductListPage {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  margin: 20px;
+}
+
+/* Product Card */
+.prod {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  gap: 20px;
+}
+
+.prod:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.prod img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  flex-shrink: 0;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.prod h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.prod h2 {
+  font-size: 12px;
+  color: #666;
+  margin: 4px 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.prod p {
+  margin: 4px 0;
+  padding: 0;
+}
+
+.prod p:first-of-type {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2563eb;
+  margin: 12px 0 8px 0;
+}
+
+.prod p:last-of-type {
+  font-size: 13px;
+  color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Product Details Page */
+.ProductDetailsPage {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 32px;
+}
+
+.ProductDetailsPage > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.ProductDetailsPage img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  background-color: #f5f5f5;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.ProductDetailsPage p:first-of-type {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.ProductDetailsPage h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.ProductDetailsPage > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.ProductDetailsPage > div:last-child p:first-child {
+  flex: 1;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ProductDetailsPage > div:last-child p:last-child {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2563eb;
+  margin: 0;
+  white-space: nowrap;
+}
