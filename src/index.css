@@ -1,5 +1,5 @@
 /* Typography */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap');
 
 /* Tailwind directives */
 @tailwind base;
@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   background-color: #F3F4F6;
   color: #111827;
   margin: 0;
