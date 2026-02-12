@@ -1,0 +1,35 @@
+.ProductDetailsPage {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 10px;
+  gap: 20px;
+}
+.ProductDetailsPage img {
+  width: 400px;
+}
+.ProductDetailsPage h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.ProductDetailsPage .category {
+  background-color: rgb(29, 5, 245);
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  max-width: 250px;
+}
+.ProductDetailsPage .para {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.ProductDetailsPage p {
+  width: 400px;
+  display: flex;
+  text-align: left;
+}
+.ProductDetailsPage .price {
+  color: rgb(29, 5, 245);
+  font-weight: bold;
+}
