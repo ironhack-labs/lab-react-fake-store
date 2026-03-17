@@ -1,5 +1,5 @@
 /* Typography */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 /* Tailwind directives */
 @tailwind base;
@@ -8,76 +8,157 @@
 
 /* Colors */
 :root {
-    --primary-color: #1E40AF;
-    --secondary-color: #3B82F6;
-    --background-color: #F3F4F6;
-    --text-color: #111827;
+	--primary-color: #1e40af;
+	--secondary-color: #3b82f6;
+	--background-color: #f3f4f6;
+	--text-color: #111827;
 }
 
 /* Base styles */
 html {
-  font-size: 16px;
+	font-size: 16px;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #F3F4F6;
-  color: #111827;
-  margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
+	font-family: "Inter", sans-serif;
+	background-color: #f3f4f6;
+	color: #111827;
+	margin: 0;
+	background-color: var(--background-color);
+	color: var(--text-color);
 }
 
 /* Container */
 .container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 16px;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 16px;
 }
 
 /* Styles */
 h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 16px;
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: 16px;
 }
 
 a {
-  list-style: none;
-  color: black;
+	list-style: none;
+	color: black;
 }
 
 button,
 select {
-  padding: 5px 10px;
-  min-width: 50px;
-  margin: 5px;
-  font-size: 1.1rem;
+	padding: 5px 10px;
+	min-width: 50px;
+	margin: 5px;
+	font-size: 1.1rem;
 }
 
 label {
-  width: 200px;
-  display: block;
+	width: 200px;
+	display: block;
 }
 
 nav {
-  position: relative;
-  z-index: 20;
+	position: relative;
+	z-index: 20;
 }
 
-
 .Navbar li {
-  list-style: none;
-  font-size: 1.7rem;
-  font-weight: 600;
+	list-style: none;
+	font-size: 1.7rem;
+	font-weight: 600;
 }
 
 .card {
-  width: 400px;
-  padding: 10px;
-  box-shadow: 0px 2px 3px grey;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  background: #94a7c8;
-  border-radius: 4px;
+	width: 400px;
+	padding: 10px;
+	box-shadow: 0px 2px 3px grey;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	background: #94a7c8;
+	border-radius: 4px;
+}
+
+.ProductListPage {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.ProductList {
+	display: flex;
+	max-width: 95%;
+	margin-top: 4%;
+	justify-content: space-between;
+	padding: 3%;
+	border: 1px solid black;
+}
+
+.ProductList img {
+	width: 220px;
+	height: auto;
+	border: 1px solid black;
+}
+
+.ProductList div {
+	display: flex;
+	height: 300px;
+	margin-left: 50px;
+	justify-content: space-around;
+	align-self: center;
+	gap: 10%;
+}
+
+.ProductDetailsPage {
+	display: flex;
+	flex-direction: column;
+}
+
+.ProductDetailsPage img {
+	max-width: 350px;
+	padding: 20px;
+	margin-top: 5%;
+	margin-bottom: 3%;
+}
+
+.ProductDetailsPage h1 {
+	text-align: start;
+}
+
+.ProductDetailsPage h1,
+p {
+	margin-bottom: 40px;
+	margin-left: 30px;
+}
+
+.ProductDetailsPage .category {
+	width: 10%;
+	background-color: purple;
+	color: white;
+	border: 1px solid purple;
+	padding: 8px;
+	border-radius: 10px;
+}
+
+.ProductDetailsPage .price-container {
+	display: flex;
+	gap: 15%;
+}
+
+.price-container .price {
+	font-size: 2em;
+	font-weight: 700;
+	color: purple;
+}
+
+button {
+	background-color: rgb(69, 165, 69);
+	border-radius: 10px;
+	color: white;
+	padding: 15px;
+	align-items: center;
+	text-align: center;
 }
