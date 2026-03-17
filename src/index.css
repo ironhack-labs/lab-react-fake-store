@@ -81,3 +81,35 @@ nav {
   background: #94a7c8;
   border-radius: 4px;
 }
+
+.product-card {
+  padding: 10px;
+  box-shadow: 0px 2px 3px grey;
+  margin: 25px;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 120px;
+}
+
+.product-card img{
+  border: 1px solid grey;
+  max-width: 250px;
+  height: 200px;
+}
+
+.product-detail{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-detail img{
+  height: 400px;
+  width: 400px;
+}
