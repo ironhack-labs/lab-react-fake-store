@@ -25,7 +25,7 @@ function Navbar() {
                 src={cart}
                 alt="Cart icon"
                 className="h-10 w-auto border-solid border border-white rounded-3xl p-1"
-              />
+                />
             </button>
         </div>
       </div>
