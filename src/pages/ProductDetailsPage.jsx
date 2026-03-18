@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from 'axios';
 
@@ -13,7 +13,7 @@ function ProductDetailsPage() {
 
 
   // To fetch the product details, set up an effect with the `useEffect` hook:
-  useState(() => {
+  useEffect(() => {
     axios.get(`https://fakestoreapi.com/products/${productId}`)
     .then((result) => {
       setProduct(result.data);
