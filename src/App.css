@@ -81,3 +81,8 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+body{
+  background-color: #E5E7EB;
+  font-size: small;
+}
