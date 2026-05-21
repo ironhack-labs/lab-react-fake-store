@@ -6,6 +6,7 @@ function Navbar() {
   return (
     <nav className="bg-blue-600 text-white shadow-md fixed top-0 left-0 w-full z-50">
       <div className="flex justify-between h-20 items-center px-4">
+      {/* Logo à gauche */}
         <div className="flex items-center space-x-2 w-1/4">
           <Link to="/">
             <button className="flex items-center text-l py-1">
@@ -13,11 +14,12 @@ function Navbar() {
             </button>
           </Link>
         </div>
-
+{/* Titre au centre */}
         <div className="flex justify-center w-1/2">
           <span className="text-xl">React Fake Store</span>
         </div>
 
+{/* Panier à droite */}
         <div className="w-1/4 flex justify-end mr-4">
           {/* User Profile Button */}
             <button className="flex items-center text-l py-1">
@@ -25,8 +27,8 @@ function Navbar() {
                 src={cart}
                 alt="Cart icon"
                 className="h-10 w-auto border-solid border border-white rounded-3xl p-1"
-              />
-            </button>
+             />
+          </button>
         </div>
       </div>
     </nav>
