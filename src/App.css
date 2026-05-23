@@ -81,3 +81,37 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.ProductListPage {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  width: 100%;;
+
+}
+.product-card{
+  width:100%;
+  border:1px solid lightgray;
+  border-radius:8px;
+  padding:16px;
+  text-align:center;
+}
+
+.product-image{
+  width: 150px;
+  height:150px;
+  object-fit: contain;
+}
+
+.price {
+  font-weight: bold;
+  width:100px;
+}
+
+.description {
+  flex:1;
+}
+
+.product-title{
+  width:250px;
+}
