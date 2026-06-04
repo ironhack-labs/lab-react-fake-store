@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  align-content: center;
 }
 
 /* Primary Button */

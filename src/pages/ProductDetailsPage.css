@@ -1,0 +1,88 @@
+.product-details {
+    width: 80%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid rgba(0, 0, 0, 0.151);
+    margin: auto;
+    border-radius: 1.5rem;
+
+    .product-infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.3rem;
+        align-items: center;
+        width: 55%;
+        max-height: 100%;
+        padding: 2.5rem 0;
+
+        .items {
+            width: 80%;
+        }
+
+        #title {
+            font-size: 1.7rem;
+            font-weight: bold;
+        }
+
+        #description {
+            text-align: center;
+            max-height: 90px;
+            overflow: hidden;
+        }
+
+        #category {
+            background-color: rgba(110, 197, 255, 0.488);
+            width: fit-content;
+            padding: 0.2rem 0.4rem;
+            border-radius: 1rem;
+            color: var(--secondary-color)
+        }
+
+        #price {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-color)
+        }
+
+        .product-ratings-container {
+            flex-grow: 1;
+            align-content: end;
+
+            #rating {
+                color: rgb(255, 204, 0);
+                font-size: 3rem;
+                line-height: 1.2em;
+            }
+
+            .item-bar {
+                background-color: rgba(0, 0, 0, 0.301);
+                display: inline-block;
+                width: 80%;
+                height: 9px;
+                border-radius: 0.5rem;
+                margin-left: 0.3rem;
+            }
+        }
+
+        .back-btn {
+            color: var(--secondary-color);
+        }
+    }
+
+    .product-image-container {
+        background-color: rgba(182, 182, 182, 0.071);
+        box-shadow: 1px 1px 0.4rem -0.08rem rgba(0, 0, 0, 0.148);
+        width: 480px;
+        height: 480px;
+        margin: auto;
+        align-content: center;
+
+        img {
+            height: 90%;
+            margin: auto;
+        }
+    }
+}
