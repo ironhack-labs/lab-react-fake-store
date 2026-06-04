@@ -9,7 +9,7 @@
 /* Colors */
 :root {
     --primary-color: #1E40AF;
-    --secondary-color: #3B82F6;
+    --secondary-color: rgb(59, 130, 246);
     --background-color: #F3F4F6;
     --text-color: #111827;
 }
@@ -40,6 +40,10 @@ h1 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 1.2rem;
 }
 
 a {
