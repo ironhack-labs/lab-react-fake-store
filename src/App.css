@@ -81,3 +81,13 @@
 .content.shifted {
   margin-left: 250px;
 }
+.product-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+  flex-direction: row;
+}
