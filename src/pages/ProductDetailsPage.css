@@ -1,0 +1,18 @@
+.ProductDetailsPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px;
+}
+
+.ProductDetailsPage img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.ProductDetailsPage > div {
+  max-width: 600px;
+  text-align: left;
+}
