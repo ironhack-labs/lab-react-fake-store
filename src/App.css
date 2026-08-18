@@ -12,7 +12,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #3B82F6;
+  background-color: #3b82f6;
 }
 
 /* Secondary Button */
@@ -25,9 +25,8 @@
 }
 
 .btn-secondary:hover {
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
 }
-
 
 /* Spacing utilities */
 .spacing-xs {
@@ -80,4 +79,102 @@
 
 .content.shifted {
   margin-left: 250px;
+}
+
+.ProductListPage {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  background-color: #EEEFF2;
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.product-card:hover{
+  background-color: #e2e1e2;
+}
+
+.product-card img {
+  padding: 5px;
+  border: 1px solid black;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
+}
+
+.ProductDetailsPage, .CartPage{
+  background-color: #EEEFF2;
+  padding: 20px;
+}
+
+.product-content{
+  text-align: left;
+  padding: 20px; 
+  background-color: white;
+  border-radius: 8px;
+}
+
+.product-content img{
+  border: 1px solid gray;
+  object-fit: contain;
+  width: 300px;
+}
+
+.product-content p.category{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 5px 10px;
+  background: #3E35DF
+}
+
+.product-content h2{
+  margin: 20px 0px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.product-content div{
+  display: flex;
+  column-gap: 30px;
+}
+
+.product-content div p.description{
+  width: 40%;
+}
+
+.product-content div p.price{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4B41E9;
+}
+
+.product-content hr{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.product-content button{
+  display: flex;
+  margin: 0px auto;
+  padding: 5px 10px;
+  color: white;
+  background-color: #1CBB4D;
+  border-radius: 6px;
+}
+
+.CartProductList{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }
