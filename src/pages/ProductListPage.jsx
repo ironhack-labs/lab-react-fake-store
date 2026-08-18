@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "./ProductListPage.css";
 
 function ProductListPage() {
   const [products, setProducts] = useState([]);
@@ -18,10 +19,13 @@ function ProductListPage() {
   return (
     <div className="ProductListPage">
       {products.map((product) => (
-        <div key={product.id}>
-          <h2>{product.title}</h2>
-          <p>€{product.price}</p>
-          <img src={product.image} alt={product.title} width="150" />
+        <div className="product-card" key={product.id}>
+          <img src={product.image} alt={product.title} />
+
+          <div className="product-info">
+            <h2>{product.title}</h2>
+            <p>€{product.price}</p>
+          </div>
         </div>
       ))}
     </div>
