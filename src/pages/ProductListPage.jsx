@@ -19,13 +19,28 @@ function ProductListPage() {
   return (
     <div className="ProductListPage">
       {products.map((product) => (
-        <div className="product-card" key={product.id}>
-          <img src={product.image} alt={product.title} />
+        <div className="product-row" key={product.id}>
 
-          <div className="product-info">
-            <h2>{product.title}</h2>
+          <div className="product-image">
+            <img src={product.image} alt={product.title} />
+          </div>
+
+          <div className="product-title">
+            <p>{product.title}</p>
+          </div>
+
+          <div className="product-category">
+            <p>{product.category}</p>
+          </div>
+
+          <div className="product-price">
             <p>€{product.price}</p>
           </div>
+
+          <div className="product-description">
+            <p>{product.description}</p>
+          </div>
+
         </div>
       ))}
     </div>
