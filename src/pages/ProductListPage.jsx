@@ -1,4 +1,6 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 function ProductListPage() {
@@ -7,11 +9,31 @@ function ProductListPage() {
   const [products, setProducts] = useState([]);
 
   // To fetch the list of products, set up an effect with the `useEffect` hook:
+  useEffect(()=> {
+    getData()
+  },[])
 
+  const getData = async () => {
+    try {
+      const response = await axios.get("https://fakestoreapi.com/products")
+      setProducts(response.data)
+    }catch(e) {
+      console.log(e)
+    }
+  }
 
   return (
-    <div className="ProductListPage">
-      {/* Render list of products here */}
+    <div className="ProductListPage" >
+      {products.map((product) => {
+        return (
+        <Link to={`product/details/${product.id}`} className="card" key={product.id}>
+          <img src={product.image} width={100}/>
+          <p> {product.title}</p>
+          <p> {product.category}</p>
+          <p> {product.price}</p>
+          <p> {product.description.slice(0, 40)}</p>
+        </Link>)
+      })}
     </div>
   );
 }
