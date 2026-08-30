@@ -40,7 +40,6 @@ function ProductListPage() {
           key={product.id} 
           style={{ textDecoration: "none", color: "inherit" }}>
           <div
-          key={product.id}
           className="product-card"
           style={{
             display: "flex",
