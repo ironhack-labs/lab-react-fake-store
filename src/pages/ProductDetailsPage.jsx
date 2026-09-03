@@ -26,7 +26,7 @@ function ProductDetailsPage() {
   return (
     <div className="ProductDetailsPage px-4 py-6">
       {/* Render product details here */}
-      <div className="max-w-3xl mx-auto flex flex-col md:flex-row gap-8 border rounded-lg shadow-sm p-6">
+      <div className="bg-white max-w-3xl mx-auto flex flex-col md:flex-row gap-8 border rounded-lg shadow-sm p-6">
         <div className="flex-shrink-0 flex justify-center items-center md:w-1/3">
           <img
             src={product.image}

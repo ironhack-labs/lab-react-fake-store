@@ -22,22 +22,24 @@ function ProductListPage() {
   return (
     <div className="ProductListPage px-4 py-6">
       {/* Render list of products here */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="flex flex-col gap-4 w-full">
         {products.map((product) => (
           <Link
             to={`/product/details/${product.id}`}
             key={product.id}
-            className="border rounded-lg shadow-sm p-4 flex flex-col items-center text-center hover:shadow-md transition-shadow"
+            className="bg-white border rounded-lg shadow-sm p-4 flex flex-row items-center gap-4 hover:shadow-md transition-shadow"
           >
             <img
               src={product.image}
               alt={product.title}
-              className="h-40 w-auto object-contain mb-4"
+              className="h-24 w-24 object-contain flex-shrink-0"
             />
-            <h2 className="text-sm font-semibold line-clamp-2">
-              {product.title}
-            </h2>
-            <p className="text-blue-600 font-bold mt-2">${product.price}</p>
+            <div className="flex flex-col text-left">
+              <h2 className="text-sm font-semibold line-clamp-2">
+                {product.title}
+              </h2>
+              <p className="text-blue-600 font-bold mt-2">${product.price}</p>
+            </div>
           </Link>
         ))}
       </div>
