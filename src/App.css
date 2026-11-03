@@ -81,3 +81,52 @@
 .content.shifted {
   margin-left: 250px;
 }
+
+.ProductListPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.listItem {
+  display: grid;
+  grid-template-columns: 100px 2fr 1fr 80px 3fr;
+  align-items: center;
+  gap:20px;
+  padding: 15px;
+  background: white;
+  margin: 5px;
+}
+
+.ProductDetailsPage{
+  text-align: left;
+  background-color: white;
+  margin: 15px;
+}
+
+.ProductDetailsPage img{
+  border: solid grey 1px;
+}
+
+.ProductDetailsPage label{
+  background-color: blue;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.ProductDetailsPage h2{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.ProductDetailsPage p {
+  margin: 10px 0;
+}
+
+.ProductDetailsPage p:nth-last-child(1) {
+  color: blue;
+  font-size: 20px;
+  font-weight: 500;
+}
+
